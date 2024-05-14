@@ -4,51 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07ab9910-d0fd-4bc4-a2e4-171797eb3ead" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap01/AsianRestaurant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap01/FrenchCourse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap01/Hotel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap01/JannChef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap01/KimuraChef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap01/SushiCourse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap01/WesternRestaurant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap02/AsianRestaurant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap02/Chef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap02/Course.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap02/FrenchCourse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap02/Hotel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap02/JannChef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap02/KimuraChef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap02/Restaurant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap02/SushiCourse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap02/WesternRestaurant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap03/AsianRestaurant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap03/Chef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap03/Course.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap03/FrenchCourse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap03/Hotel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap03/JannChef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap03/KimuraChef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap03/Restaurant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap03/SushiCourse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap03/WesternRestaurant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap03/config/HotelManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/study/springstudy/chap01/HotelTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/study/springstudy/chap03/HotelDiTest.java" afterDir="false" />
+    <list default="true" id="07ab9910-d0fd-4bc4-a2e4-171797eb3ead" name="변경" comment="# initial commit &amp; SOLID 개념 학습">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap01/AsianRestaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap01/AsianRestaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap01/FrenchCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap01/FrenchCourse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap01/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap01/Hotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap01/JannChef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap01/JannChef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap01/KimuraChef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap01/KimuraChef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap01/SushiCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap01/SushiCourse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap01/WesternRestaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap01/WesternRestaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap02/AsianRestaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap02/AsianRestaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap02/Chef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap02/Chef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap02/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap02/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap02/FrenchCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap02/FrenchCourse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap02/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap02/Hotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap02/JannChef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap02/JannChef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap02/KimuraChef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap02/KimuraChef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap02/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap02/Restaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap02/SushiCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap02/SushiCourse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap02/WesternRestaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap02/WesternRestaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap03/AsianRestaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap03/AsianRestaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap03/Chef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap03/Chef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap03/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap03/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap03/FrenchCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap03/FrenchCourse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap03/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap03/Hotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap03/JannChef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap03/JannChef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap03/KimuraChef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap03/KimuraChef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap03/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap03/Restaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap03/SushiCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap03/SushiCourse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap03/WesternRestaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap03/WesternRestaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/chap03/config/HotelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap03/config/HotelManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/study/springstudy/chap01/HotelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/study/springstudy/chap01/HotelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/study/springstudy/chap03/HotelDiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/study/springstudy/chap03/HotelDiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,10 +66,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 2
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;JinWooP98&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/JinWooP98/Spring-Study.git&quot;,
+    &quot;accountId&quot;: &quot;c1d1e7e3-48b0-4814-9fc0-ef6c9b8229b2&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2gOyRCbMOQCZtrW3ynaE8tGY3Eh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -88,17 +94,30 @@
     "Gradle.HotelDiTest.executor": "Run",
     "Gradle.HotelTest.executor": "Run",
     "Gradle.springstudy [:Main.main()].executor": "Run",
+    "Gradle.springstudy 빌드.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.Main.executor": "Run",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/qwdk0/Desktop/choongang/springstudy/src/main/java/com/study/springstudy/chap03",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/qwdk0/Desktop/choongang/springstudy/src/main/java/com/study/Main.java",
-    "project.structure.last.edited": "프로젝트",
+    "project.structure.last.edited": "모듈",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -131,11 +150,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="springstudy.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.study.springstudy.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="애플리케이션.Main" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -145,7 +179,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715582910081</updated>
+      <workItem from="1715590239768" duration="102000" />
+      <workItem from="1715647986245" duration="2192000" />
     </task>
+    <task id="LOCAL-00001" summary="# initial commit &amp; SOLID 개념 학습">
+      <option name="closed" value="true" />
+      <created>1715587354553</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715587354553</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="# initial commit &amp; SOLID 개념 학습" />
+    <option name="LAST_COMMIT_MESSAGE" value="# initial commit &amp; SOLID 개념 학습" />
   </component>
 </project>
