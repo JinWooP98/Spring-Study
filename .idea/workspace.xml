@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07ab9910-d0fd-4bc4-a2e4-171797eb3ead" name="변경" comment="# 스프링 학습 전 FrontController 만들어보기">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap01/BasicController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap01/OrderDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v5/MemberController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/hello.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v5/detail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v5/m-list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v5/reg_form.jsp" afterDir="false" />
+    <list default="true" id="07ab9910-d0fd-4bc4-a2e4-171797eb3ead" name="변경" comment="spring mvc 요청처리 1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap01/ResponseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap02/CoffeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mvc/coffee-form.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mvc/coffee-result.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mvc/hobbies.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap01/BasicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap01/BasicController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +28,8 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Interface" />
-        <option value="jsp template" />
         <option value="Class" />
+        <option value="jsp template" />
       </list>
     </option>
   </component>
@@ -165,7 +162,7 @@
       <updated>1715582910081</updated>
       <workItem from="1715590239768" duration="102000" />
       <workItem from="1715647986245" duration="16487000" />
-      <workItem from="1715817808855" duration="6640000" />
+      <workItem from="1715817808855" duration="9065000" />
     </task>
     <task id="LOCAL-00001" summary="# initial commit &amp; SOLID 개념 학습">
       <option name="closed" value="true" />
@@ -215,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715822113461</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="spring mvc 요청처리 1">
+      <option name="closed" value="true" />
+      <created>1715824660200</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1715824660200</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +231,7 @@
     <MESSAGE value="# 초기설정" />
     <MESSAGE value="# 스프링 기초 전 코드 이해해보기" />
     <MESSAGE value="# 스프링 학습 전 FrontController 만들어보기" />
-    <option name="LAST_COMMIT_MESSAGE" value="# 스프링 학습 전 FrontController 만들어보기" />
+    <MESSAGE value="spring mvc 요청처리 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="spring mvc 요청처리 1" />
   </component>
 </project>

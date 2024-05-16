@@ -58,6 +58,7 @@ public class BasicController {
         System.out.println("주문상품명 = " + order.getGoods());
         System.out.println("주문개수 = " + order.getAmount());
         System.out.println("주문가격 = " + order.getPrice());
+
         return "";
     }
 }
