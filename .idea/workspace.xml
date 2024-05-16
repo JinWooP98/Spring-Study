@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07ab9910-d0fd-4bc4-a2e4-171797eb3ead" name="변경" comment="spring mvc 요청처리 2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap02/CoffeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap02/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mvc/coffee-form.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mvc/coffee-result.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mvc/s-form.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mvc/s-result.jsp" afterDir="false" />
+    <list default="true" id="07ab9910-d0fd-4bc4-a2e4-171797eb3ead" name="변경" comment="spring mvc 요청처리 3 &amp; 연습문제">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/controller/ScoreController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/dto/ScorePostDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/entity/Grade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/entity/Score.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/repository/ScoreJdbcRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/repository/ScoreRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/score/score-list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +30,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Interface" />
         <option value="jsp template" />
+        <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -88,10 +92,17 @@
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "fileTemplates",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql_aurora_aws",
+      "mariadb"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.study.springstudy.springmvc.chap03.entity" />
       <recent name="com.study.springstudy.chap02" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -162,7 +173,7 @@
       <updated>1715582910081</updated>
       <workItem from="1715590239768" duration="102000" />
       <workItem from="1715647986245" duration="16487000" />
-      <workItem from="1715817808855" duration="11731000" />
+      <workItem from="1715817808855" duration="20335000" />
     </task>
     <task id="LOCAL-00001" summary="# initial commit &amp; SOLID 개념 학습">
       <option name="closed" value="true" />
@@ -228,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715827047368</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="spring mvc 요청처리 3 &amp; 연습문제">
+      <option name="closed" value="true" />
+      <created>1715834764038</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1715834764038</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,6 +260,7 @@
     <MESSAGE value="# 스프링 학습 전 FrontController 만들어보기" />
     <MESSAGE value="spring mvc 요청처리 1" />
     <MESSAGE value="spring mvc 요청처리 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="spring mvc 요청처리 2" />
+    <MESSAGE value="spring mvc 요청처리 3 &amp; 연습문제" />
+    <option name="LAST_COMMIT_MESSAGE" value="spring mvc 요청처리 3 &amp; 연습문제" />
   </component>
 </project>
