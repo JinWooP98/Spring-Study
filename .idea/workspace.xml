@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07ab9910-d0fd-4bc4-a2e4-171797eb3ead" name="변경" comment="# 스프링 기초 전 코드 이해해보기" />
+    <list default="true" id="07ab9910-d0fd-4bc4-a2e4-171797eb3ead" name="변경" comment="# 스프링 기초 전 코드 이해해보기">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v4/FrontControllerV4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v4/controller/ControllerV4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v4/controller/JoinController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v4/controller/SaveController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v4/controller/ShowController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v4/m-list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v4/reg_form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,7 +77,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/qwdk0/Desktop/choongang/springstudy/src/main/webapp/WEB-INF/views/v3",
+    "last_opened_file_path": "C:/Users/qwdk0/Desktop/choongang/springstudy/src/main/webapp/WEB-INF/views/v4",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -77,7 +87,7 @@
     "project.structure.last.edited": "모듈",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "settings.editor.selected.configurable": "fileTemplates",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -108,7 +118,7 @@
       <recent name="com.study.springstudy.webservlet.chap02.v2" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.study.springstudy.Main" />
       <module name="springstudy.main" />
@@ -152,7 +162,8 @@
       <option name="presentableId" value="Default" />
       <updated>1715582910081</updated>
       <workItem from="1715590239768" duration="102000" />
-      <workItem from="1715647986245" duration="16310000" />
+      <workItem from="1715647986245" duration="16487000" />
+      <workItem from="1715817808855" duration="1581000" />
     </task>
     <task id="LOCAL-00001" summary="# initial commit &amp; SOLID 개념 학습">
       <option name="closed" value="true" />
@@ -178,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715674243407</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="# 스프링 기초 전 코드 이해해보기">
+      <option name="closed" value="true" />
+      <created>1715674472507</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715674472507</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
