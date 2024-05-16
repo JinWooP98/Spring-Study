@@ -51,7 +51,6 @@ public class ScoreController {
 
         // 데이터베이스에 저장
         Score score = new Score(scorePostDto);
-        repository.save(score);
 
         // 다시 조회로 돌아가야 저장된 데이터를 볼 수 있음
         // 포워딩이 아닌 리다이렉트로 재요청을 주어야
@@ -65,8 +64,26 @@ public class ScoreController {
     }
 
     @GetMapping("/detail")
-    public String detail() {
+    public String detail(long stuNum, Model model) {
         System.out.println("/score/detail : GET!");
-        return "";
+
+        // 1. 상제조회를 원하는 학번을 읽기
+
+        // 2. DB에 상세조회 요청
+        Score score = repository.findOne(stuNum);
+
+        // 3. DB에서 조회한 회원정보 JSP에게 전달
+
+        model.addAttribute("s", score);
+
+
+        // 4. rank 조회
+        int[] result = repository.findRankByStuNum(stuNum);
+//        System.out.println("rank = " + rank);
+        model.addAttribute("rank", result[0]);
+        model.addAttribute("count", result[1]);
+
+
+        return "score/score-detail";
     }
 }
