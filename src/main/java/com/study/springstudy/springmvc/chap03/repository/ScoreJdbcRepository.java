@@ -120,8 +120,24 @@ public class ScoreJdbcRepository implements ScoreRepository {
         return null;
     }
 
+    public void remove(long stuNum) {
+        try(Connection conn = connect()) {
+
+            String sql = "DELETE FROM tbl_score WHERE stu_num = ?";
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setLong(1, stuNum);
+
+            pstmt.executeUpdate();
+
+        } catch ( Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 
     private Connection connect() throws SQLException {
         return DriverManager.getConnection(url, username, password);
     }
+
+
 }

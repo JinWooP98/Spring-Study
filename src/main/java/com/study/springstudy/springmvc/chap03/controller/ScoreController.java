@@ -57,10 +57,12 @@ public class ScoreController {
         return "redirect:/score/list";
     }
 
-    @PostMapping("/remove")
-    public String remove() {
-        System.out.println("/score/remove : POST!");
-        return "";
+    @GetMapping("/remove")
+    public String remove(long stuNum) {
+
+        repository.remove(stuNum);
+
+        return "redirect:/score/list";
     }
 
     @GetMapping("/detail")

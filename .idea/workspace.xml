@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07ab9910-d0fd-4bc4-a2e4-171797eb3ead" name="변경" comment="spring mvc 요청처리 4">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/score/score-detail.jsp" afterDir="false" />
+    <list default="true" id="07ab9910-d0fd-4bc4-a2e4-171797eb3ead" name="변경" comment="spring mvc 요청처리 5 &amp; DB 연결">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/80ad5c52-e151-47eb-af74-a8fec272ea4a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/80ad5c52-e151-47eb-af74-a8fec272ea4a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/controller/ScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/controller/ScoreController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/repository/ScoreJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/repository/ScoreJdbcRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/repository/ScoreRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/repository/ScoreRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/score/score-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/score/score-list.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -168,7 +167,8 @@
       <updated>1715582910081</updated>
       <workItem from="1715590239768" duration="102000" />
       <workItem from="1715647986245" duration="16487000" />
-      <workItem from="1715817808855" duration="24388000" />
+      <workItem from="1715817808855" duration="26557000" />
+      <workItem from="1715848545726" duration="297000" />
     </task>
     <task id="LOCAL-00001" summary="# initial commit &amp; SOLID 개념 학습">
       <option name="closed" value="true" />
@@ -258,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715841824645</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="spring mvc 요청처리 5 &amp; DB 연결">
+      <option name="closed" value="true" />
+      <created>1715847885390</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1715847885390</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,6 +281,7 @@
     <MESSAGE value="spring mvc 요청처리 2" />
     <MESSAGE value="spring mvc 요청처리 3 &amp; 연습문제" />
     <MESSAGE value="spring mvc 요청처리 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="spring mvc 요청처리 4" />
+    <MESSAGE value="spring mvc 요청처리 5 &amp; DB 연결" />
+    <option name="LAST_COMMIT_MESSAGE" value="spring mvc 요청처리 5 &amp; DB 연결" />
   </component>
 </project>
