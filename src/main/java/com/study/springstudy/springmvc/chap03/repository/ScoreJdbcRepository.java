@@ -2,11 +2,14 @@ package com.study.springstudy.springmvc.chap03.repository;
 
 import com.study.springstudy.springmvc.chap03.entity.Score;
 import org.checkerframework.checker.units.qual.A;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class ScoreJdbcRepository implements ScoreRepository {
 
     private String url = "jdbc:mariadb://localhost:3306/spring5";
@@ -51,13 +54,13 @@ public class ScoreJdbcRepository implements ScoreRepository {
     }
 
     @Override
-    public List<Score> findAll() {
+    public List<Score> findAll(String sort) {
 
         List<Score> scoreList = new ArrayList<>();
 
         try (Connection conn = connect()) {
 
-            String sql = "SELECT * FROM tbl_score";
+            String sql = "SELECT * FROM tbl_score " + sortCondition(sort);
 
             PreparedStatement pstmt = conn.prepareStatement(sql);
 
@@ -73,6 +76,24 @@ public class ScoreJdbcRepository implements ScoreRepository {
         }
 
         return scoreList;
+    }
+
+    private String sortCondition(String sort) {
+
+        String sortSql = "ORDER BY ";
+        switch (sort) {
+            case "num":
+                sortSql += "stu_num";
+                break;
+            case "name":
+                sortSql += "stu_name";
+                break;
+            case "avg":
+                sortSql += "average DESC";
+                break;
+        }
+
+        return sortSql;
     }
 
     public Score findOne(long stuNum) {
@@ -120,6 +141,7 @@ public class ScoreJdbcRepository implements ScoreRepository {
         return null;
     }
 
+    @Override
     public void remove(long stuNum) {
         try(Connection conn = connect()) {
 
@@ -134,6 +156,22 @@ public class ScoreJdbcRepository implements ScoreRepository {
         }
 
     }
+
+    @Override
+    public void oderBy(String option) {
+        try(Connection conn = connect()) {
+
+            String sql = "SELECT * FROM tbl_score ORDER BY ?";
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, option);
+
+            pstmt.executeUpdate();
+
+        } catch ( Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
     private Connection connect() throws SQLException {
         return DriverManager.getConnection(url, username, password);

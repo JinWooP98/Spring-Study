@@ -3,16 +3,22 @@ package com.study.springstudy.springmvc.chap03.controller;
 import com.study.springstudy.springmvc.chap03.dto.ScorePostDto;
 import com.study.springstudy.springmvc.chap03.entity.Score;
 import com.study.springstudy.springmvc.chap03.repository.ScoreJdbcRepository;
+import com.study.springstudy.springmvc.chap03.repository.ScoreRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.Comparator;
 import java.util.List;
 
 @Controller
 @RequestMapping("/score")
+@RequiredArgsConstructor
 public class ScoreController {
     /*
     # 요청 URL
@@ -30,15 +36,21 @@ public class ScoreController {
  */
 
     // 의존객체 설정
-    private ScoreJdbcRepository repository = new ScoreJdbcRepository();
+    private final ScoreRepository repository;
+
+//    @Autowired
+//    public ScoreController(ScoreRepository repository) {
+//        this.repository = repository;
+//    }
 
     // 1. 학생 성적정보 등록화면 출력 및 성적정보 목록조회 처리
     @GetMapping("/list")
-    public String list(Model model) {
+    public String list(@RequestParam(defaultValue = "num") String sort, Model model) {
         System.out.println("/score/list : GET!");
 
-        List<Score> scoreList = repository.findAll();
-        System.out.println("scoreList = " + scoreList);
+        List<Score> scoreList = repository.findAll(sort);
+
+//        System.out.println("scoreList = " + scoreList);
         model.addAttribute("sList", scoreList);
 
         return "score/score-list";
@@ -51,7 +63,7 @@ public class ScoreController {
 
         // 데이터베이스에 저장
         Score score = new Score(scorePostDto);
-
+        repository.save(score);
         // 다시 조회로 돌아가야 저장된 데이터를 볼 수 있음
         // 포워딩이 아닌 리다이렉트로 재요청을 주어야
         return "redirect:/score/list";
@@ -88,4 +100,5 @@ public class ScoreController {
 
         return "score/score-detail";
     }
+
 }
