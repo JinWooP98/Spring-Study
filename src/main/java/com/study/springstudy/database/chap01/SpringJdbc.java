@@ -40,12 +40,7 @@ public class SpringJdbc {
     //SELECT : 다중행 조회
     public List<Person> findAll() {
         String sql = "SELECT * FROM tbl_person";
-        return template.query(sql, new RowMapper<Person>() {
-            @Override
-            public Person mapRow(ResultSet rs, int rowNum) throws SQLException {
-                return new Person(rs);
-            }
-        });
+        return template.query(sql, (rs, rowNum) -> new Person(rs));
 
     }
 

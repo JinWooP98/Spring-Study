@@ -1,28 +1,43 @@
 package com.study.springstudy.database.chap01;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Rollback;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
+@Transactional
+@Rollback  // DB를 망가뜨리지 않고 테스트 하는 방법// 실행을 시킨뒤 다시 롤백시킨다.
 class SpringJdbcTest {
 
     @Autowired
     SpringJdbc springJdbc;
 
+    // 각 테스트 전에 공통으로 실행할 코드(실행 된 뒤 다시 롤백)
+    @BeforeEach
+    void bulkInsert() {
+        for (int i = 0; i < 100; i++) {
+            Person p = new Person(i + 2000, "테스트맨" + i, 10);
+            springJdbc.save(p);
+        }
+    }
+
     // 단위 테스트 프레임워크 : JUnit5
     // 테스트 == 단언 (Assertion)
+    // 한번 성공한 테스트는 몇번을 돌려도 다 성공해야 한다.
     @Test
     @DisplayName("사람의 정보를 입력하면 데이터베이스에 반드시 저장되어야 한다.")
     void saveTest() {
         // gwt 패턴
         // given : 테스트에 주어질 데이터
-        Person p = new Person(200, "이백이", 19);
+        Person p = new Person(1000, "천천이", 19);
 
         // when : 테스트 상황
         int result = springJdbc.save(p);

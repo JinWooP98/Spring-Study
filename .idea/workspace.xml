@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07ab9910-d0fd-4bc4-a2e4-171797eb3ead" name="변경" comment="spring mvc 요청처리 7">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/database/chap01/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/database/chap01/SpringJdbc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/study/springstudy/database/chap01/SpringJdbcTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/80ad5c52-e151-47eb-af74-a8fec272ea4a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/80ad5c52-e151-47eb-af74-a8fec272ea4a.xml" afterDir="false" />
+    <list default="true" id="07ab9910-d0fd-4bc4-a2e4-171797eb3ead" name="변경" comment="spring mvc - spring jdbc">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/repository/ScoreSpringJdbcRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/database/chap01/SpringJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/database/chap01/SpringJdbc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/repository/ScoreJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/repository/ScoreJdbcRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/study/springstudy/database/chap01/SpringJdbcTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/study/springstudy/database/chap01/SpringJdbcTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,8 +58,8 @@
         <option value="Interface" />
         <option value="Enum" />
         <option value="jsp template" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -167,7 +165,7 @@
       <recent name="com.study.springstudy.webservlet.chap02.v2" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SpringJdbcTest.findeOneTest">
+  <component name="RunManager" selected="Spring Boot.Main">
     <configuration name="SpringJdbcTest.deleteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springstudy.test" />
       <extension name="coverage">
@@ -257,9 +255,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SpringJdbcTest.saveTest" />
         <item itemvalue="JUnit.SpringJdbcTest.findeOneTest" />
         <item itemvalue="JUnit.SpringJdbcTest.findAllTest" />
-        <item itemvalue="JUnit.SpringJdbcTest.saveTest" />
         <item itemvalue="JUnit.SpringJdbcTest.updateTest" />
         <item itemvalue="JUnit.SpringJdbcTest.deleteTest" />
       </list>
@@ -286,7 +284,7 @@
       <workItem from="1715817808855" duration="26557000" />
       <workItem from="1715848545726" duration="297000" />
       <workItem from="1715904140880" duration="3643000" />
-      <workItem from="1715908529406" duration="8960000" />
+      <workItem from="1715908529406" duration="10940000" />
     </task>
     <task id="LOCAL-00001" summary="# initial commit &amp; SOLID 개념 학습">
       <option name="closed" value="true" />
@@ -400,7 +398,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715911116499</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="spring mvc - spring jdbc">
+      <option name="closed" value="true" />
+      <created>1715917632828</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1715917632828</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,6 +424,7 @@
     <MESSAGE value="spring mvc 요청처리 5 &amp; DB 연결" />
     <MESSAGE value="spring mvc 요청처리 6" />
     <MESSAGE value="spring mvc 요청처리 7" />
-    <option name="LAST_COMMIT_MESSAGE" value="spring mvc 요청처리 7" />
+    <MESSAGE value="spring mvc - spring jdbc" />
+    <option name="LAST_COMMIT_MESSAGE" value="spring mvc - spring jdbc" />
   </component>
 </project>
