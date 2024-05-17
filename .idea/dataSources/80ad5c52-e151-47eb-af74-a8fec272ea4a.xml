@@ -1401,7 +1401,7 @@
       <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
     <schema id="511" parent="1" name="spring5">
-      <LastIntrospectionLocalTimestamp>2024-05-17.02:42:41</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-05-17.05:38:02</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="512" parent="1" name="sys">
@@ -1423,114 +1423,158 @@
     <user id="518" parent="1" name="root">
       <Host>localhost</Host>
     </user>
-    <table id="519" parent="511" name="tbl_dancer">
+    <table id="519" parent="511" name="tbl_board">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="520" parent="511" name="tbl_person">
+    <table id="520" parent="511" name="tbl_dancer">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="521" parent="511" name="tbl_score">
+    <table id="521" parent="511" name="tbl_person">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <column id="522" parent="519" name="id">
+    <table id="522" parent="511" name="tbl_score">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <column id="523" parent="519" name="board_no">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>int(8)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="524" parent="519" name="title">
+      <DasType>varchar(200)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="525" parent="519" name="content">
+      <DasType>text|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="526" parent="519" name="writer">
+      <DasType>varchar(100)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="527" parent="519" name="view_count">
+      <DasType>int(8)|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>5</Position>
+    </column>
+    <column id="528" parent="519" name="reg_date_time">
+      <DasType>datetime|0s</DasType>
+      <DefaultExpression>current_timestamp()</DefaultExpression>
+      <Position>6</Position>
+    </column>
+    <index id="529" parent="519" name="PRIMARY">
+      <ColNames>board_no</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="530" parent="519" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="531" parent="520" name="id">
       <AutoIncrement>10</AutoIncrement>
       <DasType>int(8)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="523" parent="519" name="name">
+    <column id="532" parent="520" name="name">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="524" parent="519" name="crew_name">
+    <column id="533" parent="520" name="crew_name">
       <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="525" parent="519" name="dance_level">
+    <column id="534" parent="520" name="dance_level">
       <DasType>varchar(50)|0s</DasType>
       <Position>4</Position>
     </column>
-    <index id="526" parent="519" name="PRIMARY">
+    <index id="535" parent="520" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="527" parent="519" name="PRIMARY">
+    <key id="536" parent="520" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="528" parent="520" name="id">
+    <column id="537" parent="521" name="id">
       <DasType>int(6)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="529" parent="520" name="person_name">
+    <column id="538" parent="521" name="person_name">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="530" parent="520" name="person_age">
+    <column id="539" parent="521" name="person_age">
       <DasType>int(3)|0s</DasType>
       <Position>3</Position>
     </column>
-    <index id="531" parent="520" name="PRIMARY">
+    <index id="540" parent="521" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="532" parent="520" name="PRIMARY">
+    <key id="541" parent="521" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="533" parent="521" name="stu_num">
-      <AutoIncrement>12</AutoIncrement>
+    <column id="542" parent="522" name="stu_num">
+      <AutoIncrement>13</AutoIncrement>
       <DasType>int(8)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="534" parent="521" name="stu_name">
+    <column id="543" parent="522" name="stu_name">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="535" parent="521" name="kor">
+    <column id="544" parent="522" name="kor">
       <DasType>int(3)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="536" parent="521" name="eng">
+    <column id="545" parent="522" name="eng">
       <DasType>int(3)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="537" parent="521" name="math">
+    <column id="546" parent="522" name="math">
       <DasType>int(3)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="538" parent="521" name="total">
+    <column id="547" parent="522" name="total">
       <DasType>int(3)|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="539" parent="521" name="average">
+    <column id="548" parent="522" name="average">
       <DasType>float(5,2 digit)|0s</DasType>
       <Position>7</Position>
     </column>
-    <column id="540" parent="521" name="grade">
+    <column id="549" parent="522" name="grade">
       <DasType>char(1)|0s</DasType>
       <Position>8</Position>
     </column>
-    <index id="541" parent="521" name="PRIMARY">
+    <index id="550" parent="522" name="PRIMARY">
       <ColNames>stu_num</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="542" parent="521" name="PRIMARY">
+    <key id="551" parent="522" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
