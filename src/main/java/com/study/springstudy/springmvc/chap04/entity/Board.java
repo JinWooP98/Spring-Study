@@ -1,6 +1,6 @@
 package com.study.springstudy.springmvc.chap04.entity;
 
-import com.study.springstudy.springmvc.chap04.dto.BoardPostDto;
+import com.study.springstudy.springmvc.chap04.dto.BoardRequestDto;
 import lombok.*;
 
 import java.sql.ResultSet;
@@ -43,7 +43,7 @@ public class Board {
         this.regDateTime = rs.getTimestamp("reg_date_time").toLocalDateTime();
     }
 
-    public Board(BoardPostDto bpd) {
+    public Board(BoardRequestDto bpd) {
         this.title = bpd.getTitle();
         this.content = bpd.getContent();
         this.writer = bpd.getWriter();

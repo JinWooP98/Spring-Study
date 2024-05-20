@@ -2,14 +2,19 @@ package com.study.springstudy.springmvc.chap04.repository;
 
 import com.study.springstudy.springmvc.chap04.entity.Board;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 @Repository
 @RequiredArgsConstructor
-public class BoardSpringJdbcRepository implements BoardRepository{
+// 구현체는 관례적으로 끝에 Impl 을 붙인다.
+public class BoardSpringJdbcRepositoryImpl implements BoardRepository{
 
     private final JdbcTemplate template;
 
@@ -21,12 +26,11 @@ public class BoardSpringJdbcRepository implements BoardRepository{
 
     @Override
     public Board findOne(int boardNo) {
-        updateViewCount(boardNo);
         String sql = "SELECT * FROM tbl_board WHERE board_no = ?";
         return template.queryForObject(sql, (rs, n) -> new Board(rs), boardNo);
     }
 
-    private void updateViewCount(int bno) {
+    public void updateViewCount(int bno) {
         String sql = "UPDATE tbl_board SET view_count = view_count + 1 WHERE board_no = ?";
         template.update(sql, bno);
     }

@@ -5,6 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Web Study</title>
+    <style>
+    body {
+        background: url('/assets/css/img/B_SuccessModal.png') no-repeat center/cover;
+    }
+    </style>
 </head>
 <body>
 <h1>hello!!! JSP</h1>
@@ -17,5 +22,7 @@
 <a href="/chap02/v5/join">회원가입하기(front v5)</a> <br>
 <h1>=======================================================</h1>
 <a href="/score/list">성적정보 관리 프로그램</a> <br>
+<h1>=======================================================</h1>
+<a href="/board/list">게시물 관리 프로그램</a>
 </body>
 </html>
