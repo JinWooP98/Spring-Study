@@ -10,6 +10,7 @@ package com.study.springstudy.springmvc.chap03.service;
     Controller -> Service -> Repository
  */
 
+import com.study.springstudy.springmvc.chap03.dto.ScoreDetailResponseDto;
 import com.study.springstudy.springmvc.chap03.dto.ScoreListResponseDto;
 import com.study.springstudy.springmvc.chap03.dto.ScorePostDto;
 import com.study.springstudy.springmvc.chap03.entity.Score;
@@ -48,8 +49,13 @@ public class ScoreService {
     }
 
     // 개별조회 중간처리
-    public Score retrieve(long stuNum) {
-        return repository.findOne(stuNum);
+    public ScoreDetailResponseDto retrieve(long stuNum) {
+        Score score = repository.findOne(stuNum);
+        int[] result = repository.findRankByStuNum(stuNum);
+        ScoreDetailResponseDto dto = new ScoreDetailResponseDto(score, result[0], result[1]);
+        return dto;
     }
+
+
 
 }

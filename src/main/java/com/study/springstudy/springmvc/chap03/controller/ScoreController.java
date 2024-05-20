@@ -1,5 +1,6 @@
 package com.study.springstudy.springmvc.chap03.controller;
 
+import com.study.springstudy.springmvc.chap03.dto.ScoreDetailResponseDto;
 import com.study.springstudy.springmvc.chap03.dto.ScoreListResponseDto;
 import com.study.springstudy.springmvc.chap03.dto.ScorePostDto;
 import com.study.springstudy.springmvc.chap03.entity.Score;
@@ -86,18 +87,21 @@ public class ScoreController {
         // 1. 상제조회를 원하는 학번을 읽기
 
         // 2. DB에 상세조회 요청
-        Score score = service.retrieve(stuNum);
+//        Score score = repository.findOne(stuNum);
 
         // 3. DB에서 조회한 회원정보 JSP에게 전달
 
-        model.addAttribute("s", score);
-
+//        model.addAttribute("s", score);
 
         // 4. rank 조회
-        int[] result = repository.findRankByStuNum(stuNum);
-//        System.out.println("rank = " + rank);
-        model.addAttribute("rank", result[0]);
-        model.addAttribute("count", result[1]);
+//        int[] result = repository.findRankByStuNum(stuNum);
+//        model.addAttribute("rank", result[0]);
+//        model.addAttribute("count", result[1]);
+
+//        ScoreDetailResponseDto dto = new ScoreDetailResponseDto(score, result[0], result[1]);
+
+        ScoreDetailResponseDto dto = service.retrieve(stuNum);
+        model.addAttribute("s", dto);
 
 
         return "score/score-detail";
