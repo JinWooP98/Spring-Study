@@ -27,6 +27,10 @@ public interface ScoreRepository {
         return false;
     }
 
+    // 저장소에서 국영수 점수 수정하기
+    default boolean updateScore(Score s) {
+        return false;
+    }
     void oderBy(String option);
 
 

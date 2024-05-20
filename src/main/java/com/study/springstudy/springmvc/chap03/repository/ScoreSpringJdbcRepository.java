@@ -82,5 +82,12 @@ public class ScoreSpringJdbcRepository implements ScoreRepository {
 
     }
 
-
+    @Override
+    public boolean updateScore(Score s) {
+        String sql = "UPDATE tbl_score " +
+                "SET kor = ?, eng = ?, math = ?, average = ?, total = ?, grade = ? " +
+                "WHERE stu_num = ?";
+        return template.update(sql, s.getKor(), s.getEng(), s.getMath(), s.getAverage(), s.getTotal(), s.getGrade().toString()
+        ,s.getStuNum()) == 1;
+    }
 }
