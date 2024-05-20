@@ -1,9 +1,11 @@
 package com.study.springstudy.springmvc.chap03.controller;
 
+import com.study.springstudy.springmvc.chap03.dto.ScoreListResponseDto;
 import com.study.springstudy.springmvc.chap03.dto.ScorePostDto;
 import com.study.springstudy.springmvc.chap03.entity.Score;
 import com.study.springstudy.springmvc.chap03.repository.ScoreJdbcRepository;
 import com.study.springstudy.springmvc.chap03.repository.ScoreRepository;
+import com.study.springstudy.springmvc.chap03.service.ScoreService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/score")
@@ -37,6 +40,7 @@ public class ScoreController {
 
     // 의존객체 설정
     private final ScoreRepository repository;
+    private final ScoreService service;
 
 //    @Autowired
 //    public ScoreController(ScoreRepository repository) {
@@ -48,10 +52,9 @@ public class ScoreController {
     public String list(@RequestParam(defaultValue = "num") String sort, Model model) {
         System.out.println("/score/list : GET!");
 
-        List<Score> scoreList = repository.findAll(sort);
-
+        List<ScoreListResponseDto> dtos = service.getList(sort);
 //        System.out.println("scoreList = " + scoreList);
-        model.addAttribute("sList", scoreList);
+        model.addAttribute("sList", dtos);
 
         return "score/score-list";
     }
@@ -62,8 +65,7 @@ public class ScoreController {
         System.out.println("scorePostDto = " + scorePostDto);
 
         // 데이터베이스에 저장
-        Score score = new Score(scorePostDto);
-        repository.save(score);
+        service.insert(scorePostDto);
         // 다시 조회로 돌아가야 저장된 데이터를 볼 수 있음
         // 포워딩이 아닌 리다이렉트로 재요청을 주어야
         return "redirect:/score/list";
@@ -72,7 +74,7 @@ public class ScoreController {
     @GetMapping("/remove")
     public String remove(long stuNum) {
 
-        repository.remove(stuNum);
+        service.deleteScore(stuNum);
 
         return "redirect:/score/list";
     }
@@ -84,7 +86,7 @@ public class ScoreController {
         // 1. 상제조회를 원하는 학번을 읽기
 
         // 2. DB에 상세조회 요청
-        Score score = repository.findOne(stuNum);
+        Score score = service.retrieve(stuNum);
 
         // 3. DB에서 조회한 회원정보 JSP에게 전달
 

@@ -43,7 +43,7 @@ public class ScoreSpringJdbcRepository implements ScoreRepository {
 
     @Override
     public List<Score> findAll(String sort) {
-        String sql = "SELECT * FROM tbl_score" + orderByStatement(sort);
+        String sql = "SELECT * FROM tbl_score " + orderByStatement(sort);
         return template.query(sql, (rs, n) -> new Score(rs));
 
     }
