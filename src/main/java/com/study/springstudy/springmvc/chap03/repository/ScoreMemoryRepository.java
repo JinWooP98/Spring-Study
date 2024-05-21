@@ -32,6 +32,5 @@ public class ScoreMemoryRepository implements ScoreRepository {
 
     @Override
     public void oderBy(String option) {
-
     }
 }

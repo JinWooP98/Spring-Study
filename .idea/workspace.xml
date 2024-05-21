@@ -4,16 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07ab9910-d0fd-4bc4-a2e4-171797eb3ead" name="변경" comment="spring mvc - controller-service-repository 2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/dto/ScoreModifyRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/score/score-modify.jsp" afterDir="false" />
+    <list default="true" id="07ab9910-d0fd-4bc4-a2e4-171797eb3ead" name="변경" comment="spring mvc - controller-service-repository 3">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/database/chap02/PersonMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/dto/RankDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/mapper/ScoreMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/PersonMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/ScoreMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/study/springstudy/database/chap02/PersonMapperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/study/springstudy/springmvc/chap03/mapper/ScoreMapperTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/controller/ScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/controller/ScoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/dto/ScoreDetailResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/dto/ScoreDetailResponseDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/entity/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/entity/Score.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/repository/ScoreRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/repository/ScoreRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/repository/ScoreSpringJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/repository/ScoreSpringJdbcRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/repository/ScoreMemoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/repository/ScoreMemoryRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/service/ScoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/service/ScoreService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/score/score-detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/score/score-detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,51 +99,60 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.HotelDiTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.HotelTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.springstudy [:Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.springstudy 빌드.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BoardControllerTest.deleteTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BoardControllerTest.registerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.HotelDiTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.HotelSpringDITest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SpringJdbcTest.deleteTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SpringJdbcTest.findAllTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SpringJdbcTest.findeOneTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SpringJdbcTest.saveTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SpringJdbcTest.updateTest.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Main.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/qwdk0/Desktop/choongang/springstudy/src/main/java/com/study/springstudy/core/chap04&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/qwdk0/Desktop/choongang/springstudy/src/main/java/com/study/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.HotelDiTest.executor": "Run",
+    "Gradle.HotelTest.executor": "Run",
+    "Gradle.springstudy [:Main.main()].executor": "Run",
+    "Gradle.springstudy 빌드.executor": "Run",
+    "JUnit.BoardControllerTest.deleteTest.executor": "Run",
+    "JUnit.BoardControllerTest.registerTest.executor": "Run",
+    "JUnit.HotelDiTest.executor": "Run",
+    "JUnit.HotelSpringDITest.executor": "Run",
+    "JUnit.PersonMapperTest.deleteTest.executor": "Run",
+    "JUnit.PersonMapperTest.findAllTest.executor": "Run",
+    "JUnit.PersonMapperTest.findNamesTest.executor": "Run",
+    "JUnit.PersonMapperTest.findOneTest.executor": "Run",
+    "JUnit.PersonMapperTest.saveTest.executor": "Run",
+    "JUnit.PersonMapperTest.updateTest.executor": "Run",
+    "JUnit.ScoreMapperTest.findAllTest.executor": "Run",
+    "JUnit.ScoreMapperTest.findOneTest.executor": "Run",
+    "JUnit.ScoreMapperTest.rankTest.executor": "Run",
+    "JUnit.SpringJdbcTest.deleteTest.executor": "Run",
+    "JUnit.SpringJdbcTest.findAllTest.executor": "Run",
+    "JUnit.SpringJdbcTest.findeOneTest.executor": "Run",
+    "JUnit.SpringJdbcTest.saveTest.executor": "Run",
+    "JUnit.SpringJdbcTest.updateTest.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.Main.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/qwdk0/Desktop/choongang/springstudy/src/main/java/com/study/springstudy/core/chap04",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/qwdk0/Desktop/choongang/springstudy/src/main/java/com/study/Main.java",
+    "project.structure.last.edited": "모듈",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "editing.templates",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql_aurora_aws&quot;,
-      &quot;mariadb&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql_aurora_aws",
+      "mariadb"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.study.springstudy.database.chap01" />
@@ -156,14 +171,16 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\qwdk0\Desktop\choongang\springstudy\src\main\resources\mappers" />
+      <recent name="C:\Users\qwdk0\Desktop\choongang\springstudy\src\main\resources" />
       <recent name="C:\Users\qwdk0\Desktop\choongang\springstudy\src\main\webapp\WEB-INF" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.study.springstudy.springmvc.chap03.mapper" />
+      <recent name="com.study.springstudy.database.chap02" />
       <recent name="com.study.springstudy.springmvc.chap04.controller" />
       <recent name="com.study.springstudy.database.chap01" />
       <recent name="com.study.springstudy.springmvc" />
-      <recent name="com.study.springstudy.core.chap04" />
-      <recent name="com.study.springstudy.chap03" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.study.springstudy.webservlet.chap02.v3.controller" />
@@ -172,81 +189,81 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Main">
-    <configuration name="BoardControllerTest.deleteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PersonMapperTest.findNamesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springstudy.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.study.springstudy.springmvc.chap04.controller.*" />
+          <option name="PATTERN" value="com.study.springstudy.database.chap02.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.study.springstudy.springmvc.chap04.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.study.springstudy.springmvc.chap04.controller.BoardControllerTest" />
-      <option name="METHOD_NAME" value="deleteTest" />
+      <option name="PACKAGE_NAME" value="com.study.springstudy.database.chap02" />
+      <option name="MAIN_CLASS_NAME" value="com.study.springstudy.database.chap02.PersonMapperTest" />
+      <option name="METHOD_NAME" value="findNamesTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BoardControllerTest.registerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PersonMapperTest.findOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springstudy.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.study.springstudy.springmvc.chap04.controller.*" />
+          <option name="PATTERN" value="com.study.springstudy.database.chap02.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.study.springstudy.springmvc.chap04.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.study.springstudy.springmvc.chap04.controller.BoardControllerTest" />
-      <option name="METHOD_NAME" value="registerTest" />
+      <option name="PACKAGE_NAME" value="com.study.springstudy.database.chap02" />
+      <option name="MAIN_CLASS_NAME" value="com.study.springstudy.database.chap02.PersonMapperTest" />
+      <option name="METHOD_NAME" value="findOneTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringJdbcTest.findAllTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ScoreMapperTest.findAllTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springstudy.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.study.springstudy.database.chap01.*" />
+          <option name="PATTERN" value="com.study.springstudy.springmvc.chap03.mapper.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.study.springstudy.database.chap01" />
-      <option name="MAIN_CLASS_NAME" value="com.study.springstudy.database.chap01.SpringJdbcTest" />
+      <option name="PACKAGE_NAME" value="com.study.springstudy.springmvc.chap03.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.study.springstudy.springmvc.chap03.mapper.ScoreMapperTest" />
       <option name="METHOD_NAME" value="findAllTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringJdbcTest.findeOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ScoreMapperTest.findOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springstudy.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.study.springstudy.database.chap01.*" />
+          <option name="PATTERN" value="com.study.springstudy.springmvc.chap03.mapper.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.study.springstudy.database.chap01" />
-      <option name="MAIN_CLASS_NAME" value="com.study.springstudy.database.chap01.SpringJdbcTest" />
-      <option name="METHOD_NAME" value="findeOneTest" />
+      <option name="PACKAGE_NAME" value="com.study.springstudy.springmvc.chap03.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.study.springstudy.springmvc.chap03.mapper.ScoreMapperTest" />
+      <option name="METHOD_NAME" value="findOneTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringJdbcTest.saveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ScoreMapperTest.rankTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springstudy.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.study.springstudy.database.chap01.*" />
+          <option name="PATTERN" value="com.study.springstudy.springmvc.chap03.mapper.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.study.springstudy.database.chap01" />
-      <option name="MAIN_CLASS_NAME" value="com.study.springstudy.database.chap01.SpringJdbcTest" />
-      <option name="METHOD_NAME" value="saveTest" />
+      <option name="PACKAGE_NAME" value="com.study.springstudy.springmvc.chap03.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.study.springstudy.springmvc.chap03.mapper.ScoreMapperTest" />
+      <option name="METHOD_NAME" value="rankTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -261,11 +278,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BoardControllerTest.deleteTest" />
-        <item itemvalue="JUnit.BoardControllerTest.registerTest" />
-        <item itemvalue="JUnit.SpringJdbcTest.saveTest" />
-        <item itemvalue="JUnit.SpringJdbcTest.findeOneTest" />
-        <item itemvalue="JUnit.SpringJdbcTest.findAllTest" />
+        <item itemvalue="JUnit.ScoreMapperTest.rankTest" />
+        <item itemvalue="JUnit.ScoreMapperTest.findOneTest" />
+        <item itemvalue="JUnit.ScoreMapperTest.findAllTest" />
+        <item itemvalue="JUnit.PersonMapperTest.findNamesTest" />
+        <item itemvalue="JUnit.PersonMapperTest.findOneTest" />
       </list>
     </recent_temporary>
   </component>
@@ -291,7 +308,8 @@
       <workItem from="1715848545726" duration="297000" />
       <workItem from="1715904140880" duration="3643000" />
       <workItem from="1715908529406" duration="22177000" />
-      <workItem from="1716163073511" duration="18047000" />
+      <workItem from="1716163073511" duration="18190000" />
+      <workItem from="1716250062945" duration="8968000" />
     </task>
     <task id="LOCAL-00001" summary="# initial commit &amp; SOLID 개념 학습">
       <option name="closed" value="true" />
@@ -453,7 +471,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716182255346</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="spring mvc - controller-service-repository 3">
+      <option name="closed" value="true" />
+      <created>1716185805865</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1716185805866</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,6 +503,7 @@
     <MESSAGE value="spring mvc - 실습 해설" />
     <MESSAGE value="spring mvc - controller-service-repository" />
     <MESSAGE value="spring mvc - controller-service-repository 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="spring mvc - controller-service-repository 2" />
+    <MESSAGE value="spring mvc - controller-service-repository 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="spring mvc - controller-service-repository 3" />
   </component>
 </project>
