@@ -4,7 +4,9 @@ import com.study.springstudy.springmvc.chap04.dto.BoardDetailResponseDto;
 import com.study.springstudy.springmvc.chap04.dto.BoardListResponseDto;
 import com.study.springstudy.springmvc.chap04.dto.BoardRequestDto;
 import com.study.springstudy.springmvc.chap04.entity.Board;
+import com.study.springstudy.springmvc.chap04.mapper.BoardMapper;
 import com.study.springstudy.springmvc.chap04.repository.BoardRepository;
+import com.study.springstudy.springmvc.chap04.service.BoardService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,25 +24,25 @@ import java.util.stream.Collectors;
 public class BoardController {
 
 
-    private final BoardRepository repository;
+    private final BoardService service;
     // 1. 목록 조회 요청 (/board/list : GET)
     @GetMapping("/list")
     public String list(Model model) {
 
         // 1. 데이터베이스로부터 게시글 목록 조회
-        List<Board> boardList = repository.findAll();
+//        List<Board> boardList = repository.findAll();
 
         // 2. 클라이언트에 데이터를 보내기전에 랜더링에 필요한 데이터만 추출하기
 
-        List<BoardListResponseDto> bList = boardList.stream()
-                .map(BoardListResponseDto::new).collect(Collectors.toList());
+//        List<BoardListResponseDto> bList = boardList.stream()
+//                .map(BoardListResponseDto::new).collect(Collectors.toList());
 //        List<BoardListResponseDto> bList = new ArrayList<>();
 //
 //        for (Board b : boardList) {
 //            BoardListResponseDto dto = new BoardListResponseDto(b);
 //            bList.add(dto);
 //        }
-
+        List<BoardListResponseDto> bList = service.getList();
         // 3. JSP파일에 해당 목록데이터를 보냄
         model.addAttribute("bList", bList);
 
@@ -57,9 +59,11 @@ public class BoardController {
     @PostMapping("/write")
     public String register(BoardRequestDto boardPostDto) {
 
-        Board board = boardPostDto.toEntity();
+//        Board board = boardPostDto.toEntity();
+//
+//        repository.save(board);
 
-        repository.save(board);
+        service.insert(boardPostDto);
 
         return "redirect:/board/list";
     }
@@ -68,16 +72,19 @@ public class BoardController {
     @GetMapping("/delete")
     public String delete(int bno) {
 
-        repository.delete(bno);
+        service.deleteBoard(bno);
 
         return "redirect:/board/list";
     }
     // 5. 게시글 상세 조회 요청 (/board/detail : GET)
     @GetMapping("/detail")
     public String detail(int bno, Model model) {
-        Board board = repository.findOne(bno);
-        if ( board != null) repository.updateViewCount(bno);
-        model.addAttribute("b", new BoardDetailResponseDto(board));
+//        Board board = repository.findOne(bno);
+//        if ( board != null) repository.updateViewCount(bno);
+
+        BoardDetailResponseDto board = service.retrieve(bno);
+
+        model.addAttribute("b", board);
 
         return "/board/detail";
     }
