@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07ab9910-d0fd-4bc4-a2e4-171797eb3ead" name="변경" comment="mybatis part1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/mapper/BoardMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/service/BoardService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/BoardMapper.xml" afterDir="false" />
+    <list default="true" id="07ab9910-d0fd-4bc4-a2e4-171797eb3ead" name="변경" comment="mybatis part2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/common/Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/common/PageMaker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/study/springstudy/springmvc/chap04/mapper/BoardMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/80ad5c52-e151-47eb-af74-a8fec272ea4a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/80ad5c52-e151-47eb-af74-a8fec272ea4a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/dto/BoardListResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/dto/BoardListResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/mapper/BoardMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/mapper/BoardMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/service/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/BoardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/BoardMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/list.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/list.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/list.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,9 +63,9 @@
       <list>
         <option value="Enum" />
         <option value="jsp template" />
+        <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
-        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -100,6 +103,7 @@
     "Gradle.springstudy 빌드.executor": "Run",
     "JUnit.BoardControllerTest.deleteTest.executor": "Run",
     "JUnit.BoardControllerTest.registerTest.executor": "Run",
+    "JUnit.BoardMapperTest.insertTest.executor": "Run",
     "JUnit.HotelDiTest.executor": "Run",
     "JUnit.HotelSpringDITest.executor": "Run",
     "JUnit.PersonMapperTest.deleteTest.executor": "Run",
@@ -169,11 +173,11 @@
       <recent name="C:\Users\qwdk0\Desktop\choongang\springstudy\src\main\webapp\WEB-INF" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.study.springstudy.springmvc.chap04.mapper" />
       <recent name="com.study.springstudy.springmvc.chap03.mapper" />
       <recent name="com.study.springstudy.database.chap02" />
       <recent name="com.study.springstudy.springmvc.chap04.controller" />
       <recent name="com.study.springstudy.database.chap01" />
-      <recent name="com.study.springstudy.springmvc" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.study.springstudy.webservlet.chap02.v3.controller" />
@@ -182,6 +186,22 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Main">
+    <configuration name="BoardMapperTest.insertTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springstudy.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.study.springstudy.springmvc.chap04.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.study.springstudy.springmvc.chap04.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.study.springstudy.springmvc.chap04.mapper.BoardMapperTest" />
+      <option name="METHOD_NAME" value="insertTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PersonMapperTest.findNamesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springstudy.test" />
       <extension name="coverage">
@@ -193,22 +213,6 @@
       <option name="PACKAGE_NAME" value="com.study.springstudy.database.chap02" />
       <option name="MAIN_CLASS_NAME" value="com.study.springstudy.database.chap02.PersonMapperTest" />
       <option name="METHOD_NAME" value="findNamesTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PersonMapperTest.findOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springstudy.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.study.springstudy.database.chap02.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.study.springstudy.database.chap02" />
-      <option name="MAIN_CLASS_NAME" value="com.study.springstudy.database.chap02.PersonMapperTest" />
-      <option name="METHOD_NAME" value="findOneTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -271,11 +275,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BoardMapperTest.insertTest" />
         <item itemvalue="JUnit.ScoreMapperTest.rankTest" />
         <item itemvalue="JUnit.ScoreMapperTest.findOneTest" />
         <item itemvalue="JUnit.ScoreMapperTest.findAllTest" />
         <item itemvalue="JUnit.PersonMapperTest.findNamesTest" />
-        <item itemvalue="JUnit.PersonMapperTest.findOneTest" />
       </list>
     </recent_temporary>
   </component>
@@ -302,7 +306,8 @@
       <workItem from="1715904140880" duration="3643000" />
       <workItem from="1715908529406" duration="22177000" />
       <workItem from="1716163073511" duration="18190000" />
-      <workItem from="1716250062945" duration="14317000" />
+      <workItem from="1716250062945" duration="14579000" />
+      <workItem from="1716336376124" duration="5556000" />
     </task>
     <task id="LOCAL-00001" summary="# initial commit &amp; SOLID 개념 학습">
       <option name="closed" value="true" />
@@ -480,7 +485,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716259954296</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="mybatis part2">
+      <option name="closed" value="true" />
+      <created>1716274362492</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1716274362493</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,6 +519,7 @@
     <MESSAGE value="spring mvc - controller-service-repository 2" />
     <MESSAGE value="spring mvc - controller-service-repository 3" />
     <MESSAGE value="mybatis part1" />
-    <option name="LAST_COMMIT_MESSAGE" value="mybatis part1" />
+    <MESSAGE value="mybatis part2" />
+    <option name="LAST_COMMIT_MESSAGE" value="mybatis part2" />
   </component>
 </project>
