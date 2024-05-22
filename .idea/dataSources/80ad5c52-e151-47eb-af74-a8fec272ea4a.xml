@@ -7,199 +7,199 @@
       <Grants>|root||root||ALTER|G
 |root||root|127.0.0.1|ALTER|G
 |root||root|::1|ALTER|G
-|root||root|desktop-vaqpb3v|ALTER|G
+|root||root|desktop-0l11ub0|ALTER|G
 |root||root|localhost|ALTER|G
 |root||root||ALTER ROUTINE|G
 |root||root|127.0.0.1|ALTER ROUTINE|G
 |root||root|::1|ALTER ROUTINE|G
-|root||root|desktop-vaqpb3v|ALTER ROUTINE|G
+|root||root|desktop-0l11ub0|ALTER ROUTINE|G
 |root||root|localhost|ALTER ROUTINE|G
 |root||root||BINLOG ADMIN|G
 |root||root|127.0.0.1|BINLOG ADMIN|G
 |root||root|::1|BINLOG ADMIN|G
-|root||root|desktop-vaqpb3v|BINLOG ADMIN|G
+|root||root|desktop-0l11ub0|BINLOG ADMIN|G
 |root||root|localhost|BINLOG ADMIN|G
 |root||root||BINLOG MONITOR|G
 |root||root|127.0.0.1|BINLOG MONITOR|G
 |root||root|::1|BINLOG MONITOR|G
-|root||root|desktop-vaqpb3v|BINLOG MONITOR|G
+|root||root|desktop-0l11ub0|BINLOG MONITOR|G
 |root||root|localhost|BINLOG MONITOR|G
 |root||root||BINLOG REPLAY|G
 |root||root|127.0.0.1|BINLOG REPLAY|G
 |root||root|::1|BINLOG REPLAY|G
-|root||root|desktop-vaqpb3v|BINLOG REPLAY|G
+|root||root|desktop-0l11ub0|BINLOG REPLAY|G
 |root||root|localhost|BINLOG REPLAY|G
 |root||root||CONNECTION ADMIN|G
 |root||root|127.0.0.1|CONNECTION ADMIN|G
 |root||root|::1|CONNECTION ADMIN|G
-|root||root|desktop-vaqpb3v|CONNECTION ADMIN|G
+|root||root|desktop-0l11ub0|CONNECTION ADMIN|G
 |root||root|localhost|CONNECTION ADMIN|G
 |root||root||CREATE|G
 |root||root|127.0.0.1|CREATE|G
 |root||root|::1|CREATE|G
-|root||root|desktop-vaqpb3v|CREATE|G
+|root||root|desktop-0l11ub0|CREATE|G
 |root||root|localhost|CREATE|G
 |root||root||CREATE ROUTINE|G
 |root||root|127.0.0.1|CREATE ROUTINE|G
 |root||root|::1|CREATE ROUTINE|G
-|root||root|desktop-vaqpb3v|CREATE ROUTINE|G
+|root||root|desktop-0l11ub0|CREATE ROUTINE|G
 |root||root|localhost|CREATE ROUTINE|G
 |root||root||CREATE TABLESPACE|G
 |root||root|127.0.0.1|CREATE TABLESPACE|G
 |root||root|::1|CREATE TABLESPACE|G
-|root||root|desktop-vaqpb3v|CREATE TABLESPACE|G
+|root||root|desktop-0l11ub0|CREATE TABLESPACE|G
 |root||root|localhost|CREATE TABLESPACE|G
 |root||root||CREATE TEMPORARY TABLES|G
 |root||root|127.0.0.1|CREATE TEMPORARY TABLES|G
 |root||root|::1|CREATE TEMPORARY TABLES|G
-|root||root|desktop-vaqpb3v|CREATE TEMPORARY TABLES|G
+|root||root|desktop-0l11ub0|CREATE TEMPORARY TABLES|G
 |root||root|localhost|CREATE TEMPORARY TABLES|G
 |root||root||CREATE USER|G
 |root||root|127.0.0.1|CREATE USER|G
 |root||root|::1|CREATE USER|G
-|root||root|desktop-vaqpb3v|CREATE USER|G
+|root||root|desktop-0l11ub0|CREATE USER|G
 |root||root|localhost|CREATE USER|G
 |root||root||CREATE VIEW|G
 |root||root|127.0.0.1|CREATE VIEW|G
 |root||root|::1|CREATE VIEW|G
-|root||root|desktop-vaqpb3v|CREATE VIEW|G
+|root||root|desktop-0l11ub0|CREATE VIEW|G
 |root||root|localhost|CREATE VIEW|G
 |root||root||DELETE|G
 |root||root|127.0.0.1|DELETE|G
 |root||root|::1|DELETE|G
-|root||root|desktop-vaqpb3v|DELETE|G
+|root||root|desktop-0l11ub0|DELETE|G
 |root||root|localhost|DELETE|G
 |root||root||DELETE HISTORY|G
 |root||root|127.0.0.1|DELETE HISTORY|G
 |root||root|::1|DELETE HISTORY|G
-|root||root|desktop-vaqpb3v|DELETE HISTORY|G
+|root||root|desktop-0l11ub0|DELETE HISTORY|G
 |root||root|localhost|DELETE HISTORY|G
 |root||root||DROP|G
 |root||root|127.0.0.1|DROP|G
 |root||root|::1|DROP|G
-|root||root|desktop-vaqpb3v|DROP|G
+|root||root|desktop-0l11ub0|DROP|G
 |root||root|localhost|DROP|G
 |root||root||EVENT|G
 |root||root|127.0.0.1|EVENT|G
 |root||root|::1|EVENT|G
-|root||root|desktop-vaqpb3v|EVENT|G
+|root||root|desktop-0l11ub0|EVENT|G
 |root||root|localhost|EVENT|G
 |root||root||EXECUTE|G
 |root||root|127.0.0.1|EXECUTE|G
 |root||root|::1|EXECUTE|G
-|root||root|desktop-vaqpb3v|EXECUTE|G
+|root||root|desktop-0l11ub0|EXECUTE|G
 |root||root|localhost|EXECUTE|G
 |root||root||FEDERATED ADMIN|G
 |root||root|127.0.0.1|FEDERATED ADMIN|G
 |root||root|::1|FEDERATED ADMIN|G
-|root||root|desktop-vaqpb3v|FEDERATED ADMIN|G
+|root||root|desktop-0l11ub0|FEDERATED ADMIN|G
 |root||root|localhost|FEDERATED ADMIN|G
 |root||root||FILE|G
 |root||root|127.0.0.1|FILE|G
 |root||root|::1|FILE|G
-|root||root|desktop-vaqpb3v|FILE|G
+|root||root|desktop-0l11ub0|FILE|G
 |root||root|localhost|FILE|G
 |root||root||INDEX|G
 |root||root|127.0.0.1|INDEX|G
 |root||root|::1|INDEX|G
-|root||root|desktop-vaqpb3v|INDEX|G
+|root||root|desktop-0l11ub0|INDEX|G
 |root||root|localhost|INDEX|G
 |root||root||INSERT|G
 |root||root|127.0.0.1|INSERT|G
 |root||root|::1|INSERT|G
-|root||root|desktop-vaqpb3v|INSERT|G
+|root||root|desktop-0l11ub0|INSERT|G
 |root||root|localhost|INSERT|G
 |root||root||LOCK TABLES|G
 |root||root|127.0.0.1|LOCK TABLES|G
 |root||root|::1|LOCK TABLES|G
-|root||root|desktop-vaqpb3v|LOCK TABLES|G
+|root||root|desktop-0l11ub0|LOCK TABLES|G
 |root||root|localhost|LOCK TABLES|G
 |root||root||PROCESS|G
 |root||root|127.0.0.1|PROCESS|G
 |root||root|::1|PROCESS|G
-|root||root|desktop-vaqpb3v|PROCESS|G
+|root||root|desktop-0l11ub0|PROCESS|G
 |root||root|localhost|PROCESS|G
 |root||root||READ_ONLY ADMIN|G
 |root||root|127.0.0.1|READ_ONLY ADMIN|G
 |root||root|::1|READ_ONLY ADMIN|G
-|root||root|desktop-vaqpb3v|READ_ONLY ADMIN|G
+|root||root|desktop-0l11ub0|READ_ONLY ADMIN|G
 |root||root|localhost|READ_ONLY ADMIN|G
 |root||root||REFERENCES|G
 |root||root|127.0.0.1|REFERENCES|G
 |root||root|::1|REFERENCES|G
-|root||root|desktop-vaqpb3v|REFERENCES|G
+|root||root|desktop-0l11ub0|REFERENCES|G
 |root||root|localhost|REFERENCES|G
 |root||root||RELOAD|G
 |root||root|127.0.0.1|RELOAD|G
 |root||root|::1|RELOAD|G
-|root||root|desktop-vaqpb3v|RELOAD|G
+|root||root|desktop-0l11ub0|RELOAD|G
 |root||root|localhost|RELOAD|G
 |root||root||REPLICATION MASTER ADMIN|G
 |root||root|127.0.0.1|REPLICATION MASTER ADMIN|G
 |root||root|::1|REPLICATION MASTER ADMIN|G
-|root||root|desktop-vaqpb3v|REPLICATION MASTER ADMIN|G
+|root||root|desktop-0l11ub0|REPLICATION MASTER ADMIN|G
 |root||root|localhost|REPLICATION MASTER ADMIN|G
 |root||root||REPLICATION SLAVE|G
 |root||root|127.0.0.1|REPLICATION SLAVE|G
 |root||root|::1|REPLICATION SLAVE|G
-|root||root|desktop-vaqpb3v|REPLICATION SLAVE|G
+|root||root|desktop-0l11ub0|REPLICATION SLAVE|G
 |root||root|localhost|REPLICATION SLAVE|G
 |root||root||REPLICATION SLAVE ADMIN|G
 |root||root|127.0.0.1|REPLICATION SLAVE ADMIN|G
 |root||root|::1|REPLICATION SLAVE ADMIN|G
-|root||root|desktop-vaqpb3v|REPLICATION SLAVE ADMIN|G
+|root||root|desktop-0l11ub0|REPLICATION SLAVE ADMIN|G
 |root||root|localhost|REPLICATION SLAVE ADMIN|G
 |root||root||SELECT|G
 |root||root|127.0.0.1|SELECT|G
 |root||root|::1|SELECT|G
-|root||root|desktop-vaqpb3v|SELECT|G
+|root||root|desktop-0l11ub0|SELECT|G
 |root||root|localhost|SELECT|G
 |root||root||SET USER|G
 |root||root|127.0.0.1|SET USER|G
 |root||root|::1|SET USER|G
-|root||root|desktop-vaqpb3v|SET USER|G
+|root||root|desktop-0l11ub0|SET USER|G
 |root||root|localhost|SET USER|G
 |root||root||SHOW DATABASES|G
 |root||root|127.0.0.1|SHOW DATABASES|G
 |root||root|::1|SHOW DATABASES|G
-|root||root|desktop-vaqpb3v|SHOW DATABASES|G
+|root||root|desktop-0l11ub0|SHOW DATABASES|G
 |root||root|localhost|SHOW DATABASES|G
 |root||root||SHOW VIEW|G
 |root||root|127.0.0.1|SHOW VIEW|G
 |root||root|::1|SHOW VIEW|G
-|root||root|desktop-vaqpb3v|SHOW VIEW|G
+|root||root|desktop-0l11ub0|SHOW VIEW|G
 |root||root|localhost|SHOW VIEW|G
 |root||root||SHUTDOWN|G
 |root||root|127.0.0.1|SHUTDOWN|G
 |root||root|::1|SHUTDOWN|G
-|root||root|desktop-vaqpb3v|SHUTDOWN|G
+|root||root|desktop-0l11ub0|SHUTDOWN|G
 |root||root|localhost|SHUTDOWN|G
 |root||root||SLAVE MONITOR|G
 |root||root|127.0.0.1|SLAVE MONITOR|G
 |root||root|::1|SLAVE MONITOR|G
-|root||root|desktop-vaqpb3v|SLAVE MONITOR|G
+|root||root|desktop-0l11ub0|SLAVE MONITOR|G
 |root||root|localhost|SLAVE MONITOR|G
 |root||root||SUPER|G
 |root||root|127.0.0.1|SUPER|G
 |root||root|::1|SUPER|G
-|root||root|desktop-vaqpb3v|SUPER|G
+|root||root|desktop-0l11ub0|SUPER|G
 |root||root|localhost|SUPER|G
 |root||root||TRIGGER|G
 |root||root|127.0.0.1|TRIGGER|G
 |root||root|::1|TRIGGER|G
-|root||root|desktop-vaqpb3v|TRIGGER|G
+|root||root|desktop-0l11ub0|TRIGGER|G
 |root||root|localhost|TRIGGER|G
 |root||root||UPDATE|G
 |root||root|127.0.0.1|UPDATE|G
 |root||root|::1|UPDATE|G
-|root||root|desktop-vaqpb3v|UPDATE|G
+|root||root|desktop-0l11ub0|UPDATE|G
 |root||root|localhost|UPDATE|G
 |root||root||grant option|G
 |root||root|127.0.0.1|grant option|G
 |root||root|::1|grant option|G
-|root||root|desktop-vaqpb3v|grant option|G
+|root||root|desktop-0l11ub0|grant option|G
 |root||root|localhost|grant option|G</Grants>
-      <ServerVersion>10.11.7</ServerVersion>
+      <ServerVersion>10.11.8</ServerVersion>
     </root>
     <collation id="2" parent="1" name="armscii8_bin">
       <Charset>armscii8</Charset>
@@ -1401,180 +1401,76 @@
       <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
     <schema id="511" parent="1" name="spring5">
-      <LastIntrospectionLocalTimestamp>2024-05-22.00:08:10</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-05-22.03:17:34</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="512" parent="1" name="sys">
       <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
-    <user id="513" parent="1" name="mariadb.sys">
+    <schema id="513" parent="1" name="tbl_person">
+      <LastIntrospectionLocalTimestamp>2024-05-22.03:16:51</LastIntrospectionLocalTimestamp>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <schema id="514" parent="1" name="tbl_score">
+      <LastIntrospectionLocalTimestamp>2024-05-22.03:16:51</LastIntrospectionLocalTimestamp>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <user id="515" parent="1" name="mariadb.sys">
       <Host>localhost</Host>
     </user>
-    <user id="514" parent="1" name="root"/>
-    <user id="515" parent="1" name="root">
+    <user id="516" parent="1" name="root"/>
+    <user id="517" parent="1" name="root">
       <Host>127.0.0.1</Host>
     </user>
-    <user id="516" parent="1" name="root">
+    <user id="518" parent="1" name="root">
       <Host>::1</Host>
     </user>
-    <user id="517" parent="1" name="root">
-      <Host>desktop-vaqpb3v</Host>
+    <user id="519" parent="1" name="root">
+      <Host>desktop-0l11ub0</Host>
     </user>
-    <user id="518" parent="1" name="root">
+    <user id="520" parent="1" name="root">
       <Host>localhost</Host>
     </user>
-    <table id="519" parent="511" name="tbl_board">
+    <table id="521" parent="511" name="tbl_board">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="520" parent="511" name="tbl_dancer">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </table>
-    <table id="521" parent="511" name="tbl_person">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </table>
-    <table id="522" parent="511" name="tbl_score">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </table>
-    <column id="523" parent="519" name="board_no">
-      <AutoIncrement>1</AutoIncrement>
+    <column id="522" parent="521" name="board_no">
+      <AutoIncrement>301</AutoIncrement>
       <DasType>int(8)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="524" parent="519" name="title">
+    <column id="523" parent="521" name="title">
       <DasType>varchar(200)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="525" parent="519" name="content">
+    <column id="524" parent="521" name="content">
       <DasType>text|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="526" parent="519" name="writer">
+    <column id="525" parent="521" name="writer">
       <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="527" parent="519" name="view_count">
+    <column id="526" parent="521" name="view_count">
       <DasType>int(8)|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>5</Position>
     </column>
-    <column id="528" parent="519" name="reg_date_time">
+    <column id="527" parent="521" name="reg_date_time">
       <DasType>datetime|0s</DasType>
       <DefaultExpression>current_timestamp()</DefaultExpression>
       <Position>6</Position>
     </column>
-    <index id="529" parent="519" name="PRIMARY">
+    <index id="528" parent="521" name="PRIMARY">
       <ColNames>board_no</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="530" parent="519" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="531" parent="520" name="id">
-      <AutoIncrement>10</AutoIncrement>
-      <DasType>int(8)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="532" parent="520" name="name">
-      <DasType>varchar(255)|0s</DasType>
-      <Position>2</Position>
-    </column>
-    <column id="533" parent="520" name="crew_name">
-      <DasType>varchar(255)|0s</DasType>
-      <Position>3</Position>
-    </column>
-    <column id="534" parent="520" name="dance_level">
-      <DasType>varchar(50)|0s</DasType>
-      <Position>4</Position>
-    </column>
-    <index id="535" parent="520" name="PRIMARY">
-      <ColNames>id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="536" parent="520" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="537" parent="521" name="id">
-      <DasType>int(6)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="538" parent="521" name="person_name">
-      <DasType>varchar(255)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="539" parent="521" name="person_age">
-      <DasType>int(3)|0s</DasType>
-      <Position>3</Position>
-    </column>
-    <index id="540" parent="521" name="PRIMARY">
-      <ColNames>id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="541" parent="521" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="542" parent="522" name="stu_num">
-      <AutoIncrement>15</AutoIncrement>
-      <DasType>int(8)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="543" parent="522" name="stu_name">
-      <DasType>varchar(255)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="544" parent="522" name="kor">
-      <DasType>int(3)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-    </column>
-    <column id="545" parent="522" name="eng">
-      <DasType>int(3)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-    </column>
-    <column id="546" parent="522" name="math">
-      <DasType>int(3)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-    </column>
-    <column id="547" parent="522" name="total">
-      <DasType>int(3)|0s</DasType>
-      <Position>6</Position>
-    </column>
-    <column id="548" parent="522" name="average">
-      <DasType>float(5,2 digit)|0s</DasType>
-      <Position>7</Position>
-    </column>
-    <column id="549" parent="522" name="grade">
-      <DasType>char(1)|0s</DasType>
-      <Position>8</Position>
-    </column>
-    <index id="550" parent="522" name="PRIMARY">
-      <ColNames>stu_num</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="551" parent="522" name="PRIMARY">
+    <key id="529" parent="521" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

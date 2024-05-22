@@ -2,7 +2,7 @@
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="IU-241.15989.150">
     <data-source name="@localhost" uuid="80ad5c52-e151-47eb-af74-a8fec272ea4a">
-      <database-info product="MariaDB" version="10.11.7-MariaDB" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="3.3.3" dbms="MARIADB" exact-version="10.11.7" exact-driver-version="3.3">
+      <database-info product="MariaDB" version="10.11.8-MariaDB" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="3.3.3" dbms="MARIADB" exact-version="10.11.8" exact-driver-version="3.3">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>
@@ -14,6 +14,8 @@
           <node kind="schema">
             <name qname="@" />
             <name qname="spring5" />
+            <name qname="tbl_person" />
+            <name qname="tbl_score" />
           </node>
         </introspection-scope>
       </schema-mapping>
