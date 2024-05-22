@@ -18,5 +18,8 @@ public interface BoardMapper {
     boolean delete(int boardNo);
     // 조회수 상승
     void updateViewCount(int bno);
+
+    // 총 게시물 수 조회
+    int count();
 }
 

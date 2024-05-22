@@ -18,8 +18,12 @@ public class PageMaker {
     // 현재 페이지 정보
     private Page pageInfo;
 
-    public PageMaker(Page page) {
+    // 총 게시물 수
+    private int totalCount;
+
+    public PageMaker(Page page, int totalCount) {
         this.pageInfo = page;
+        this.totalCount = totalCount;
         makePageInfo();
     }
 
@@ -45,5 +49,30 @@ public class PageMaker {
 
         // 2. begin
         this.begin = this.end - PAGE_COUNT + 1;
+
+        // 3. 마지막 페이지 구간에서 end값 보정
+        /*
+            총 게시물이 237개이고 한 화면에 게시물을 10개씩 배치하고 있다면
+
+            1~10페이지 구간 : 게시물이 총 100개
+            11~20 페이지 구간 : 게시물이 총 100개
+
+            -> 과연 마지막 구간에서 end값이 30이 맞는지
+            -> 실제로는 24로 보정되어야 함
+
+            // 마지막 페이지 구하는 공식
+
+            게시물이 351개 한페이지당 게시물 10개씩 배치
+            끝페이지 번호? 36페이지
+
+            올림(총 게시물 수/ 한 페이지당 배치할 게시물 수)
+         */
+
+        int finalPage = (int) Math.ceil((double)totalCount / pageInfo.getAmount());
+
+        // 마지막 구간에서 end값을 finalPage으로 보정
+        if(finalPage < this.end) {
+            this.end = finalPage;
+        }
     }
 }
