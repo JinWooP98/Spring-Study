@@ -12,7 +12,7 @@ import lombok.ToString;
 public class Search extends Page{
 
     // 검색어, 검색조건
-    private String keyword, condition;
+    private String keyword, type;
 
     public Search() {
         this.keyword = "";
