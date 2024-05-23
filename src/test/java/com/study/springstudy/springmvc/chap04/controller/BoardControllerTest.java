@@ -72,9 +72,9 @@ class BoardControllerTest {
     @DisplayName("글번호가 1번인 게시물을 삭제할 수 있다")
     void deleteTest() {
         //given
-        int boardNo = repository.findAll().get(0).getBoardNo();
+        long boardNo = repository.findAll().get(0).getBoardNo();
         //when
-        boolean flag = repository.delete(boardNo);
+        boolean flag = repository.delete((int)boardNo);
         //then
         assertTrue(flag);
         assertEquals(2, repository.findAll().size());

@@ -5,6 +5,7 @@ import com.study.springstudy.springmvc.chap03.entity.Score;
 import com.study.springstudy.springmvc.chap04.common.Page;
 import com.study.springstudy.springmvc.chap04.common.Search;
 import com.study.springstudy.springmvc.chap04.dto.BoardDetailResponseDto;
+import com.study.springstudy.springmvc.chap04.dto.BoardFindAllDto;
 import com.study.springstudy.springmvc.chap04.dto.BoardListResponseDto;
 import com.study.springstudy.springmvc.chap04.dto.BoardRequestDto;
 import com.study.springstudy.springmvc.chap04.entity.Board;
@@ -22,7 +23,7 @@ public class BoardService {
     private final BoardMapper mapper;
 
     public List<BoardListResponseDto> getList(Search page) {
-        List<Board> boardList = mapper.findAll(page);
+        List<BoardFindAllDto> boardList = mapper.findAll(page);
         return  boardList.stream()
                 .map(s -> new BoardListResponseDto(s))
                 .collect(Collectors.toList());
