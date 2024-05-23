@@ -21,6 +21,6 @@ public interface BoardMapper {
     void updateViewCount(int bno);
 
     // 총 게시물 수 조회
-    int count();
+    int count(Search search);
 }
 

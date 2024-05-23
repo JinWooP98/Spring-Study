@@ -44,7 +44,7 @@ public class BoardService {
         return new BoardDetailResponseDto(board);
     }
 
-    public int getCount() {
-        return mapper.count();
+    public int getCount(Search search) {
+        return mapper.count(search);
     }
 }

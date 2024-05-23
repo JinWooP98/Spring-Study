@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
@@ -20,11 +20,12 @@
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="/assets/css/list.css">
 
     <style>
-        .card-container .card .card-title-wrapper .time-view-wrapper .hit {
+        .card-container .card .card-title-wrapper .time-view-wrapper>div.hit {
             background: yellow;
         }
     </style>
@@ -62,8 +63,17 @@
             </form>
         </div>
 
-        <div class="card-container">
-            <c:forEach var="b" items="${bList}">
+        <div class="amount">
+            <div><a href="#">6</a></div>
+            <div><a href="#">18</a></div>
+            <div><a href="#">30</a></div>
+        </div>
+
+    </div>
+
+    <div class="card-container">
+
+        <c:forEach var="b" items="${bList}">
             <div class="card-wrapper">
                 <section class="card" data-bno="${b.boardNo}">
                     <div class="card-title-wrapper">
@@ -71,10 +81,11 @@
                         <div class="time-view-wrapper">
                             <div class="time">
                                 <i class="far fa-clock"></i>
-                                ${b.date}</div>
+                                    ${b.date}
+                            </div>
 
                             <c:if test="${b.hit}">
-                            <div class="hit">HIT</div>
+                                <div class="hit">HIT</div>
                             </c:if>
 
                             <c:if test="${b.newArticle}">
@@ -88,9 +99,7 @@
                         </div>
                     </div>
                     <div class="card-content">
-
-                        ${b.shortContent}
-
+                            ${b.shortContent}
                     </div>
                 </section>
                 <div class="card-btn-group">
@@ -98,51 +107,58 @@
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
-            </div> <!-- end div.card-wrap -->
+            </div>
+            <!-- end div.card-wrapper -->
+        </c:forEach>
 
-            </c:forEach>
-        </div> <!-- end div.card-container -->
-
-    <!-- 게시글 목록 하단 영역 -->
-    <div class="bottom-section">
-
-        <!-- 페이지 버튼 영역 -->
-        <nav aria-label="Page navigation example">
-            <ul class="pagination pagination-lg pagination-custom">
-
-                <c:if test="${maker.pageInfo.pageNo != 1}">
-                <li class="page-item">
-                    <a class="page-link" href="/board/list?pageNo=1"><<<</a>
-                </li>
-                </c:if>
-
-                <c:if test="${maker.prev}">
-                <li class="page-item">
-                    <a class="page-link" href="/board/list?pageNo=${maker.begin - 1}">prev</a>
-                </li>
-                </c:if>
-                <c:forEach var="i" begin="${maker.begin}" end="${maker.end}">
-                    <li data-page-num="${i}" class="page-item">
-                        <a class="page-link" href="/board/list?pageNo=${i}">${i}</a>
-                    </li>
-                </c:forEach>
-                <c:if test="${maker.next}">
-                <li class="page-item">
-                    <a class="page-link" href="/board/list?pageNo=${maker.end + 1}">next</a>
-                </li>
-                </c:if>
-                <c:if test="${maker.pageInfo.pageNo != maker.finalPage }">
-                    <li class="page-item">
-                        <a class="page-link" href="/board/list?pageNo=${maker.finalPage}">>>></a>
-                    </li>
-                </c:if>
-            </ul>
-        </nav>
 
     </div>
-    <!— end div.bottom-section —>
+    <!-- end div.card-container -->
 
-</div> <!-- end div.wrap -->
+    <!-- 페이지 버튼 영역 -->
+    <nav aria-label="Page navigation example">
+        <ul class="pagination pagination-lg pagination-custom">
+
+            <c:if test="${maker.pageInfo.pageNo != 1}">
+                <li class="page-item">
+                    <a class="page-link" href="/board/list?pageNo=1&type=${s.type}&keyword=${s.keyword}">&lt;&lt;</a>
+                </li>
+            </c:if>
+
+            <c:if test="${maker.prev}">
+                <li class="page-item">
+                    <a class="page-link" href="/board/list?pageNo=${maker.begin - 1}&type=${s.type}&keyword=${s.keyword}">prev</a>
+                </li>
+            </c:if>
+
+            <c:forEach var="i" begin="${maker.begin}" end="${maker.end}">
+                <li data-page-num="${i}" class="page-item">
+                    <a class="page-link" href="/board/list?pageNo=${i}&type=${s.type}&keyword=${s.keyword}">${i}</a>
+                </li>
+            </c:forEach>
+
+            <c:if test="${maker.next}">
+                <li class="page-item">
+                    <a class="page-link" href="/board/list?pageNo=${maker.end + 1}&type=${s.type}&keyword=${s.keyword}">next</a>
+                </li>
+            </c:if>
+
+            <c:if test="${maker.pageInfo.pageNo != maker.finalPage}">
+                <li class="page-item">
+                    <a class="page-link" href="/board/list?pageNo=${maker.finalPage}&type=${s.type}&keyword=${s.keyword}">&gt;&gt;</a>
+                </li>
+            </c:if>
+
+        </ul>
+    </nav>
+
+</div>
+<!-- end div.bottom-section -->
+
+
+</div>
+<!-- end div.wrap -->
+
 
 <!-- 모달 창 -->
 <div class="modal" id="modal">
@@ -173,7 +189,9 @@
             modal.style.display = 'flex'; // 모달 창 띄움
 
             const $delBtn = e.target.closest('.del-btn');
+            // 삭제 링크주소 얻기
             const deleteLocation = $delBtn.dataset.href;
+            console.log(deleteLocation);
 
             // 확인 버튼 이벤트
             confirmDelete.onclick = e => {
@@ -193,7 +211,7 @@
             // section태그에 붙은 글번호 읽기
             const bno = e.target.closest('section.card').dataset.bno;
             // 요청 보내기
-            window.location.href= '/board/detail?bno=' + bno;
+            window.location.href = '/board/detail?bno=' + bno;
         }
     });
 
@@ -255,9 +273,10 @@
     function appendActivePage() {
 
         // 1. 현재 위치한 페이지 번호를 알아낸다.
-        // -> 주소창에 묻어있는 페이지 파라미터 숫자를 읽거나
-        // 서버에서 내려준 페이지번호를 읽는다.
+        //  -> 주소창에 묻어있는 페이지 파라미터 숫자를 읽거나
+        //     서버에서 내려준 페이지번호를 읽는다.
         const currentPage = '${maker.pageInfo.pageNo}';
+        console.log('현재페이지: ' + currentPage);
 
         // 2. 해당 페이지번호와 일치하는 li태그를 탐색한다.
         const $li = document.querySelector(`.pagination li[data-page-num="\${currentPage}"]`);
@@ -268,6 +287,9 @@
     }
 
     appendActivePage();
+
+
+
 
 </script>
 
