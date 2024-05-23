@@ -10,6 +10,8 @@ import com.study.springstudy.springmvc.chap04.dto.BoardListResponseDto;
 import com.study.springstudy.springmvc.chap04.dto.BoardRequestDto;
 import com.study.springstudy.springmvc.chap04.entity.Board;
 import com.study.springstudy.springmvc.chap04.mapper.BoardMapper;
+import com.study.springstudy.springmvc.chap05.ReplyMapper;
+import com.study.springstudy.springmvc.chap05.entity.Reply;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -20,10 +22,11 @@ import java.util.stream.Collectors;
 @Service
 public class BoardService {
 
-    private final BoardMapper mapper;
+    private final BoardMapper boardMapper;
+    private final ReplyMapper replyMapper;
 
     public List<BoardListResponseDto> getList(Search page) {
-        List<BoardFindAllDto> boardList = mapper.findAll(page);
+        List<BoardFindAllDto> boardList = boardMapper.findAll(page);
         return  boardList.stream()
                 .map(s -> new BoardListResponseDto(s))
                 .collect(Collectors.toList());
@@ -31,21 +34,26 @@ public class BoardService {
 
     public void insert(BoardRequestDto boardPostDto) {
         Board board = boardPostDto.toEntity();
-        mapper.save(board);
+        boardMapper.save(board);
     }
 
     public void deleteBoard(int bno) {
-        mapper.delete(bno);
+        boardMapper.delete(bno);
     }
 
     public BoardDetailResponseDto retrieve(int bno) {
-        Board board = mapper.findOne(bno);
-        if ( board != null) mapper.updateViewCount(bno);
+        Board board = boardMapper.findOne(bno);
+        if ( board != null) boardMapper.updateViewCount(bno);
 
-        return new BoardDetailResponseDto(board);
+        // 댓글 목록 조회
+        List<Reply> replies = replyMapper.findAll(bno);
+
+        BoardDetailResponseDto responseDto = new BoardDetailResponseDto(board);
+        responseDto.setReplies(replies);
+        return responseDto;
     }
 
     public int getCount(Search search) {
-        return mapper.count(search);
+        return boardMapper.count(search);
     }
 }
