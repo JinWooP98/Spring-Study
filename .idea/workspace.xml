@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07ab9910-d0fd-4bc4-a2e4-171797eb3ead" name="변경" comment="AJAX 학습 - 1">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/getReply.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/postReply.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/reply.js" afterDir="false" />
+    <list default="true" id="07ab9910-d0fd-4bc4-a2e4-171797eb3ead" name="변경" comment="fetch, async, await 활용 댓글 등록, 목록 죄회 클라이언트 비동기 요청 처리">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/response/ReplyListDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/service/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/response/ReplyDetailDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/response/ReplyDetailDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/common/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/common/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/api/ReplyApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/api/ReplyApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/mapper/ReplyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/mapper/ReplyMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/service/ReplyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/service/ReplyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ReplyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/ReplyMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/getReply.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/getReply.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/reply.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/reply.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,7 +290,7 @@
       <workItem from="1716768251070" duration="5376000" />
       <workItem from="1716780042903" duration="5378000" />
       <workItem from="1716799767124" duration="30000" />
-      <workItem from="1716854479351" duration="12149000" />
+      <workItem from="1716854479351" duration="25599000" />
     </task>
     <task id="LOCAL-00001" summary="# initial commit &amp; SOLID 개념 학습">
       <option name="closed" value="true" />
@@ -570,7 +572,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716781229202</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="fetch, async, await 활용 댓글 등록, 목록 죄회 클라이언트 비동기 요청 처리">
+      <option name="closed" value="true" />
+      <created>1716868000455</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1716868000455</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -588,7 +598,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="spring mvc 요청처리 4" />
     <MESSAGE value="spring mvc 요청처리 5 &amp; DB 연결" />
     <MESSAGE value="spring mvc 요청처리 6" />
     <MESSAGE value="spring mvc 요청처리 7" />
@@ -613,6 +622,7 @@
     <MESSAGE value="댓글 등록 요청 - 1" />
     <MESSAGE value="입력 검증 라이브러리 &amp; 댓글 삭제 요청" />
     <MESSAGE value="AJAX 학습 - 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="AJAX 학습 - 1" />
+    <MESSAGE value="fetch, async, await 활용 댓글 등록, 목록 죄회 클라이언트 비동기 요청 처리" />
+    <option name="LAST_COMMIT_MESSAGE" value="fetch, async, await 활용 댓글 등록, 목록 죄회 클라이언트 비동기 요청 처리" />
   </component>
 </project>

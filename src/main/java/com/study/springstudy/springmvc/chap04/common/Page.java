@@ -13,7 +13,7 @@ public class Page {
 
     public Page() {
         this.pageNo = 1;
-        this.amount = 6;
+        this.amount = 5;
     }
     /*
         만약에 한 페이지에 게시물을 10개씩 렌더링한다면
@@ -43,7 +43,7 @@ public class Page {
 
     public void setAmount(int amount) {
         if(amount < 6 || amount > 60) {
-            this.amount = 6;
+            this.amount = 5;
             return;
         }
         this.amount = amount;

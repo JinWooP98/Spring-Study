@@ -36,10 +36,36 @@ function getRelativeTime(createAt) {
 
 const bno = document.getElementById('wrap').dataset.bno; // 게시물 글번호
 
-export function renderReplies(replies) {
+function renderPage({ begin, end, prev, next, pageInfo }) {
+    let tag = '';
+
+    if(prev) {
+        tag += `<li class='page-item'><a class='page-link page-custom' href='${begin - end + 1}'>prev</a></li>`;
+    }
+    // 페이지 번호 태그 만들기
+    for (let i = begin; i <= end; i++){
+        if(i === pageInfo.pageNo) {
+            tag += `<li class='page-item p-active'><a class='page-link page-custom' href='${i}'>${i}</a></li>`;
+        } else {
+            tag += `<li class='page-item'><a class='page-link page-custom' href='${i}'>${i}</a></li>`;
+        }
+    }
+    if(next) {
+        tag += `<li class='page-item'><a class='page-link page-custom' href='${end+1}'>next</a></li>`;
+    }
+    // 페이지 태그 ul에 붙이기
+    const $pageUl = document.querySelector('.pagination');
+    $pageUl.innerHTML = tag;
+}
+
+
+
+
+
+export function renderReplies({pageInfo, replies}) {
 
     // 댓글 수 렌더링
-    document.getElementById('replyCnt').textContent = replies.length;
+    document.getElementById('replyCnt').textContent = pageInfo.totalCount;
 
     // 댓글 목록 렌더링
     let tag = '';
@@ -58,7 +84,7 @@ export function renderReplies(replies) {
                     <div class='col-md-9'>${text}</div>
                     <div class='col-md-3 text-right'>
                         <a id='replyModBtn' class='btn btn-sm btn-outline-dark' data-bs-toggle='modal' data-bs-target='#replyModifyModal'>수정</a>&nbsp;
-                        <a id='replyDelBtn' class='btn btn-sm btn-outline-dark' href='#'>삭제</a>
+                        <a id='replyDelBtn' class='btn btn-sm btn-outline-dark' href='${reply_no}'>삭제</a>
                     </div>
                 </div>
             </div>
@@ -70,14 +96,49 @@ export function renderReplies(replies) {
 
     document.getElementById("replyData").innerHTML = tag;
 
+    // 페이지 태그 렌더링
+    renderPage(pageInfo);
+
 }
 
-
-export async function fetchReplies() {
-    const res = await fetch(`${BASE_URL}/${bno}`);
+// 서버에서 댓글 목록 가져오는 비동기 요청 함수
+export async function fetchReplies(pageNo = 1) {
+    const res = await fetch(`${BASE_URL}/${bno}/page/${pageNo}`);
     const replies = await res.json();
 
     // 댓글 목록 렌더링
     renderReplies(replies);
+}
+
+// 페이지 클릭 이벤트 생성 함수
+export async function replyPageClickEvent() {
+
+    document.querySelector('.pagination').addEventListener('click', e => {
+        e.preventDefault();
+        fetchReplies(e.target.getAttribute('href'));
+
+    });
+
+}
+async function aaa(target) {
+    const rno = target.getAttribute('href');
+    const res = await fetch(`${BASE_URL}/${rno}`, {
+        method: 'DELETE'
+    });
+
+    const replies = await res.json();
+
+    renderReplies(replies);
+}
+export function replyDelete() {
+    document.getElementById('replyData').addEventListener('click',  e => {
+        e.preventDefault();
+        console.log(e.target);
+        if(e.target.matches('#replyDelBtn')) aaa(e.target);
+
+
+    });
+
+
 }
 
