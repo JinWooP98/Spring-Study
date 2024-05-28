@@ -45,11 +45,11 @@ public class BoardService {
         Board board = boardMapper.findOne(bno);
         if ( board != null) boardMapper.updateViewCount(bno);
 
-        // 댓글 목록 조회
-        List<Reply> replies = replyMapper.findAll(bno);
+//        // 댓글 목록 조회
+//        List<Reply> replies = replyMapper.findAll(bno);
 
         BoardDetailResponseDto responseDto = new BoardDetailResponseDto(board);
-        responseDto.setReplies(replies);
+//        responseDto.setReplies(replies);
         return responseDto;
     }
 
