@@ -16,8 +16,9 @@ export function removeReplyClickEvent() {
             return;
         }
 
-        fetchInfScrollReplies();
+
         window.scrollTo(0, 0); // 삭제 후 페이지 상단으로 이동
+        await fetchInfScrollReplies();
     }
 
     document.getElementById('replyData').addEventListener('click', e => {

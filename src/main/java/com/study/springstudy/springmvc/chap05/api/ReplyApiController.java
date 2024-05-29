@@ -110,7 +110,7 @@ public class ReplyApiController {
     // 댓글 수정 요청
     // @PutMapping // 전체수정
     // @PatchMapping // 일부수정
-    // BindingResult // 검증 메서드
+    // BindingResult // 검증 메서드를 가지는 클래스
     // 둘다 받기 위해서
     @RequestMapping(method = {RequestMethod.PUT, RequestMethod.PATCH})
     public ResponseEntity<?> modify(@Validated @RequestBody ReplyModifyDto dto, BindingResult result) {
