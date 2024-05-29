@@ -1,7 +1,7 @@
 
 // 서버에 댓글 등록을 요청하는 비동기 함수
 import {BASE_URL} from "./reply.js";
-import {renderReplies} from "./getReply.js";
+import {fetchInfScrollReplies} from "./getReply.js";
 
 export async function fetchPostReplies() {
 
@@ -26,7 +26,7 @@ export async function fetchPostReplies() {
     writerInput.value = '';
 
 
-    renderReplies(replies);
+    fetchInfScrollReplies(replies);
 
 }
 

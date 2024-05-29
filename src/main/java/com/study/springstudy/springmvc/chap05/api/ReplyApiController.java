@@ -43,9 +43,8 @@ public class ReplyApiController {
 
         log.info("/api/v1/replies/{} : GET", bno);
 
-        ReplyListDto replies = replyService.getReplies(bno, new Page(pageNo, 5));
+        ReplyListDto replies = replyService.getReplies(bno, new Page(pageNo, 10));
 
-        log.debug("first reply : {}", replies.getReplies().get(0));
 
 
         return ResponseEntity
@@ -79,7 +78,7 @@ public class ReplyApiController {
 
         return ResponseEntity
                 .ok()
-                .body(replyService.getReplies(dto.getBno(), new Page(1,5)));
+                .body(replyService.getReplies(dto.getBno(), new Page(1,10)));
     }
 
     private Map<String, String> makeValidationMessageMap(BindingResult result) {
@@ -107,9 +106,6 @@ public class ReplyApiController {
                 .body(dtoList);
     }
 
-    @PatchMapping
-    public ResponseEntity<?> modify(@PathVariable Reply reply) {
 
-    }
 
 }
