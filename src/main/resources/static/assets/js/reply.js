@@ -3,6 +3,7 @@ import {fetchInfScrollReplies, setupInfiniteScroll} from "./getReply.js";
 import {fetchPostReplies} from "./postReply.js";
 import {replyPageClickEvent} from "./getReply.js";
 import {removeReplyClickEvent, } from "./deleteReply.js";
+import {modifyBtnClickEvent} from "./modifyReply.js";
 
 
 // ===== 전역 변수 =====
@@ -16,6 +17,7 @@ document.getElementById('replyAddBtn').addEventListener('click',  e => {
     fetchPostReplies();
 });
 
+modifyBtnClickEvent();
 // // 댓글 삭제 클릭이벤트
 // replyDelete();
 
@@ -24,7 +26,7 @@ removeReplyClickEvent();
 
 // 댓글 페이지 클릭이벤트 등록
 // replyPageClickEvent();
-setupInfiniteScroll();
+// setupInfiniteScroll();
 // 댓글 목록 서버에서 불러오기
 // fetchReplies();
 fetchInfScrollReplies();
