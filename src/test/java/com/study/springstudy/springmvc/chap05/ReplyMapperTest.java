@@ -51,7 +51,7 @@ class ReplyMapperTest {
     void findAllTest() {
         long boardNo = 1;
 
-        List<Reply> replies = replyMapper.findAll(boardNo);
+        List<Reply> replies = replyMapper.findAll(boardNo, null);
 
         replies.forEach(System.out::println);
     }
@@ -79,6 +79,7 @@ class ReplyMapperTest {
         replyMapper.modify(reply);
         //then
     }
+
 
 
 }

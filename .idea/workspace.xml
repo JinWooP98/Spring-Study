@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07ab9910-d0fd-4bc4-a2e4-171797eb3ead" name="변경" comment="댓글 수정">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/entity/Auth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/entity/Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/mapper/MemberMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/MemberMapper.xml" afterDir="false" />
+    <list default="true" id="07ab9910-d0fd-4bc4-a2e4-171797eb3ead" name="변경" comment="# 회원관리 시스템 만들기 - Entity, Mapper 생성">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/study/springstudy/springmvc/chap05/mapper/MemberMapperTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/80ad5c52-e151-47eb-af74-a8fec272ea4a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/80ad5c52-e151-47eb-af74-a8fec272ea4a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/mapper/MemberMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/mapper/MemberMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/MemberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/MemberMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/study/springstudy/springmvc/chap05/ReplyMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/study/springstudy/springmvc/chap05/ReplyMapperTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,10 +51,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="jsp template" />
-        <option value="JUnit5 Test Class" />
         <option value="Enum" />
         <option value="Class" />
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -99,6 +98,9 @@
     &quot;JUnit.HotelDiTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.HotelSpringDITest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.LogExampleTest.logTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MemberMapperTest.existsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MemberMapperTest.findOneTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MemberMapperTest.saveTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.PersonMapperTest.deleteTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.PersonMapperTest.findAllTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.PersonMapperTest.findNamesTest.executor&quot;: &quot;Run&quot;,
@@ -170,11 +172,11 @@
       <recent name="C:\Users\qwdk0\Desktop\choongang\springstudy\src\main\webapp\WEB-INF" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.study.springstudy.springmvc.chap05.mapper" />
       <recent name="com.study.springstudy.springmvc" />
       <recent name="com.study.springstudy.springmvc.chap05" />
       <recent name="com.study.springstudy.springmvc.chap04.mapper" />
       <recent name="com.study.springstudy.springmvc.chap03.mapper" />
-      <recent name="com.study.springstudy.database.chap02" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.study.springstudy.webservlet.chap02.v3.controller" />
@@ -182,10 +184,7 @@
       <recent name="com.study.springstudy.webservlet.chap02.v2" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Main">
-    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="단일 요청 실행">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="JUnit.MemberMapperTest.existsTest">
     <configuration name="generated-requests | #4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="4" requestIdentifier="#4" runType="단일 요청 실행">
       <method v="2" />
     </configuration>
@@ -205,33 +204,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReplyMapperTest.findAllTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MemberMapperTest.existsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springstudy.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.study.springstudy.springmvc.chap05.*" />
+          <option name="PATTERN" value="com.study.springstudy.springmvc.chap05.mapper.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.study.springstudy.springmvc.chap05" />
-      <option name="MAIN_CLASS_NAME" value="com.study.springstudy.springmvc.chap05.ReplyMapperTest" />
-      <option name="METHOD_NAME" value="findAllTest" />
+      <option name="PACKAGE_NAME" value="com.study.springstudy.springmvc.chap05.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.study.springstudy.springmvc.chap05.mapper.MemberMapperTest" />
+      <option name="METHOD_NAME" value="existsTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReplyMapperTest.modifyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MemberMapperTest.findOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springstudy.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.study.springstudy.springmvc.chap05.*" />
+          <option name="PATTERN" value="com.study.springstudy.springmvc.chap05.mapper.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.study.springstudy.springmvc.chap05" />
-      <option name="MAIN_CLASS_NAME" value="com.study.springstudy.springmvc.chap05.ReplyMapperTest" />
-      <option name="METHOD_NAME" value="modifyTest" />
+      <option name="PACKAGE_NAME" value="com.study.springstudy.springmvc.chap05.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.study.springstudy.springmvc.chap05.mapper.MemberMapperTest" />
+      <option name="METHOD_NAME" value="findOneTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemberMapperTest.saveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springstudy.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.study.springstudy.springmvc.chap05.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.study.springstudy.springmvc.chap05.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.study.springstudy.springmvc.chap05.mapper.MemberMapperTest" />
+      <option name="METHOD_NAME" value="saveTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -246,11 +261,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MemberMapperTest.existsTest" />
+        <item itemvalue="JUnit.MemberMapperTest.findOneTest" />
+        <item itemvalue="JUnit.MemberMapperTest.saveTest" />
         <item itemvalue="HTTP 요청.generated-requests | #4" />
         <item itemvalue="JUnit.LogExampleTest.logTest" />
-        <item itemvalue="HTTP 요청.generated-requests | #2" />
-        <item itemvalue="JUnit.ReplyMapperTest.findAllTest" />
-        <item itemvalue="JUnit.ReplyMapperTest.modifyTest" />
       </list>
     </recent_temporary>
   </component>
@@ -289,7 +304,8 @@
       <workItem from="1716780042903" duration="5378000" />
       <workItem from="1716799767124" duration="30000" />
       <workItem from="1716854479351" duration="25674000" />
-      <workItem from="1716941233366" duration="15132000" />
+      <workItem from="1716941233366" duration="17894000" />
+      <workItem from="1716964853552" duration="1066000" />
     </task>
     <task id="LOCAL-00001" summary="# initial commit &amp; SOLID 개념 학습">
       <option name="closed" value="true" />
@@ -611,7 +627,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716960342352</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="# 회원관리 시스템 만들기 - Entity, Mapper 생성">
+      <option name="closed" value="true" />
+      <created>1716962112982</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1716962112982</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -629,7 +653,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="spring mvc - spring jdbc 2" />
     <MESSAGE value="spring mvc - 실습" />
     <MESSAGE value="spring mvc - 실습 해설" />
     <MESSAGE value="spring mvc - controller-service-repository" />
@@ -654,6 +677,7 @@
     <MESSAGE value="fetch, async, await 활용 댓글 등록, 목록 죄회 클라이언트 비동기 요청 처리 3" />
     <MESSAGE value="댓글 수정 백엔드" />
     <MESSAGE value="댓글 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="댓글 수정" />
+    <MESSAGE value="# 회원관리 시스템 만들기 - Entity, Mapper 생성" />
+    <option name="LAST_COMMIT_MESSAGE" value="# 회원관리 시스템 만들기 - Entity, Mapper 생성" />
   </component>
 </project>
