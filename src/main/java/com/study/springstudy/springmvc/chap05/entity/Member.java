@@ -25,6 +25,8 @@ CONSTRAINT pk_member PRIMARY KEY (account)
 @Builder
 public class Member {
     private String account;
+
+    @Setter
     private String password;
     private String name;
     private String email;
