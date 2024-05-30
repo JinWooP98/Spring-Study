@@ -6,9 +6,11 @@ import lombok.*;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 @Getter @ToString
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -16,7 +18,8 @@ import javax.validation.constraints.Size;
 public class SignUpDto {
 
     @NotBlank
-    @Size(min = 4, max = 14)
+    @Size(min = 4, max = 14, message = "아이디는 4~14글자")
+    @Pattern(regexp = "^[a-zA-Z0-9]+$", message = "아이디는 영문과 숫자만 포함해야 합니다.")
     private String account;
 
     @NotBlank

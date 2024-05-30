@@ -4,29 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07ab9910-d0fd-4bc4-a2e4-171797eb3ead" name="변경" comment="# 회원관리 시스템 만들기 - xml 생성 및 TEST">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/api/MemberController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/request/LoginDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/request/SignUpDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/service/LoginResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/service/MemberService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/side-menu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/footer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/header.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/static-head.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/members/sign-up.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/study/springstudy/springmvc/chap05/service/MemberServiceTest.java" afterDir="false" />
+    <list default="true" id="07ab9910-d0fd-4bc4-a2e4-171797eb3ead" name="변경" comment="# 회원관리 시스템 만들기 - 인증 인가, 스프링 시큐리티 모듈">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/signUp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/validation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/entity/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/entity/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v5/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v5/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/api/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/api/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/request/SignUpDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/request/SignUpDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/service/MemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/write.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/write.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/study/springstudy/springmvc/chap05/mapper/MemberMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/study/springstudy/springmvc/chap05/mapper/MemberMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/members/sign-up.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/members/sign-up.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,76 +90,76 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.HotelDiTest.executor": "Run",
-    "Gradle.HotelTest.executor": "Run",
-    "Gradle.springstudy [:Main.main()].executor": "Run",
-    "Gradle.springstudy 빌드.executor": "Run",
-    "HTTP 요청.generated-requests | #2.executor": "Run",
-    "HTTP 요청.generated-requests | #4.executor": "Run",
-    "JUnit.BoardControllerTest.deleteTest.executor": "Run",
-    "JUnit.BoardControllerTest.registerTest.executor": "Run",
-    "JUnit.BoardMapperTest.insertTest.executor": "Run",
-    "JUnit.HotelDiTest.executor": "Run",
-    "JUnit.HotelSpringDITest.executor": "Run",
-    "JUnit.LogExampleTest.logTest.executor": "Run",
-    "JUnit.MemberMapperTest.encodingTest.executor": "Run",
-    "JUnit.MemberMapperTest.existsTest.executor": "Run",
-    "JUnit.MemberMapperTest.findOneTest.executor": "Run",
-    "JUnit.MemberMapperTest.saveTest.executor": "Run",
-    "JUnit.MemberServiceTest.joinTest.executor": "Run",
-    "JUnit.MemberServiceTest.loginSuccessTest.executor": "Run",
-    "JUnit.MemberServiceTest.noAccTest.executor": "Run",
-    "JUnit.MemberServiceTest.noPwTest.executor": "Run",
-    "JUnit.PersonMapperTest.deleteTest.executor": "Run",
-    "JUnit.PersonMapperTest.findAllTest.executor": "Run",
-    "JUnit.PersonMapperTest.findNamesTest.executor": "Run",
-    "JUnit.PersonMapperTest.findOneTest.executor": "Run",
-    "JUnit.PersonMapperTest.saveTest.executor": "Run",
-    "JUnit.PersonMapperTest.updateTest.executor": "Run",
-    "JUnit.ReplyMapperTest.bulkInsert.executor": "Run",
-    "JUnit.ReplyMapperTest.deleteTest.executor": "Run",
-    "JUnit.ReplyMapperTest.findAllTest.executor": "Run",
-    "JUnit.ReplyMapperTest.modifyTest.executor": "Run",
-    "JUnit.ScoreMapperTest.findAllTest.executor": "Run",
-    "JUnit.ScoreMapperTest.findOneTest.executor": "Run",
-    "JUnit.ScoreMapperTest.rankTest.executor": "Run",
-    "JUnit.SpringJdbcTest.deleteTest.executor": "Run",
-    "JUnit.SpringJdbcTest.findAllTest.executor": "Run",
-    "JUnit.SpringJdbcTest.findeOneTest.executor": "Run",
-    "JUnit.SpringJdbcTest.saveTest.executor": "Run",
-    "JUnit.SpringJdbcTest.updateTest.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.Main.executor": "Run",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/qwdk0/Desktop/choongang/springstudy/src/main/resources/static/assets/css/img",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/qwdk0/Desktop/choongang/springstudy/src/main/java/com/study/Main.java",
-    "project.structure.last.edited": "모듈",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.HotelDiTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.HotelTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.springstudy [:Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.springstudy 빌드.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 요청.generated-requests | #2.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 요청.generated-requests | #4.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BoardControllerTest.deleteTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BoardControllerTest.registerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BoardMapperTest.insertTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HotelDiTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HotelSpringDITest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LogExampleTest.logTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MemberMapperTest.encodingTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MemberMapperTest.existsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MemberMapperTest.findOneTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MemberMapperTest.saveTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MemberServiceTest.joinTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MemberServiceTest.loginSuccessTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MemberServiceTest.noAccTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MemberServiceTest.noPwTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PersonMapperTest.deleteTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PersonMapperTest.findAllTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PersonMapperTest.findNamesTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PersonMapperTest.findOneTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PersonMapperTest.saveTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PersonMapperTest.updateTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReplyMapperTest.bulkInsert.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReplyMapperTest.deleteTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReplyMapperTest.findAllTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReplyMapperTest.modifyTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ScoreMapperTest.findAllTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ScoreMapperTest.findOneTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ScoreMapperTest.rankTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SpringJdbcTest.deleteTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SpringJdbcTest.findAllTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SpringJdbcTest.findeOneTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SpringJdbcTest.saveTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SpringJdbcTest.updateTest.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Main.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/qwdk0/Desktop/choongang/springstudy/src/main/resources/static/assets/css/img&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/qwdk0/Desktop/choongang/springstudy/src/main/java/com/study/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql_aurora_aws",
-      "mariadb"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql_aurora_aws&quot;,
+      &quot;mariadb&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.study.springstudy.springmvc.chap05.service" />
@@ -358,7 +348,7 @@
       <workItem from="1716969262365" duration="58000" />
       <workItem from="1716969488573" duration="27000" />
       <workItem from="1717027613122" duration="5170000" />
-      <workItem from="1717032890681" duration="2500000" />
+      <workItem from="1717032890681" duration="19748000" />
     </task>
     <task id="LOCAL-00001" summary="# initial commit &amp; SOLID 개념 학습">
       <option name="closed" value="true" />
@@ -696,7 +686,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716965966719</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="# 회원관리 시스템 만들기 - 인증 인가, 스프링 시큐리티 모듈">
+      <option name="closed" value="true" />
+      <created>1717035498427</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1717035498427</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -714,7 +712,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="spring mvc - 실습 해설" />
     <MESSAGE value="spring mvc - controller-service-repository" />
     <MESSAGE value="spring mvc - controller-service-repository 2" />
     <MESSAGE value="spring mvc - controller-service-repository 3" />
@@ -739,6 +736,7 @@
     <MESSAGE value="댓글 수정" />
     <MESSAGE value="# 회원관리 시스템 만들기 - Entity, Mapper 생성" />
     <MESSAGE value="# 회원관리 시스템 만들기 - xml 생성 및 TEST" />
-    <option name="LAST_COMMIT_MESSAGE" value="# 회원관리 시스템 만들기 - xml 생성 및 TEST" />
+    <MESSAGE value="# 회원관리 시스템 만들기 - 인증 인가, 스프링 시큐리티 모듈" />
+    <option name="LAST_COMMIT_MESSAGE" value="# 회원관리 시스템 만들기 - 인증 인가, 스프링 시큐리티 모듈" />
   </component>
 </project>

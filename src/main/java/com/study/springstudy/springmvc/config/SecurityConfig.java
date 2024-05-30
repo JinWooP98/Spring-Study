@@ -17,7 +17,9 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
         // 모든 요청에 대해 인증하지 않겠다.
-        http.authorizeRequests().antMatchers("/**").permitAll();
+        http
+                .csrf().disable() // csrf 토큰공격방지 기능 off
+                .authorizeRequests().antMatchers("/**").permitAll();
 
         return http.build();
     }
