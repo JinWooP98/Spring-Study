@@ -15,6 +15,7 @@ public class BoardRequestDto {
     private String writer;
     private String title;
     private String content;
+    private String account;
 
     public Board toEntity() {
         Board b = new Board();

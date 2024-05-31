@@ -5,6 +5,7 @@ import com.study.springstudy.springmvc.chap05.entity.Reply;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.servlet.http.HttpSession;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 

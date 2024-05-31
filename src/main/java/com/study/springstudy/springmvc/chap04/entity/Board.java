@@ -34,6 +34,7 @@ public class Board {
     private String writer; // 작성자명
     private int viewCount; // 조회수
     private LocalDateTime regDateTime; // 작성일시
+    private String account;
 
     public Board(ResultSet rs) throws SQLException {
         this.boardNo = rs.getInt("board_no");

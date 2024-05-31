@@ -12,11 +12,15 @@ import com.study.springstudy.springmvc.chap04.entity.Board;
 import com.study.springstudy.springmvc.chap04.mapper.BoardMapper;
 import com.study.springstudy.springmvc.chap05.mapper.ReplyMapper;
 import com.study.springstudy.springmvc.chap05.entity.Reply;
+import com.study.springstudy.springmvc.util.LoginUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import static com.study.springstudy.springmvc.util.LoginUtil.LOGIN;
 
 @RequiredArgsConstructor
 @Service
@@ -32,8 +36,10 @@ public class BoardService {
                 .collect(Collectors.toList());
     }
 
-    public void insert(BoardRequestDto boardPostDto) {
+    public void insert(BoardRequestDto boardPostDto, HttpSession session) {
         Board board = boardPostDto.toEntity();
+        // 계정명을 엔터티에 추가 - 세션에서 계정명 가져오기
+        board.setAccount(LoginUtil.getLoggedInUserAccount(session));
         boardMapper.save(board);
     }
 
