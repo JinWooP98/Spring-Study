@@ -67,7 +67,7 @@ signupButton.addEventListener('click', (e) => {
 function checkPassword (field){
     const $input = document.getElementById(field.id); // 입력 요소 가져오기
     const $a = document.getElementById('password')
-    $a.addEventListener('keyup', debounce(async (e) => { // 키보드 입력 시마다 유효성 검증
+    $a.addEventListener('keyup',async (e) => { // 키보드 입력 시마다 유효성 검증
         const isValid = await field.validator($input.value); // 유효성 검증 함수 호출
         const $errorSpan = document.getElementById(field.errorElement); // 에러 메시지 표시 요소 가져오기
         console.log(isValid);
@@ -80,8 +80,7 @@ function checkPassword (field){
             $errorSpan.innerHTML = `<b class="warning">[${isValid.message}]</b>`; // 에러 메시지 표시
             field.valid = false; // 필드의 유효 상태를 false로 설정
         }
-        updateButtonState(); // 각 입력 유효성 검사 후 버튼 상태 업데이트
-    }, 500));
+    });
 }
 
 // 페이지 로드 시 초기 버튼 상태 업데이트

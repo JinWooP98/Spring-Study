@@ -1,14 +1,18 @@
 package com.study.springstudy.springmvc.chap05.api;
 
+import com.study.springstudy.springmvc.chap05.dto.request.LoginDto;
 import com.study.springstudy.springmvc.chap05.dto.request.SignUpDto;
+import com.study.springstudy.springmvc.chap05.service.LoginResult;
 import com.study.springstudy.springmvc.chap05.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 @RequestMapping("/members")
@@ -41,7 +45,7 @@ public class MemberController {
 
         boolean flag = memberService.join(dto);
 
-        return flag ? "redirect:/board/list" : "redirect:/members/sign-up";
+        return flag ? "redirect:/members/sign-in" : "redirect:/members/sign-up";
     }
 
     // 아이디, 이메일 중복검사 비동기 요청 처리
@@ -54,4 +58,39 @@ public class MemberController {
                 .ok()
                 .body(flag);
     }
+
+    //로그인 양식 열기
+    @GetMapping("/sign-in")
+    public void signIn() {
+        log.info("/members/sign-in GET : forwarding to sign-in.jsp");
+//        return "members/sign-up";
+        // url이 JSP 경로와 같으면 리턴 타입을 void로 지정해주면 된다.
+
+    }
+
+    // 로그인 요청 처리
+    @PostMapping("/sign-in")
+    public String signIn(LoginDto dto, RedirectAttributes ra) {
+        log.info("/members/sign-in POST");
+        log.debug("parameter: {}", dto);
+
+        LoginResult result = memberService.authenticate(dto);
+
+        // 로그인 검증 결과를 JSP에게 보내기
+        // Redirect시에 Redirect된 페이지에 데이터를 보낼 때는
+        // Model객체를 사용할 수 없음
+        // 왜냐면 Model 객체는 request객체를 사용하는데 해당 객체는
+        // 한번의 요청이 끝나면 메모리에서 제거된다. 그러나 redirect는
+        // 요청이 2번 발생하므로 다른 request 객체를 jsp가 사용하게 됨.
+        // Model 대신 RedirectAttributes를 사용
+        ra.addFlashAttribute("result", result);
+
+        if(result == LoginResult.SUCCESS) {
+
+            return "redirect:/index"; // 로그인 성공시
+        }
+
+        return "redirect:/members/sign-in";
+    }
+
 }
