@@ -4,22 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07ab9910-d0fd-4bc4-a2e4-171797eb3ead" name="변경" comment="# 회원관리 시스템 만들기 - 로그인 &amp; 회원가입 검증 시스템">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/member.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/members/sign-in.jsp" afterDir="false" />
+    <list default="true" id="07ab9910-d0fd-4bc4-a2e4-171797eb3ead" name="변경" comment="# 로그인 시스템 만들기 &amp; 검증">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/response/LoginUserInfoDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/api/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/api/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/request/LoginDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/request/LoginDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap01/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap01/HomeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/img/B_SuccessModal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/img/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/signUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/signUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/service/MemberService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/members/sign-up.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/members/sign-up.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -353,7 +343,7 @@
       <workItem from="1716969488573" duration="27000" />
       <workItem from="1717027613122" duration="5170000" />
       <workItem from="1717032890681" duration="23528000" />
-      <workItem from="1717114052903" duration="2856000" />
+      <workItem from="1717114052903" duration="5387000" />
     </task>
     <task id="LOCAL-00001" summary="# initial commit &amp; SOLID 개념 학습">
       <option name="closed" value="true" />
@@ -707,7 +697,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717057012505</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="# 로그인 시스템 만들기 &amp; 검증">
+      <option name="closed" value="true" />
+      <created>1717117015642</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1717117015642</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -725,7 +723,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="spring mvc - controller-service-repository 2" />
     <MESSAGE value="spring mvc - controller-service-repository 3" />
     <MESSAGE value="mybatis part1" />
     <MESSAGE value="mybatis part2" />
@@ -750,6 +747,7 @@
     <MESSAGE value="# 회원관리 시스템 만들기 - xml 생성 및 TEST" />
     <MESSAGE value="# 회원관리 시스템 만들기 - 인증 인가, 스프링 시큐리티 모듈" />
     <MESSAGE value="# 회원관리 시스템 만들기 - 로그인 &amp; 회원가입 검증 시스템" />
-    <option name="LAST_COMMIT_MESSAGE" value="# 회원관리 시스템 만들기 - 로그인 &amp; 회원가입 검증 시스템" />
+    <MESSAGE value="# 로그인 시스템 만들기 &amp; 검증" />
+    <option name="LAST_COMMIT_MESSAGE" value="# 로그인 시스템 만들기 &amp; 검증" />
   </component>
 </project>
