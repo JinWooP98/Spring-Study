@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
@@ -88,11 +89,11 @@ public class BoardController {
     }
     // 5. 게시글 상세 조회 요청 (/board/detail : GET)
     @GetMapping("/detail")
-    public String detail(int bno, HttpServletRequest request, Model model) {
+    public String detail(int bno, HttpServletRequest request, Model model, HttpServletResponse response) {
 //        Board board = repository.findOne(bno);
 //        if ( board != null) repository.updateViewCount(bno);
 
-        BoardDetailResponseDto board = service.retrieve(bno);
+        BoardDetailResponseDto board = service.retrieve(bno, request, response);
 
         model.addAttribute("b", board);
 
