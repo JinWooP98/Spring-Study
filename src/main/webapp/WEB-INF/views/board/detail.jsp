@@ -128,6 +128,12 @@
     <label for="content">내용</label>
     <div id="content">${b.content}</div>
     <div class="buttons">
+        <button id = "like-btn" class="list-btn" type="button" >좋아요</button>
+    </div>
+    <div class="buttons">
+        <button id = "hate-btn" class="list-btn" type="button" >싫어요</button>
+    </div>
+    <div class="buttons">
         <button class="list-btn" type="button" onclick="window.location.href='${ref}'">목록</button>
     </div>
 

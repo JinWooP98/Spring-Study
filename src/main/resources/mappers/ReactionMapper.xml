@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.study.springstudy.springmvc.chap05.mapper.ReactionMapper">
+    <select id="findOne" resultType="reaction">
+        SELECT *
+        FROM tbl_reaction
+        WHERE account = #{account}
+        AND board_no = #{bno}
+    </select>
+
+    <insert id="insertReaction">
+        INSERT INTO tbl_reaction
+            (account, board_no, reaction_type, reaction_date)
+        VALUES
+            (#{account}, #{boardNo}, #{reactionType}, #{reactionDate})
+    </insert>
+
+    <delete id="deleteReaction">
+        DELETE FROM tbl_reaction
+        WHERE account = #{account}
+        AND board_no = #{boardNo}
+    </delete>
+
+    <update id="upDataReaction">
+        UPDATE tbl_reaction
+        SET reaction_type = #{reactionType}
+        WHERE account = #{account}
+        AND board_no = #{boardNo}
+    </update>
+</mapper>
