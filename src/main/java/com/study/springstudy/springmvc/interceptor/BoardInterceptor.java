@@ -10,6 +10,7 @@ import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @RequiredArgsConstructor
 @Configuration
@@ -24,24 +25,27 @@ public class BoardInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
+        HttpSession session = request.getSession();
         log.debug("after login interceptor execute!");
         String requestUri = request.getRequestURI();
         if(requestUri.equals("/board/delete")) {
             if(!LoginUtil.isLoggedIn(request.getSession())) {
-                response.sendRedirect("/members/sign-in?message=login-required&redirect=/board/list");
+                response.sendRedirect("/members/sign-in?message=login-required&redirect=/access-deny");
                 return false;
             }
 
             int bno = Integer.parseInt(request.getParameter("bno"));
-            Board one = boardMapper.findOne(bno);
+            Board board = boardMapper.findOne(bno);
+            String boardAccount = board.getAccount();
 
-            if(!(LoginUtil.getLoggedInUserAccount(request.getSession()).equals(one.getAccount())
-            || LoginUtil.getLoggedInUserAuth(request.getSession()).equals("ADMIN"))) {
-
-                response.sendRedirect("/board/list");
+            if(!(LoginUtil.getLoggedInUserAccount(request.getSession()).equals(boardAccount)
+            || LoginUtil.getLoggedInUserAuth(session).equals("ADMIN"))) {
+                response.setStatus(403);
+                response.sendRedirect("/access-deny?message=authorization");
                 return false;
             }
             return true; // 리턴이 true 일경우 컨트롤러 진입 허용, false 진입 차단
+
         }
         if(!LoginUtil.isLoggedIn(request.getSession())) {
             response.sendRedirect("/members/sign-in?message=login-required&redirect=" + requestUri);
