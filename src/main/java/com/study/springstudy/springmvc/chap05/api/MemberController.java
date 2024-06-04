@@ -63,6 +63,7 @@ public class MemberController {
     // 로그인 양식 열기
     @GetMapping("/sign-in")
     public String signIn(HttpSession session
+                         // 이 RequestParam은 필수가 아니다
                         , @RequestParam(required = false) String redirect
     ) {
 
@@ -98,6 +99,7 @@ public class MemberController {
         // 요청이 2번 발생하므로 다른 request객체를 jsp가 사용하게 됨
 
 //        model.addAttribute("result", result); // (X)
+        // 리다이렉트할때 까지 살아있는 데이터
         ra.addFlashAttribute("result", result);
 
         if (result == LoginResult.SUCCESS) {
