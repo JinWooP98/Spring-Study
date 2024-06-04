@@ -8,7 +8,9 @@ import com.study.springstudy.springmvc.chap04.dto.BoardListResponseDto;
 import com.study.springstudy.springmvc.chap04.dto.BoardRequestDto;
 import com.study.springstudy.springmvc.chap04.entity.Board;
 import com.study.springstudy.springmvc.chap04.mapper.BoardMapper;
+import com.study.springstudy.springmvc.chap05.entity.Reaction;
 import com.study.springstudy.springmvc.chap05.entity.ViewLog;
+import com.study.springstudy.springmvc.chap05.mapper.ReactionMapper;
 import com.study.springstudy.springmvc.chap05.mapper.ReplyMapper;
 import com.study.springstudy.springmvc.chap05.mapper.ViewLogMapper;
 import com.study.springstudy.springmvc.util.LoginUtil;
@@ -34,6 +36,7 @@ public class BoardService {
     private final BoardMapper boardMapper;
     private final ReplyMapper replyMapper;
     private final ViewLogMapper viewLogMapper;
+    private final ReactionMapper reactionMapper;
 
     public List<BoardListResponseDto> getList(Search page) {
         List<BoardFindAllDto> boardList = boardMapper.findAll(page);
@@ -59,8 +62,8 @@ public class BoardService {
 
         HttpSession session = request.getSession();
         // 비회원이거나 본인 글이면 조회수 증가 방지
+        String currentUserAccount = getLoggedInUserAccount(session);
         if ( board != null && LoginUtil.isLoggedIn(session)) {
-            String currentUserAccount = getLoggedInUserAccount(session);
 
             if(!currentUserAccount.equals(board.getAccount())) {
 //                // 조회수 증가 여부를 판단 // (쿠키버전)
@@ -129,7 +132,20 @@ public class BoardService {
 //        // 댓글 목록 조회
 //        List<Reply> replies = replyMapper.findAll(bno);
 
+        // 상세조회시 초기렌더링에 그려질 데이터
         BoardDetailResponseDto responseDto = new BoardDetailResponseDto(board);
+        responseDto.setLikeCount(reactionMapper.countLikes(bno));
+        responseDto.setDislikeCount(reactionMapper.countDisLikes(bno));
+
+        Reaction reaction = reactionMapper.findOne(bno, currentUserAccount);
+
+        String type = null;
+        if(reaction != null) {
+            type = reaction.getReactionType().toString();
+        }
+
+        responseDto.setUserReaction(type);
+
 //        responseDto.setReplies(replies);
         return responseDto;
     }
