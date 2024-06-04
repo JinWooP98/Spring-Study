@@ -4,205 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec3da5f4-95c0-4ce2-96e2-c5d6bdbf9b4b" name="변경" comment="# 댓글 인가처리 - 인터셉터설정 및 fetch 함수 호출 일원화">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/dto/BoardWriteRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/MyModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/study/springstudy/springmvc/chap04/repository/BoardRepositoryImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/80ad5c52-e151-47eb-af74-a8fec272ea4a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/80ad5c52-e151-47eb-af74-a8fec272ea4a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+    <list default="true" id="ec3da5f4-95c0-4ce2-96e2-c5d6bdbf9b4b" name="변경" comment="# 댓글 인가처리 - 댓글쓰기 기능 수정">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap01/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap01/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap01/KimuraChef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap01/KimuraChef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap01/SushiCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap01/SushiCourse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap01/WesternRestaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap01/WesternRestaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap02/AsianRestaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap02/AsianRestaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap02/FrenchCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap02/FrenchCourse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap02/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap02/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap02/JannChef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap02/JannChef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap02/KimuraChef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap02/KimuraChef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap02/SushiCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap02/SushiCourse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap02/WesternRestaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap02/WesternRestaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap03/AsianRestaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap03/AsianRestaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap03/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap03/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap03/JannChef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap03/JannChef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap03/KimuraChef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap03/KimuraChef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap03/SushiCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap03/SushiCourse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap03/WesternRestaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap03/WesternRestaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap03/config/HotelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap03/config/HotelManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap04/AsianRestaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap04/AsianRestaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap04/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap04/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap04/HotelConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap04/HotelConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap04/JannChef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap04/JannChef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap04/KimuraChef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap04/KimuraChef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap04/SushiCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap04/SushiCourse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap04/WesternRestaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/core/chap04/WesternRestaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/database/chap01/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/database/chap01/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/database/chap01/SpringJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/database/chap01/SpringJdbc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/database/chap02/PersonMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/database/chap02/PersonMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/LogExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/LogExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap01/BasicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap01/BasicController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap01/ResponseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap01/ResponseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap02/CoffeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap02/CoffeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap02/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap02/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/controller/ScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/controller/ScoreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/dto/RankDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/dto/RankDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/dto/ScoreListResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/dto/ScoreListResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/dto/ScoreModifyRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/dto/ScoreModifyRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/dto/ScorePostDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/dto/ScorePostDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/entity/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/entity/Score.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/mapper/ScoreMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/mapper/ScoreMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/repository/ScoreJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/repository/ScoreJdbcRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/repository/ScoreMemoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/repository/ScoreMemoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/repository/ScoreRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/repository/ScoreRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/repository/ScoreSpringJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/repository/ScoreSpringJdbcRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/service/ScoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap03/service/ScoreService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/common/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/common/Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/common/PageMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/common/PageMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/common/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/common/Search.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/dto/BoardDetailResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/dto/BoardDetailResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/dto/BoardFindAllDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/dto/BoardFindAllDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/dto/BoardListResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/dto/BoardListResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/entity/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/entity/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/mapper/BoardMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/mapper/BoardMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/repository/BoardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/repository/BoardRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/repository/BoardSpringJdbcRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/repository/BoardRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap04/service/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/api/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/api/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/api/ReplyApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/api/ReplyApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/request/AutoLoginDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/request/AutoLoginDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/request/LoginDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/request/LoginDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/request/ReplyModifyDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/request/ReplyModifyDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/request/ReplyPostDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/request/ReplyPostDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/request/SignUpDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/request/SignUpDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/response/LoginUserInfoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/response/LoginUserInfoDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/response/ReactionDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/response/ReactionDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/response/ReplyDetailDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/response/ReplyDetailDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/response/ReplyListDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/response/ReplyListDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/entity/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/entity/Auth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/entity/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/entity/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/entity/Reaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/entity/Reaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/entity/Reply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/entity/Reply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/entity/ViewLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/entity/ViewLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/mapper/MemberMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/mapper/MemberMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/mapper/ReactionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/mapper/ReactionMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/mapper/ReplyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/mapper/ReplyMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/mapper/ViewLogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/mapper/ViewLogMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/rest/RestApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/rest/RestApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/service/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/service/ReactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/service/ReactionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/service/ReplyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/service/ReplyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/config/ErrorPageConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/config/ErrorPageConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/config/InterceptorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/config/InterceptorConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/error/ErrorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/error/ErrorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/interceptor/AfterLoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/interceptor/AfterLoginInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/interceptor/AutoLoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/interceptor/AutoLoginInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/interceptor/BoardInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/interceptor/BoardInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/util/LoginUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/util/LoginUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/MemberMemoryRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/MemberMemoryRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/ModelAndView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/ModelAndView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap01/controller/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap01/controller/RegisterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap01/controller/SaveServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap01/controller/SaveServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap01/controller/ShowServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap01/controller/ShowServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v1/FrontControllerV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v1/FrontControllerV1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v1/controller/ControllerV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v1/controller/ControllerV1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v1/controller/JoinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v1/controller/JoinController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v1/controller/SaveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v1/controller/SaveController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v1/controller/ShowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v1/controller/ShowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v2/FrontControllerV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v2/FrontControllerV2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v2/controller/ControllerV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v2/controller/ControllerV2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v2/controller/JoinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v2/controller/JoinController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v2/controller/SaveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v2/controller/SaveController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v2/controller/ShowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v2/controller/ShowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v3/FrontControllerV3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v3/FrontControllerV3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v3/controller/ControllerV3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v3/controller/ControllerV3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v3/controller/JoinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v3/controller/JoinController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v3/controller/SaveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v3/controller/SaveController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v3/controller/ShowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v3/controller/ShowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v4/FrontControllerV4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v4/FrontControllerV4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v4/controller/ControllerV4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v4/controller/ControllerV4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v4/controller/DeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v4/controller/DeleteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v4/controller/DetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v4/controller/DetailController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v4/controller/JoinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v4/controller/JoinController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v4/controller/SaveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v4/controller/SaveController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v4/controller/ShowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/chap02/v4/controller/ShowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/entity/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/webservlet/entity/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/BoardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/BoardMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/MemberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/MemberMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/PersonMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/PersonMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ReactionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/ReactionMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ReplyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/ReplyMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ScoreMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/ScoreMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ViewLogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/ViewLogMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/detail.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/detail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/member.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/member.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/deleteReply.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/deleteReply.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/getReply.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/getReply.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/modifyReply.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/modifyReply.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/postReply.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/postReply.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/reply.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/reply.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/side-menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/side-menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/signUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/signUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/spinner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/spinner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/util.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/validate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/write.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/write.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error/access-deny.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error/access-deny.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error/error404.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error/error404.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error/error500.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error/error500.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/hello.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/hello.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/static-head.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/static-head.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/m-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/m-list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/members/sign-in.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/members/sign-in.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/members/sign-up.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/members/sign-up.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mvc/coffee-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mvc/coffee-form.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mvc/coffee-result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mvc/coffee-result.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mvc/hobbies.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mvc/hobbies.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mvc/s-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mvc/s-form.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mvc/s-result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mvc/s-result.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/reg_form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/reg_form.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/score/score-detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/score/score-detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/score/score-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/score/score-list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/score/score-modify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/score/score-modify.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v1/m-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v1/m-list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v1/reg_form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v1/reg_form.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v2/m-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v2/m-list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v2/reg_form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v2/reg_form.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v3/m-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v3/m-list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v3/reg_form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v3/reg_form.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v4/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v4/detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v4/m-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v4/m-list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v4/reg_form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v4/reg_form.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v5/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v5/detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v5/m-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v5/m-list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v5/reg_form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/v5/reg_form.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/study/springstudy/chap03/HotelDiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/study/springstudy/chap03/HotelDiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/study/springstudy/core/chap04/HotelSpringDITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/study/springstudy/core/chap04/HotelSpringDITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/study/springstudy/database/chap01/SpringJdbcTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/study/springstudy/database/chap01/SpringJdbcTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/study/springstudy/database/chap02/PersonMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/study/springstudy/database/chap02/PersonMapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/study/springstudy/springmvc/LogExampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/study/springstudy/springmvc/LogExampleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/study/springstudy/springmvc/StudentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/study/springstudy/springmvc/StudentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/study/springstudy/springmvc/chap03/mapper/ScoreMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/study/springstudy/springmvc/chap03/mapper/ScoreMapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/study/springstudy/springmvc/chap04/mapper/BoardMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/study/springstudy/springmvc/chap04/mapper/BoardMapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/study/springstudy/springmvc/chap05/ReplyMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/study/springstudy/springmvc/chap05/ReplyMapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/study/springstudy/springmvc/chap05/mapper/MemberMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/study/springstudy/springmvc/chap05/mapper/MemberMapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/study/springstudy/springmvc/chap05/service/MemberServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/study/springstudy/springmvc/chap05/service/MemberServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +70,7 @@
   </component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/JinWooP98/Spring-Study.git",
+    "url": "https://github.com/soongu/spring-study202405.git",
     "accountId": "c1d1e7e3-48b0-4814-9fc0-ef6c9b8229b2"
   }
 }]]></component>
@@ -342,11 +147,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/superstar/Desktop/develop/springstudy",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
+    "last_opened_file_path": "C:/Users/qwdk0/Desktop/choongang/spring-study202405",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "/Users/superstar/Desktop/develop/springstudy/src/main/java/com/study/Main.java",
     "project.structure.last.edited": "프로젝트",
@@ -355,6 +156,11 @@
     "settings.editor.selected.configurable": "editing.templates",
     "vue.rearranger.settings.migration": "true",
     "애플리케이션.Main.executor": "Run"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql_aurora_aws"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -507,15 +313,7 @@
       <updated>1715582906822</updated>
       <workItem from="1716528901753" duration="151000" />
       <workItem from="1716767867006" duration="45000" />
-      <workItem from="1717480902637" duration="873000" />
-    </task>
-    <task id="LOCAL-00018" summary="spring mvc - 게시판 앱 5">
-      <option name="closed" value="true" />
-      <created>1716173396677</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1716173396677</updated>
+      <workItem from="1717483747498" duration="282000" />
     </task>
     <task id="LOCAL-00019" summary="3 tier architecture - part1">
       <option name="closed" value="true" />
@@ -901,7 +699,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717478993560</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="# 댓글 인가처리 - 댓글쓰기 기능 수정">
+      <option name="closed" value="true" />
+      <created>1717480679072</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1717480679072</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -920,7 +726,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="댓글 페이징 처리 1" />
     <MESSAGE value="댓글 페이징 처리 2" />
     <MESSAGE value="무한스크롤 완성" />
     <MESSAGE value="댓글 삭제 기능" />
@@ -945,6 +750,7 @@
     <MESSAGE value="# 좋아요 싫어요 2" />
     <MESSAGE value="# 좋아요 싫어요 3" />
     <MESSAGE value="# 댓글 인가처리 - 인터셉터설정 및 fetch 함수 호출 일원화" />
-    <option name="LAST_COMMIT_MESSAGE" value="# 댓글 인가처리 - 인터셉터설정 및 fetch 함수 호출 일원화" />
+    <MESSAGE value="# 댓글 인가처리 - 댓글쓰기 기능 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="# 댓글 인가처리 - 댓글쓰기 기능 수정" />
   </component>
 </project>

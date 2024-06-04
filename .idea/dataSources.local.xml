@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="IU-241.15989.150">
-    <data-source name="@localhost" uuid="80ad5c52-e151-47eb-af74-a8fec272ea4a">
-      <database-info product="MariaDB" version="10.11.7-MariaDB" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="3.3.3" dbms="MARIADB" exact-version="10.11.7" exact-driver-version="3.3">
+    <data-source name="@localhost" uuid="60301a3a-bb63-4a7a-814a-7ad63c5daee7">
+      <database-info product="MySQL" version="5.5.5-10.11.7-MariaDB" jdbc-version="4.2" driver-name="Amazon Web Services (AWS) JDBC Driver for MySQL" driver-version="aws-mysql-connector-java-1.1.14 (Revision: 4629bb4ea3ade12a811483453fafcb8fc2a66bb5)" dbms="MARIADB" exact-version="10.11.7" exact-driver-version="1.1">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
+        <jdbc-catalog-is-schema>true</jdbc-catalog-is-schema>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema">
-            <name qname="@" />
-            <name qname="spring5" />
-            <name qname="tbl_person" />
-            <name qname="tbl_score" />
-          </node>
+          <node kind="schema" qname="spring5" />
         </introspection-scope>
       </schema-mapping>
     </data-source>

@@ -27,6 +27,7 @@ public class ReplyService {
 
     // 댓글 목록 전체조회
     public ReplyListDto getReplies(long boardNo, Page page) {
+
         List<Reply> replies = replyMapper.findAll(boardNo, page);
 
         List<ReplyDetailDto> dtoList = replies.stream()
