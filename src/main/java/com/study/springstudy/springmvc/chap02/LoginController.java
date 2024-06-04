@@ -1,14 +1,20 @@
 package com.study.springstudy.springmvc.chap02;
 
+import com.study.springstudy.springmvc.chap03.repository.ScoreJdbcRepository;
+import com.study.springstudy.springmvc.chap03.repository.ScoreMemoryRepository;
+import com.study.springstudy.springmvc.chap03.repository.ScoreRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/hw")
 public class LoginController {
+
+    private ScoreRepository repository = new ScoreJdbcRepository();
 
     /*
         1번요청: 로그인 폼 화면 열어주기
@@ -23,28 +29,41 @@ public class LoginController {
         - jsp에게 전달할 데이터: 로그인 성공여부, 아이디 없는경우, 비번 틀린경우
 
      */
+    @GetMapping("/s-login-form")
+    public String sLoginForm() {
 
-    // 1. 로그인 폼 화면 열어주기
-    @GetMapping("/hw/s-login-form")
-    public String loginForm() {
         return "mvc/s-form";
     }
 
-    // 2. 로그인 검증하기
-    @PostMapping("/hw/s-login-check")
-    public String loginCheck(String id, String pw, Model model) {
+    @PostMapping("/s-login-check")
+    public String sLoginCheck(
+            String id,
+            @RequestParam("pw") String password,
+            Model model
+    ) {
 
-        String result;
+        System.out.println("id = " + id);
+        System.out.println("pw = " + password);
 
-        if(id.equals("grape111") && pw.equals("ggg9999")) {
-            result = "success";
-        } else if (!id.equals("grape111")) {
-            result = "f-id";
+        String message;
+        if (id.equals("grape111")) {
+            if (password.equals("ggg9999")) {
+                // success
+//                message = "로그인 성공!";
+                message = "success";
+            } else {
+                // pw fail
+//                message = "비밀번호가 틀렸습니다!";
+                message = "f-pw";
+            }
         } else {
-            result = "f-pw";
+            // id없는경우
+//            message = "회원가입되지 않은 계정입니다.";
+            message = "f-id";
         }
 
-        model.addAttribute("result", result);
+//        model.addAttribute("message", message);
+        model.addAttribute("result", message);
 
         return "mvc/s-result";
     }

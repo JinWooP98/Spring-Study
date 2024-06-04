@@ -28,7 +28,8 @@ public class SaveServlet extends HttpServlet {
 //        System.out.println("member = " + member);
         repo.save(member);
 
-        // 3. 적절한 페이지로 이동 - 조회 화면으로 리다이렉트
+        // 3. 적절한 페이지로 이동 - 조회화면으로 리다이렉트
         resp.sendRedirect("/chap01/show");
+
     }
 }

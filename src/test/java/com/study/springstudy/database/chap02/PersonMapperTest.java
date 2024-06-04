@@ -14,74 +14,81 @@ import static org.junit.jupiter.api.Assertions.*;
 class PersonMapperTest {
 
     @Autowired
-    PersonMapper personMapper;
+    PersonMapper mapper;
+
 
     @Test
-    @DisplayName("mybatis mapper로 사람 정보를 등록한다.")
+    @DisplayName("마이바티스 매퍼로 사람 정보를 등록한다.")
     void saveTest() {
         //given
         Person p = new Person(9999, "마바맨", 59);
         //when
-        boolean result = personMapper.save(p);
+        boolean flag = mapper.save(p);
         //then
-        assertTrue(result);
+        assertTrue(flag);
     }
+
 
     @Test
     @DisplayName("아이디로 사람 정보 삭제한다.")
-    void deleteTest() {
+    void delTest() {
         //given
         long id = 9999;
         //when
-        boolean result = personMapper.delete(id);
+        boolean flag = mapper.delete(id);
         //then
-        assertTrue(result);
+        assertTrue(flag);
     }
     
+    
     @Test
-    @DisplayName("아이디가 200인 사람의 정보를 수정한다.")
+    @DisplayName("아이디가 300인 사람의 정보를 수정한다.")
     void updateTest() {
         //given
-        Person p = new Person(200, "루피", 25);
+        Person p = new Person(300, "뉴마바", 300);
         //when
-        boolean update = personMapper.update(p);
+        boolean flag = mapper.update(p);
         //then
-        assertTrue(update);
+        assertTrue(flag);
     }
     
+    
     @Test
-    @DisplayName("전체조회하면 결과 건수가 3건이다")
+    @DisplayName("전체조회하면 결과 건수가 5건이다")
     void findAllTest() {
         //given
-        List<Person> people = personMapper.findAll();
-        //when
-        people.forEach(System.out::println);
-        //then
-        assertEquals(3, people.size());
-    }
 
+        //when
+        List<Person> people = mapper.findAll();
+        //then
+        people.forEach(System.out::println);
+
+        assertEquals(5, people.size());
+    }
+    
+    
     @Test
-    @DisplayName("id로 사람 정보를 개별 조회한다.")
+    @DisplayName("id로 사람 정보를 개별 조회한다")
     void findOneTest() {
         //given
-        long id = 200;
+        long id = 100;
         //when
-        Person p = personMapper.findOne(id);
+        Person person = mapper.findOne(id);
         //then
+        System.out.println("person = " + person);
 
-        System.out.println("p = " + p);
-
-        assertEquals("루피", p.getPersonName());
+        assertEquals("백백이", person.getPersonName());
     }
+    
 
     @Test
-    @DisplayName("사람수와 이름리스트를 조회한다.")
+    @DisplayName("사람수와 이름리스트를 조회한다")
     void findNamesTest() {
         //given
 
         //when
-        List<String> names = personMapper.findNames();
-        int count = personMapper.count();
+        List<String> names = mapper.findNames();
+        int count = mapper.count();
         //then
         names.forEach(System.out::println);
         System.out.println();

@@ -5,15 +5,24 @@ import lombok.*;
 
 import java.util.List;
 
-@Getter
-@ToString
+@Getter @ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+/*
+    {
+        "replies": [
+            {}, {}, {}
+        ]
+    }
+ */
 public class ReplyListDto {
 
-
+    /*
+        [
+            {}, {}, {}
+        ]
+     */
     private PageMaker pageInfo;
     private List<ReplyDetailDto> replies;
-
 }

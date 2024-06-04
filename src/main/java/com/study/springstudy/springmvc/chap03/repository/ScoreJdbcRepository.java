@@ -92,12 +92,14 @@ public class ScoreJdbcRepository implements ScoreRepository {
                 sortSql += "average DESC";
                 break;
         }
-
         return sortSql;
     }
 
+    @Override
     public Score findOne(long stuNum) {
-        try (Connection conn = connect()){
+
+        try (Connection conn = connect()) {
+
             String sql = "SELECT * FROM tbl_score WHERE stu_num = ?";
 
             PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -105,11 +107,36 @@ public class ScoreJdbcRepository implements ScoreRepository {
 
             ResultSet rs = pstmt.executeQuery();
 
-           if(rs.next()) return new Score(rs);
+            if (rs.next()) {
+                return new Score(rs);
+            }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         return null;
+    }
+
+    @Override
+    public boolean delete(long stuNum) {
+
+        try (Connection conn = connect()) {
+
+            String sql = "DELETE FROM tbl_score WHERE stu_num = ?";
+
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setLong(1, stuNum);
+
+            int result = pstmt.executeUpdate();
+
+            if (result == 1) return true;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return false;
     }
 
     @Override
@@ -141,41 +168,7 @@ public class ScoreJdbcRepository implements ScoreRepository {
         return null;
     }
 
-    @Override
-    public void remove(long stuNum) {
-        try(Connection conn = connect()) {
-
-            String sql = "DELETE FROM tbl_score WHERE stu_num = ?";
-            PreparedStatement pstmt = conn.prepareStatement(sql);
-            pstmt.setLong(1, stuNum);
-
-            pstmt.executeUpdate();
-
-        } catch ( Exception e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    @Override
-    public void oderBy(String option) {
-        try(Connection conn = connect()) {
-
-            String sql = "SELECT * FROM tbl_score ORDER BY ?";
-            PreparedStatement pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1, option);
-
-            pstmt.executeUpdate();
-
-        } catch ( Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-
     private Connection connect() throws SQLException {
         return DriverManager.getConnection(url, username, password);
     }
-
-
 }

@@ -64,8 +64,8 @@
 <div class="wrap">
     <section class="score-main">
         <h1>${s.stuName}님 성적 정보 수정하기~</h1>
-            <form action="/score/modify" method="post">
-            <%--사용자 몰래 서버로 보낼 데이터--%>
+        <form action="/score/modify" method="post">
+            <!-- 사용자 몰래 서버로 보낼 데이터 -->
             <input type="hidden" name="stuNum" value="${s.stuNum}">
             <ul>
                 <li># 국어: <input type="text" name="kor" value="${s.kor}"></li>

@@ -14,29 +14,29 @@
     </style>
 </head>
 <body>
+    
+    <ul>        
+       
+        <h1>프론트컨트롤러V3 목록보기</h1>
 
-<ul>
+        <c:forEach var="m" items="${memberList}">
+            <li>
+                # 아이디: ${m.account},
+                <a href="#">
+                    이름: ${m.userName} 
+                </a> 
+                &nbsp;&nbsp;&nbsp;
+                <a id="rm-btn" href="#">[delete]</a>
 
-    <h1>프론트컨트롤러3 목록보기</h1>
+            </li>
+        </c:forEach>
 
-    <c:forEach var="m" items="${mmm}">
-        <li>
-            아이디: ${m.account},
-            <a href="#">
-                이름: ${m.userName}
-            </a>
-            &nbsp;&nbsp;&nbsp;
-            <a id="rm-btn" href="#">[delete]</a>
+    </ul>
 
-        </li>
-    </c:forEach>
-
-</ul>
-
-<a href="/chap02/v3/join">새로운 회원가입하기</a>
+    <a href="/chap02/v3/join">새로운 회원가입하기</a>
 
 
-
+    
 
 </body>
 </html>

@@ -5,7 +5,6 @@ import com.study.springstudy.springmvc.chap05.mapper.MemberMapper;
 import com.study.springstudy.springmvc.chap05.service.MemberService;
 import com.study.springstudy.springmvc.util.LoginUtil;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.util.WebUtils;
@@ -16,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.time.LocalDateTime;
 
 @Configuration
-@Slf4j
 @RequiredArgsConstructor
 public class AutoLoginInterceptor implements HandlerInterceptor {
 
@@ -26,10 +24,12 @@ public class AutoLoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
         // 1. 사이트에 들어오면 자동로그인 쿠키를 가지고 있는지 확인
-        Cookie autoLoginCookie = WebUtils.getCookie(request, LoginUtil.AUTO_LOGIN_COOKIE);
+        Cookie autoLoginCookie
+                = WebUtils.getCookie(request, LoginUtil.AUTO_LOGIN_COOKIE);
 
-        // 2. 자동로그인 쿠키가 있고 로그인이 안되어 있다면 사이트 로그인 처리를 수행
-        if(autoLoginCookie != null && !LoginUtil.isLoggedIn(request.getSession())) {
+        // 2. 자동로그인 쿠키가 있고, 로그인이 안되어있다면 사이트 로그인 처리를 수행
+        if (autoLoginCookie != null
+                && !LoginUtil.isLoggedIn(request.getSession())) {
             // 3. 쿠키에 들어있는 랜덤값을 읽기
             String sessionId = autoLoginCookie.getValue();
 
@@ -45,8 +45,6 @@ public class AutoLoginInterceptor implements HandlerInterceptor {
             }
         }
 
-
         return true;
-
     }
 }

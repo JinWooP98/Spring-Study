@@ -5,9 +5,7 @@ import lombok.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-@Setter
-@Getter
-@ToString
+@Setter @Getter @ToString
 @EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
@@ -22,5 +20,4 @@ public class Person {
         this.personName = rs.getString("person_name");
         this.personAge = rs.getInt("person_age");
     }
-
 }

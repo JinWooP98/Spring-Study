@@ -1,7 +1,6 @@
 package com.study.springstudy.springmvc.chap03.mapper;
 
 import com.study.springstudy.springmvc.chap03.dto.RankDto;
-import com.study.springstudy.springmvc.chap03.dto.ScoreDetailResponseDto;
 import com.study.springstudy.springmvc.chap03.entity.Score;
 import org.apache.ibatis.annotations.Mapper;
 

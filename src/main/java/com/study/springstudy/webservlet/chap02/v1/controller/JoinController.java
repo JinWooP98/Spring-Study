@@ -16,5 +16,6 @@ public class JoinController implements ControllerV1 {
         RequestDispatcher dp
                 = request.getRequestDispatcher(viewName);
         dp.forward(request, response);
+
     }
 }

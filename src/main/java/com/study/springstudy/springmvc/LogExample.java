@@ -4,7 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 @Component
-@Slf4j
+@Slf4j // 로그 라이브러리
 public class LogExample {
 
     /*
@@ -26,10 +26,12 @@ public class LogExample {
 
     public void showLog() {
 
-        log.trace("trace!!");
+        log.trace("trace!!!");
         log.debug("debug!!!");
         log.info("info!!!");
         log.warn("warn!!!");
         log.error("error!!!");
     }
+
+
 }

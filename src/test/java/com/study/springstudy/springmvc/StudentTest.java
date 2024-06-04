@@ -2,14 +2,19 @@ package com.study.springstudy.springmvc;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 class StudentTest {
 
     @Test
-    void test() {
+    void sTest() {
+
         Student s = new Student();
-        s.setName("말똥이");
-        s.setAge(12);
-        s.setGrade(5);
+        s.setName("홍길동");
+        s.setAge(20);
+        s.setGrade(3);
+
+        System.out.println("s = " + s);
     }
 
 }

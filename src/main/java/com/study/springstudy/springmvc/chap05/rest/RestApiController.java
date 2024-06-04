@@ -9,8 +9,10 @@ import com.study.springstudy.springmvc.chap04.service.BoardService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 import java.util.List;
@@ -25,23 +27,23 @@ public class RestApiController {
 
     private final BoardService boardService;
 
-    @GetMapping("/rest/hello")// 서버사이드렌더링(SSR) 방식 직접 html을 만들어 보내는 것
-//    @ResponseBody // 서버가 클라이언크에게 순수한 데이터를 전달할 때 사용
+    @GetMapping("/hello")
+    // @ResponseBody // 서버가 클라이언트에게 순수한 데이터를 전달할 때 사용
     public String hello() {
-        // ...
+        // ....
 
         return "안녕안녕 메롱메롱";
     }
 
     @GetMapping("/hobby")
-//    @ResponseBody
+    // @ResponseBody
     public List<String> hobby() {
         List<String> hobbies = List.of("태권도", "장기", "댄스");
         return hobbies;
     }
 
-    @GetMapping(value = "/person", produces="application/json" /*json 이 기본값이라 굳이 안적어줘도 됨*/)
-//    @ResponseBody
+    @GetMapping(value = "/person", produces = "application/json")
+    // @ResponseBody
     public Person person() {
         Person p = new Person(100, "핑구", 10);
         return p;
@@ -50,10 +52,12 @@ public class RestApiController {
     @GetMapping("/board")
     public Map<String, Object> board() {
 
-        List<BoardListResponseDto> list = boardService.getList(new Search());
+        List<BoardListResponseDto> list = boardService.findList(new Search());
 
         HashMap<String, Object> map = new HashMap<>();
-        map.put("page", new PageMaker(new Page(), boardService.getCount(new Search())));
+        map.put("page", new PageMaker(new Page(),
+                boardService.getCount(new Search())));
+
         map.put("articles", list);
 
         return map;
@@ -62,10 +66,10 @@ public class RestApiController {
     /*
          RestController에서 리턴타입을 ResponseEntity를 쓰는 이유
 
-         - 클라이언트에게 응답할 때는 메시지 바디안에 들어 있는 데이터도 중요하지만
+         - 클라이언트에게 응답할 때는 메시지 바디안에 들어 있는
+           데이터도 중요하지만
          - 상태코드와 헤더정보를 포함해야 한다
          - 근데 일반 리턴타입은 상태코드와 헤더정보를 전송하기 어렵다
-
      */
 
     @GetMapping("/people")
@@ -78,27 +82,29 @@ public class RestApiController {
 
         HttpHeaders headers = new HttpHeaders();
         headers.add("my-pet", "cat");
-        headers.add("money", "85949");
+        headers.add("money", "100");
 
         return ResponseEntity
-//                .status(404)
+//                .status(500)
                 .ok()
                 .headers(headers)
                 .body(people);
     }
 
     @GetMapping("/bmi")
-    public ResponseEntity<?> bmi(@RequestParam(required = false)Double cm,@RequestParam(required = false) Double kg) {
+    public ResponseEntity<?> bmi(
+           @RequestParam(required = false) Double cm,
+           @RequestParam(required = false) Double kg
+    ) {
 
-        if(cm==null||kg==null) {
+        if (cm == null || kg == null) {
             return ResponseEntity
                     .badRequest()
-                    .body("키와 몸무게를 전달하세요");
+                    .body("키와 몸무게를 전달하세요!");
         }
 
         double m = cm / 100;
-        double bmi = kg/ (m * m);
-
+        double bmi = kg / (m * m);
 
         return ResponseEntity
                 .ok()

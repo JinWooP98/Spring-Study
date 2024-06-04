@@ -20,16 +20,17 @@ public class ShowServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        //1. 적절한 저장소에서 회원정보들을 가져옴
+        // 1. 적절한 저장소에서 회원정보들을 가져옴
         List<Member> memberList = repo.findAll();
 
-        //2. 해당 회원정보를 JSP 파일에 전송하기 위한 세팅을 함
-        req.setAttribute("mmm", memberList);
+        // 2. 해당 회원정보를 JSP파일에 전송하기 위한 세팅을 함
+        req.setAttribute("memberList", memberList);
 
-        //3. 적절한 JSP 를 찾아 화면 렌더링
+        // 3. 적절한 JSP를 찾아 화면 렌더링
         String viewName = "/WEB-INF/views/m-list.jsp";
 
         RequestDispatcher dp = req.getRequestDispatcher(viewName);
         dp.forward(req, resp);
+
     }
 }

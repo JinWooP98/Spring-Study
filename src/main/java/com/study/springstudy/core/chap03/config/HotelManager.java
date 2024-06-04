@@ -1,6 +1,5 @@
 package com.study.springstudy.core.chap03.config;
 
-//import com.study.springstudy.chap03.*;
 import com.study.springstudy.core.chap03.*;
 
 // 객체 생성의 제어권을 모두 가지고 온 객체
@@ -13,7 +12,6 @@ public class HotelManager {
     public Chef chef2() {
         return new KimuraChef();
     }
-
     // 요리 코스객체 생성
     public Course course1() {
         return new FrenchCourse();
@@ -29,10 +27,7 @@ public class HotelManager {
         return new AsianRestaurant(chef2(), course2());
     }
     // 호텔 객체 생성
-    public Hotel hotel1() {
-        return new Hotel(restaurant1(), chef1());
-    }
-    public Hotel hotel2() {
+    public Hotel hotel() {
         return new Hotel(restaurant2(), chef2());
     }
 

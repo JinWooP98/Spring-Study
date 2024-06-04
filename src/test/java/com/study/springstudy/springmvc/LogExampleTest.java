@@ -13,6 +13,7 @@ class LogExampleTest {
     @Autowired
     LogExample logExample;
 
+
     @Test
     @DisplayName("")
     void logTest() {

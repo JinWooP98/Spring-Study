@@ -5,7 +5,6 @@ import com.study.springstudy.springmvc.chap05.entity.Reply;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.servlet.http.HttpSession;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
@@ -25,15 +24,18 @@ public class BoardDetailResponseDto {
     @Setter
     private String userReaction; // 현재 리액션 상태
 
-    @Setter
-    private List<Reply> replies;
+//    @Setter
+//    private List<Reply> replies;
 
     public BoardDetailResponseDto(Board b) {
         this.boardNo = b.getBoardNo();
         this.title = b.getTitle();
         this.writer = b.getWriter();
         this.content = b.getContent();
-        DateTimeFormatter pattern = DateTimeFormatter.ofPattern("yyyy년 MM월 dd일 hh시 mm분 ss초");
+
+        DateTimeFormatter pattern
+                = DateTimeFormatter.ofPattern("yyyy년 MM월 dd일 a hh시 mm분 ss초");
         this.regDateTime = pattern.format(b.getRegDateTime());
     }
+
 }

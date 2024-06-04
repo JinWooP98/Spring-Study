@@ -13,12 +13,12 @@ import java.util.Scanner;
 public class SecurityConfig {
 
     // 시큐리티 기본 설정 (인증 인가 처리, 초기 로그인화면 없애기)
-    @Bean //  <-- 내가 안만든 클래스에 붙여주는 것   || --> 우리가 만든 것에 붙여주는 것 @Component (@Controller, @Service, @Repository, @Mapper)
+    @Bean // @Component (@Contoller, @Service, @Repository, @Mapper)
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
-        // 모든 요청에 대해 인증하지 않겠다.
         http
-                .csrf().disable() // csrf 토큰공격방지 기능 off
+                .csrf().disable()  // csrf 토큰공격방지 기능 off
+                // 모든 요청에 대해 인증하지 않겠다.
                 .authorizeRequests().antMatchers("/**").permitAll();
 
         return http.build();
@@ -30,9 +30,12 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
+
     // ex
 //    @Bean
 //    public Scanner scanner() {
-//        return new Scanner(System.in)
+//        return new Scanner(System.in);
 //    }
+
+
 }

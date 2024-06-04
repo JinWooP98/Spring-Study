@@ -7,20 +7,20 @@ import java.io.IOException;
 
 public class ModelAndView {
 
-    private View view; // 화면 처리
-    private Model model; // 화면에 필요한 데이터 처리
+    private View view;   // 화면 처리
+    private MyModel model; // 화면에 필요한 데이터 처리
 
     public ModelAndView(String viewName) {
         this.view = new View(viewName);
-        this.model = new Model();
+        this.model = new MyModel();
     }
 
     // 화면 렌더링 기능 (포워딩 or 리다이렉트)
-    public void render (HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    public void render(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.view.render(request, response);
     }
 
-    // 모델에 JSP 가 필요한 데이터를 담는 메서드
+    // 모델에 JSP가 필요한 데이터를 담는 메서드
     public void addAttribute(String key, Object value) {
         this.model.addAttribute(key, value);
     }
@@ -33,11 +33,11 @@ public class ModelAndView {
         this.view = view;
     }
 
-    public Model getModel() {
+    public MyModel getModel() {
         return model;
     }
 
-    public void setModel(Model model) {
+    public void setModel(MyModel model) {
         this.model = model;
     }
 }

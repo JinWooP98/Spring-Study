@@ -15,19 +15,22 @@ public interface MemberMapper {
     Member findOne(String account);
 
     // 중복 확인 (아이디, 이메일)
-
     /**
      *
      * @param type - 어떤걸 중복검사할지 (ex: account OR email)
-     * @param keyowrd - 중복검사할 실제 값
+     * @param keyword - 중복검사할 실제값
      * @return - 중복이면 true, 아니면 false
      */
-    boolean existsById(@Param("type") String type,@Param("keyword") String keyowrd);
+    boolean existsById(
+            @Param("type") String type,
+            @Param("keyword") String keyword
+    );
+
 
     // 자동로그인 쿠키값, 만료시간 업데이트
     void updateAutoLogin(AutoLoginDto dto);
 
     // 세션아이디로 회원정보 조회
     Member findMemberBySessionId(String sessionId);
-
+    
 }

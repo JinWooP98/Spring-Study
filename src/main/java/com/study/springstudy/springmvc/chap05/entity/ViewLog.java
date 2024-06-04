@@ -1,9 +1,10 @@
 package com.study.springstudy.springmvc.chap05.entity;
 
 /*
+
 -- 조회수 기록 관리 테이블
 CREATE TABLE view_log (
-    id INT PRIMARY KEY auto_increment,
+	id INT PRIMARY KEY auto_increment,
     account VARCHAR(50),
     board_no INT,
     view_time DATETIME
@@ -19,15 +20,15 @@ ADD CONSTRAINT fk_board_viewlog
 FOREIGN KEY (board_no)
 REFERENCES tbl_board (board_no);
 
-SELECT * From view_log;
+SELECT * FROM view_log;
  */
 
 import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Setter @Getter
-@ToString
+@Setter @Getter @ToString
+@EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder

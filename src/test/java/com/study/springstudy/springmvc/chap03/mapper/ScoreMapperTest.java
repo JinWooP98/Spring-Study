@@ -19,35 +19,41 @@ class ScoreMapperTest {
     @Autowired
     ScoreMapper mapper;
 
+
     @Test
     @DisplayName("전체조회")
     void findAllTest() {
         //given
+
         //when
         List<Score> scoreList = mapper.findAll(null);
         //then
         scoreList.forEach(System.out::println);
     }
 
+
     @Test
     @DisplayName("개별조회")
     void findOneTest() {
         //given
-        long stuNum = 13;
+        long stuNum = 11;
         //when
         Score score = mapper.findOne(stuNum);
         //then
         System.out.println("score = " + score);
     }
-    
+
+
     @Test
     @DisplayName("순위 조회")
     void rankTest() {
         //given
-        long stuNum = 13;
+        long stuNum = 1;
         //when
         RankDto rankByStuNum = mapper.findRankByStuNum(stuNum);
         //then
         System.out.println(rankByStuNum);
     }
+
+
 }

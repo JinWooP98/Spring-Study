@@ -14,10 +14,10 @@ public class WesternRestaurant implements Restaurant {
     }
 
     // 주문 기능
-    @Override
     public void order() {
         System.out.println("서양 요리를 주문합니다.");
         course.combineMenu();
         chef.cook();
     }
+
 }

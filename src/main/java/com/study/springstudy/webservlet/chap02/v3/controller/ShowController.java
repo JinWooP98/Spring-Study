@@ -3,7 +3,7 @@ package com.study.springstudy.webservlet.chap02.v3.controller;
 import com.study.springstudy.webservlet.MemberMemoryRepo;
 import com.study.springstudy.webservlet.ModelAndView;
 import com.study.springstudy.webservlet.View;
-import com.study.springstudy.webservlet.chap02.v3.controller.ControllerV3;
+import com.study.springstudy.webservlet.chap02.v2.controller.ControllerV2;
 import com.study.springstudy.webservlet.entity.Member;
 
 import javax.servlet.ServletException;
@@ -18,12 +18,12 @@ public class ShowController implements ControllerV3 {
     private MemberMemoryRepo repo = MemberMemoryRepo.getInstance();
 
     @Override
-    public ModelAndView process(Map<String, String> paramMap){
+    public ModelAndView process(Map<String, String> paramMap) {
 
         List<Member> memberList = repo.findAll();
 
         ModelAndView modelAndView = new ModelAndView("v3/m-list");
-        modelAndView.addAttribute("mmm", memberList);
+        modelAndView.addAttribute("memberList", memberList);
 
         return modelAndView;
     }

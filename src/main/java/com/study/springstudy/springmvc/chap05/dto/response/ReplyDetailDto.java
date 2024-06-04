@@ -7,8 +7,7 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Getter @Setter
-@ToString
+@Getter @ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
@@ -30,5 +29,4 @@ public class ReplyDetailDto {
         this.writer = r.getReplyWriter();
         this.createAt = r.getReplyDate();
     }
-
 }

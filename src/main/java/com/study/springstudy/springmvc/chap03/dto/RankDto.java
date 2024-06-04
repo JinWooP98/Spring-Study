@@ -5,10 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@Getter @Setter
-@ToString
+@Getter @Setter @ToString
 @AllArgsConstructor
 public class RankDto {
-    private int rank;
-    private int count;
+    private int rank, cnt;
 }

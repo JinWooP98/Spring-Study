@@ -2,6 +2,7 @@ package com.study.springstudy.springmvc.chap05.api;
 
 import com.study.springstudy.springmvc.chap05.dto.request.LoginDto;
 import com.study.springstudy.springmvc.chap05.dto.request.SignUpDto;
+import com.study.springstudy.springmvc.chap05.dto.response.LoginUserInfoDto;
 import com.study.springstudy.springmvc.chap05.service.LoginResult;
 import com.study.springstudy.springmvc.chap05.service.MemberService;
 import com.study.springstudy.springmvc.util.LoginUtil;
@@ -9,6 +10,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -24,26 +26,22 @@ import javax.servlet.http.HttpSession;
 public class MemberController {
 
     private final MemberService memberService;
-//    // 회원가입 양식 열기
-//    @GetMapping("/hello")
-//    // json을 보내고 싶다면 @ResponseBody 을 사용 단, modelandview말고 string
-//    public ModelAndView hello() {
-//        return new ModelAndView("board/write");
-//    }
 
-    //회원가입 양식 열기
+    // 회원가입 양식 열기
     @GetMapping("/sign-up")
     public void signUp() {
-        log.info("/members/sign-up GET : forwarding to sign-up.jsp");
-//        return "members/sign-up";
-        // url이 JSP 경로와 같으면 리턴 타입을 void로 지정해주면 된다.
 
+        log.info("/members/sign-up GET : forwarding to sign-up.jsp");
+        // return "members/sign-up";
     }
 
     // 회원가입 요청 처리
     @PostMapping("/sign-up")
     public String signUp(@Validated SignUpDto dto) {
-        log.info("/members/sign-up POST");
+
+
+
+        log.info("/members/sign-up POST ");
         log.debug("parameter: {}", dto);
 
         boolean flag = memberService.join(dto);
@@ -62,34 +60,32 @@ public class MemberController {
                 .body(flag);
     }
 
-    //로그인 양식 열기
+    // 로그인 양식 열기
     @GetMapping("/sign-in")
-    public String signIn(HttpSession session, @RequestParam(required = false) String redirect) {
+    public String signIn(HttpSession session
+                        , @RequestParam(required = false) String redirect
+    ) {
 
-        //로그인을 한 사람이 이 요청을 보내면 돌려보낸다.
-//        if(LoginUtil.isLoggedIn(session)) {
+        // 로그인을 한 사람이 이 요청을 보내면 돌려보낸다.
+//        if (LoginUtil.isLoggedIn(session)) {
 //            return "redirect:/";
 //        }
         session.setAttribute("redirect", redirect);
 
         log.info("/members/sign-in GET : forwarding to sign-in.jsp");
         return "members/sign-in";
-        // url이 JSP 경로와 같으면 리턴 타입을 void로 지정해주면 된다.
-
     }
 
     // 로그인 요청 처리
     @PostMapping("/sign-in")
-    public String signIn(LoginDto dto, RedirectAttributes ra, HttpServletRequest request, HttpServletResponse response) {
+    public String signIn(LoginDto dto,
+                         RedirectAttributes ra,
+                         HttpServletRequest request,
+                         HttpServletResponse response) {
         log.info("/members/sign-in POST");
         log.debug("parameter: {}", dto);
 
-
-
         // 세션 얻기
-        // model은 1번의 요청 응답에 의해 사라짐
-        // 세션은 세션의 수명이 다 하면 사람
-        // 세션의 수명은 session.getMaxInactiveInterval에 의해 알 수 있다.
         HttpSession session = request.getSession();
 
         LoginResult result = memberService.authenticate(dto, session, response);
@@ -97,20 +93,22 @@ public class MemberController {
         // 로그인 검증 결과를 JSP에게 보내기
         // Redirect시에 Redirect된 페이지에 데이터를 보낼 때는
         // Model객체를 사용할 수 없음
-        // 왜냐면 Model 객체는 request객체를 사용하는데 해당 객체는
+        // 왜냐면 Model객체는 request객체를 사용하는데 해당 객체는
         // 한번의 요청이 끝나면 메모리에서 제거된다. 그러나 redirect는
-        // 요청이 2번 발생하므로 다른 request 객체를 jsp가 사용하게 됨.
-        // Model 대신 RedirectAttributes를 사용
+        // 요청이 2번 발생하므로 다른 request객체를 jsp가 사용하게 됨
+
+//        model.addAttribute("result", result); // (X)
         ra.addFlashAttribute("result", result);
 
-        if(result == LoginResult.SUCCESS) {
+        if (result == LoginResult.SUCCESS) {
 
             // 혹시 세션에 리다이렉트 URL이 있다면
-            String redirect = (String)session.getAttribute("redirect");
-            if(redirect != null) {
+            String redirect = (String) session.getAttribute("redirect");
+            if (redirect != null) {
                 session.removeAttribute("redirect");
                 return "redirect:" + redirect;
             }
+
             return "redirect:/index"; // 로그인 성공시
         }
 
@@ -119,12 +117,11 @@ public class MemberController {
 
     @GetMapping("/sign-out")
     public String signOut(HttpServletRequest request, HttpServletResponse response) {
-//        // 세션 구하기
-        // HttpSession session 이와 같이 매개변수를 설정하면 이 과정 생략
+        // 세션 구하기
         HttpSession session = request.getSession();
 
         // 자동로그인 상태인지 확인
-        if(LoginUtil.isAutoLogin(request)) {
+        if (LoginUtil.isAutoLogin(request)) {
             // 쿠키를 제거하고, DB에도 자동로그인 관련데이터를 원래대로 해놓음
             memberService.autoLoginClear(request, response);
         }
@@ -138,4 +135,5 @@ public class MemberController {
         // 홈으로 보내기
         return "redirect:/";
     }
+
 }

@@ -14,6 +14,7 @@ public interface ViewLogMapper {
     void updateViewLog(ViewLog viewLog);
 
     // 조회수 기록 조회
-    ViewLog findOne(@Param("account")String account, @Param("bno")long bno);
+    ViewLog findOne(@Param("account") String account,
+                    @Param("bno") long bno);
 
 }

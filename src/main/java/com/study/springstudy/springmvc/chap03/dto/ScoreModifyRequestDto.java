@@ -1,17 +1,12 @@
 package com.study.springstudy.springmvc.chap03.dto;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
-@Getter
-@AllArgsConstructor
-@ToString
+@Setter @Getter @ToString
 public class ScoreModifyRequestDto {
 
-    private int stuNum;
-    private int kor;
-    private int eng;
-    private int math;
-
+    private long stuNum;
+    private int kor, eng, math;
 }

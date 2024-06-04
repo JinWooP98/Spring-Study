@@ -14,4 +14,5 @@ public class WesternRestaurant {
         course.combineMenu();
         chef.cook();
     }
+
 }

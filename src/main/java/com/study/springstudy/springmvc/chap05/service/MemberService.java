@@ -11,6 +11,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.util.WebUtils;
 
 import javax.servlet.http.Cookie;
@@ -33,7 +34,7 @@ public class MemberService {
 
     // 회원 가입 중간 처리
     public boolean join(SignUpDto dto) {
-        // dto 를 엔터티로 변환
+        // dto를 엔터티로 변환
         Member member = dto.toEntity();
 
         // 비밀번호를 인코딩(암호화)
@@ -43,6 +44,7 @@ public class MemberService {
         return memberMapper.save(member);
     }
 
+
     // 로그인 검증 처리
     public LoginResult authenticate(LoginDto dto, HttpSession session, HttpServletResponse response) {
 
@@ -50,26 +52,27 @@ public class MemberService {
         String account = dto.getAccount();
         Member foundMember = memberMapper.findOne(account);
 
-        if(foundMember == null) {
+        if (foundMember == null) {
             log.info("{} - 회원가입이 필요합니다.", account);
             return NO_ACC;
         }
+
         // 비밀번호 일치 검사
         String inputPassword = dto.getPassword(); // 클라이언트에 입력한 비번
         String originPassword = foundMember.getPassword(); // 데이터베이스에 저장된 비번
 
-        // PasswordEncoder 에서는 암호화된 비번을 내부적으로 비교해주는 기능을 제공
-        // 1. 암호화가 안된 비밀번호, 2. 암호화된 비밀번호
-        if(!encoder.matches(inputPassword, originPassword)) {
+        // PasswordEncoder에서는 암호화된 비번을 내부적으로 비교해주는 기능을 제공
+        if (!encoder.matches(inputPassword, originPassword)) {
             log.info("비밀번호가 일치하지 않습니다.");
             return NO_PW;
         }
 
+
         // 자동로그인 추가 처리
-        if(dto.isAutoLogin()) {
-            // 1. 자동 로그인 쿠키 생성하기
+        if (dto.isAutoLogin()) {
+            // 1. 자동 로그인 쿠키 생성
             // - 쿠키 내부에 절대로 중복되지 않는 유니크한 값을 저장
-            // (UUID, SessionID)
+            //   (UUID, SessionID)
             String sessionId = session.getId();
             Cookie autoLoginCookie = new Cookie(AUTO_LOGIN_COOKIE, sessionId);
             // 쿠키 설정
@@ -80,17 +83,17 @@ public class MemberService {
             response.addCookie(autoLoginCookie);
 
             // 3. DB에도 해당 쿠키값을 저장
-            memberMapper.updateAutoLogin(AutoLoginDto.builder()
+            memberMapper.updateAutoLogin(
+                    AutoLoginDto.builder()
                             .sessionId(sessionId)
                             .limitTime(LocalDateTime.now().plusDays(90))
                             .account(account)
-                            .build());
-
-
+                            .build()
+            );
         }
 
-        maintainLoginState(session, foundMember);
 
+        maintainLoginState(session, foundMember);
 
         return SUCCESS;
     }
@@ -99,26 +102,27 @@ public class MemberService {
         log.info("{}님 로그인 성공", foundMember.getName());
 
         // 세션의 수명 : 설정된 시간 OR 브라우저를 닫기 전까지
-        session.setMaxInactiveInterval(60*60); // 세션 수명 1시간 설정
-
         int maxInactiveInterval = session.getMaxInactiveInterval();
-
+        session.setMaxInactiveInterval(60 * 60); // 세션 수명 1시간 설정
         log.debug("session time: {}", maxInactiveInterval);
 
-        session.setAttribute("login", new LoginUserInfoDto(foundMember));
+        session.setAttribute(LOGIN, new LoginUserInfoDto(foundMember));
     }
+
 
     // 아이디, 이메일 중복검사
     public boolean checkIdentifier(String type, String keyword) {
         return memberMapper.existsById(type, keyword);
     }
 
-    public void autoLoginClear(HttpServletRequest request, HttpServletResponse response) {
+    public void autoLoginClear(
+            HttpServletRequest request,
+            HttpServletResponse response
+    ) {
 
         // 1. 쿠키 제거하기
         Cookie c = WebUtils.getCookie(request, AUTO_LOGIN_COOKIE);
-
-        if(c != null) {
+        if (c != null) {
             c.setPath("/");
             c.setMaxAge(0);
             response.addCookie(c);

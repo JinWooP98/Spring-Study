@@ -2,7 +2,7 @@ package com.study.springstudy.core.chap04;
 
 import org.springframework.stereotype.Component;
 
-@Component("www")
+@Component("wwww")
 public class WesternRestaurant implements Restaurant {
 
     // 담당 쉐프
@@ -17,10 +17,10 @@ public class WesternRestaurant implements Restaurant {
     }
 
     // 주문 기능
-    @Override
     public void order() {
         System.out.println("서양 요리를 주문합니다.");
         course.combineMenu();
         chef.cook();
     }
+
 }

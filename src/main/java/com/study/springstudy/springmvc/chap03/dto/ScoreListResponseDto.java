@@ -7,7 +7,7 @@ import lombok.Getter;
 public class ScoreListResponseDto {
 
     private long stuNum;
-    private String maskingName;
+    private String maskingName; // 첫글자 빼고 모두 *처리
     private double average;
     private String grade;
 

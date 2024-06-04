@@ -1,6 +1,5 @@
 package com.study.springstudy.springmvc.chap05.dto.request;
 
-
 import com.study.springstudy.springmvc.chap05.entity.Reply;
 import lombok.*;
 
@@ -10,8 +9,8 @@ import javax.validation.constraints.NotNull;
 @Getter @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode
 @Builder
+@EqualsAndHashCode
 public class ReplyModifyDto {
 
     @NotNull
@@ -29,4 +28,5 @@ public class ReplyModifyDto {
                 .boardNo(this.bno)
                 .build();
     }
+
 }

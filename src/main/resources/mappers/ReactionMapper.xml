@@ -7,36 +7,36 @@
 
     <insert id="save">
         INSERT INTO tbl_reaction
-        (board_no, account, reaction_type)
+            (board_no, account, reaction_type)
         VALUES
-        (#{boardNo}, #{account}, #{reactionType})
+            (#{boardNo}, #{account}, #{reactionType})
     </insert>
 
     <delete id="delete">
         DELETE FROM tbl_reaction
         WHERE board_no = #{boardNo}
-        AND account = #{account}
+            AND account = #{account}
     </delete>
 
     <select id="findOne" resultType="reaction">
         SELECT *
         FROM tbl_reaction
         WHERE board_no = #{boardNo}
-        AND account = #{account}
+            AND account = #{account}
     </select>
 
     <select id="countLikes" resultType="int">
         SELECT COUNT(*)
         FROM tbl_reaction
         WHERE board_no = #{boardNo}
-        AND reaction_type = 'LIKE'
+            AND reaction_type = 'LIKE'
     </select>
 
-    <select id="countDisLikes" resultType="int">
+    <select id="countDislikes" resultType="int">
         SELECT COUNT(*)
         FROM tbl_reaction
         WHERE board_no = #{boardNo}
-        AND reaction_type = 'DISLIKE'
+            AND reaction_type = 'DISLIKE'
     </select>
 
 </mapper>

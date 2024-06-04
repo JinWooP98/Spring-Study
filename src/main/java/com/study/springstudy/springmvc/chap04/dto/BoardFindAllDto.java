@@ -1,6 +1,5 @@
 package com.study.springstudy.springmvc.chap04.dto;
 
-import com.sun.jna.platform.win32.Sspi;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,6 +20,4 @@ public class BoardFindAllDto {
     private int viewCount;
     private int replyCount;
     private String account;
-
-
 }

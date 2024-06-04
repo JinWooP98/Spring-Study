@@ -14,20 +14,20 @@
     </style>
 </head>
 <body>
+    
+    <h1>로그인하기~</h1>
 
-<h1>로그인하기~</h1>
-
-<form action="/hw/s-login-check" method="post">
-    <label>
-        # 아이디 : <input type="text" name="id">
-    </label>
-    <label>
-        # 비밀번호 : <input type="password" name="pw">
-    </label>
-    <label>
-        <button type="submit">로그인</button>
-    </label>
-</form>
+    <form action="/hw/s-login-check" method="post">
+        <label>
+            # 아이디 : <input type="text" name="id">
+        </label>
+        <label>
+            # 비밀번호 : <input type="password" name="pw">
+        </label>
+        <label>
+            <button type="submit">로그인</button>
+        </label>
+    </form>
 
 </body>
 </html>

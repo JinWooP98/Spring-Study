@@ -5,7 +5,6 @@ import com.study.springstudy.springmvc.chap05.dto.request.ReplyModifyDto;
 import com.study.springstudy.springmvc.chap05.dto.request.ReplyPostDto;
 import com.study.springstudy.springmvc.chap05.dto.response.ReplyDetailDto;
 import com.study.springstudy.springmvc.chap05.dto.response.ReplyListDto;
-import com.study.springstudy.springmvc.chap05.entity.Reply;
 import com.study.springstudy.springmvc.chap05.service.ReplyService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -15,6 +14,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,30 +23,30 @@ import java.util.Map;
 @RequestMapping("/api/v1/replies")
 @RequiredArgsConstructor
 @Slf4j
-@CrossOrigin // CORS 정책 허용범위 설정
 public class ReplyApiController {
 
     private final ReplyService replyService;
 
     // 댓글 목록 조회 요청
-    // URL : /api/v1/replies/원본글번호/page/페이지번호 - GET -> 목록조회
-    // @PathVariable : URL 에 붙어있는 변수값을 읽는 아노테이션
+    // URL : /api/v1/replies/원본글번호/page/페이지번호   -  GET -> 목록조회
+    // @PathVariable : URL에 붙어있는 변수값을 읽는 아노테이션
     @GetMapping("/{bno}/page/{pageNo}")
-    public ResponseEntity<?> list(@PathVariable long bno, @PathVariable int pageNo) {
+    public ResponseEntity<?> list(
+            @PathVariable long bno
+            , @PathVariable int pageNo
+    ) {
 
-        if(bno == 0) {
-            String massage = "글 번호는 0번이 될 수 없습니다.";
-            log.warn(massage);
+        if (bno == 0) {
+            String message = "글 번호는 0번이 될 수 없습니다.";
+            log.warn(message);
             return ResponseEntity
                     .badRequest()
-                    .body(massage);
+                    .body(message);
         }
 
         log.info("/api/v1/replies/{} : GET", bno);
 
         ReplyListDto replies = replyService.getReplies(bno, new Page(pageNo, 10));
-
-
 
         return ResponseEntity
                 .ok()
@@ -54,18 +54,17 @@ public class ReplyApiController {
     }
 
     // 댓글 생성 요청
-    // @RequestBody : 클라이언트가 전송한 데이터를 JSON 으로 받아서 파싱
+    // @RequestBody : 클라이언트가 전송한 데이터를 JSON으로 받아서 파싱
     @PostMapping
     public ResponseEntity<?> posts(
             @Validated @RequestBody ReplyPostDto dto
             , BindingResult result // 입력값 검증 결과 데이터를 갖고 있는 객체
+            , HttpSession session
     ) {
-
         log.info("/api/v1/replies : POST");
-        log.debug("parameter : {}", dto);
+        log.debug("parameter: {}", dto);
 
-        if(result.hasErrors()) {
-
+        if (result.hasErrors()) {
             Map<String, String> errors = makeValidationMessageMap(result);
 
             return ResponseEntity
@@ -73,13 +72,15 @@ public class ReplyApiController {
                     .body(errors);
         }
 
-        boolean flag = replyService.register(dto);
+        boolean flag = replyService.register(dto, session);
 
-        if(!flag) return ResponseEntity.internalServerError().body("댓글 등록 실패!");
+        if (!flag) return ResponseEntity
+                .internalServerError()
+                .body("댓글 등록 실패!");
 
         return ResponseEntity
                 .ok()
-                .body(replyService.getReplies(dto.getBno(), new Page(1,10)));
+                .body(replyService.getReplies(dto.getBno(), new Page(1, 10)));
     }
 
     private Map<String, String> makeValidationMessageMap(BindingResult result) {
@@ -108,18 +109,28 @@ public class ReplyApiController {
     }
 
     // 댓글 수정 요청
-    // @PutMapping // 전체수정
-    // @PatchMapping // 일부수정
-    // BindingResult // 검증 메서드를 가지는 클래스
-    // 둘다 받기 위해서
+//    @PutMapping   // 전체수정
+//    @PatchMapping // 일부수정
+
+    /*
+        let obj = {
+            age : 3
+        }
+
+        PUT  -   obj = { age: 10 };
+        PATCH -  obj.age = 10;
+     */
+
     @RequestMapping(method = {RequestMethod.PUT, RequestMethod.PATCH})
-    public ResponseEntity<?> modify(@Validated @RequestBody ReplyModifyDto dto, BindingResult result) {
+    public ResponseEntity<?> modify(
+            @Validated @RequestBody ReplyModifyDto dto
+            , BindingResult result
+    ) {
 
         log.info("/api/v1/replies : PUT, PATCH");
-        log.debug("parameter : {}", dto);
+        log.debug("parameter: {}", dto);
 
-        if(result.hasErrors()) {
-
+        if (result.hasErrors()) {
             Map<String, String> errors = makeValidationMessageMap(result);
 
             return ResponseEntity
@@ -130,7 +141,7 @@ public class ReplyApiController {
         ReplyListDto replyListDto = replyService.modify(dto);
 
         return ResponseEntity.ok().body(replyListDto);
-    }
 
+    }
 
 }

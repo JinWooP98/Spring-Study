@@ -6,11 +6,6 @@ import java.util.List;
 
 public class ScoreMemoryRepository implements ScoreRepository {
     @Override
-    public int[] findRankByStuNum(long stuNum) {
-        return new int[0];
-    }
-
-    @Override
     public boolean save(Score score) {
         return false;
     }
@@ -26,11 +21,7 @@ public class ScoreMemoryRepository implements ScoreRepository {
     }
 
     @Override
-    public void remove(long stuNum) {
-
-    }
-
-    @Override
-    public void oderBy(String option) {
+    public int[] findRankByStuNum(long stuNum) {
+        return new int[0];
     }
 }

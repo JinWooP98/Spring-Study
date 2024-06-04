@@ -1401,7 +1401,7 @@
       <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
     <schema id="511" parent="1" name="spring5">
-      <LastIntrospectionLocalTimestamp>2024-06-03.08:24:00</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-06-04.05:43:28</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="512" parent="1" name="sys">
@@ -1619,7 +1619,7 @@
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="561" parent="523" name="reaction_id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>27</AutoIncrement>
       <DasType>int(8)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1707,110 +1707,120 @@
       <RefColNames>board_no</RefColNames>
       <RefTableName>tbl_board</RefTableName>
     </foreign-key>
-    <index id="579" parent="524" name="PRIMARY">
+    <foreign-key id="579" parent="524" name="fk_reply_member">
+      <ColNames>account</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>account</RefColNames>
+      <RefTableName>tbl_member</RefTableName>
+    </foreign-key>
+    <index id="580" parent="524" name="PRIMARY">
       <ColNames>reply_no</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="580" parent="524" name="fk_reply">
+    <index id="581" parent="524" name="fk_reply">
       <ColNames>board_no</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="581" parent="524" name="PRIMARY">
+    <index id="582" parent="524" name="fk_reply_member">
+      <ColNames>account</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="583" parent="524" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="582" parent="525" name="stu_num">
+    <column id="584" parent="525" name="stu_num">
       <AutoIncrement>15</AutoIncrement>
       <DasType>int(8)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="583" parent="525" name="stu_name">
+    <column id="585" parent="525" name="stu_name">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="584" parent="525" name="kor">
+    <column id="586" parent="525" name="kor">
       <DasType>int(3)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="585" parent="525" name="eng">
+    <column id="587" parent="525" name="eng">
       <DasType>int(3)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="586" parent="525" name="math">
+    <column id="588" parent="525" name="math">
       <DasType>int(3)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="587" parent="525" name="total">
+    <column id="589" parent="525" name="total">
       <DasType>int(3)|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="588" parent="525" name="average">
+    <column id="590" parent="525" name="average">
       <DasType>float(5,2 digit)|0s</DasType>
       <Position>7</Position>
     </column>
-    <column id="589" parent="525" name="grade">
+    <column id="591" parent="525" name="grade">
       <DasType>char(1)|0s</DasType>
       <Position>8</Position>
     </column>
-    <index id="590" parent="525" name="PRIMARY">
+    <index id="592" parent="525" name="PRIMARY">
       <ColNames>stu_num</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="591" parent="525" name="PRIMARY">
+    <key id="593" parent="525" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="592" parent="526" name="id">
-      <AutoIncrement>2</AutoIncrement>
+    <column id="594" parent="526" name="id">
+      <AutoIncrement>6</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="593" parent="526" name="account">
+    <column id="595" parent="526" name="account">
       <DasType>varchar(50)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="594" parent="526" name="board_no">
+    <column id="596" parent="526" name="board_no">
       <DasType>int(11)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="595" parent="526" name="view_time">
+    <column id="597" parent="526" name="view_time">
       <DasType>datetime|0s</DasType>
       <Position>4</Position>
     </column>
-    <foreign-key id="596" parent="526" name="fk_member_viewlog">
+    <foreign-key id="598" parent="526" name="fk_member_viewlog">
       <ColNames>account</ColNames>
       <RefColNames>account</RefColNames>
       <RefTableName>tbl_member</RefTableName>
     </foreign-key>
-    <foreign-key id="597" parent="526" name="fk_board_viewlog">
+    <foreign-key id="599" parent="526" name="fk_board_viewlog">
       <ColNames>board_no</ColNames>
       <RefColNames>board_no</RefColNames>
       <RefTableName>tbl_board</RefTableName>
     </foreign-key>
-    <index id="598" parent="526" name="PRIMARY">
+    <index id="600" parent="526" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="599" parent="526" name="fk_member_viewlog">
+    <index id="601" parent="526" name="fk_member_viewlog">
       <ColNames>account</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="600" parent="526" name="fk_board_viewlog">
+    <index id="602" parent="526" name="fk_board_viewlog">
       <ColNames>board_no</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="601" parent="526" name="PRIMARY">
+    <key id="603" parent="526" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

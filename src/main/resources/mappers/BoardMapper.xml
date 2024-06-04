@@ -31,8 +31,8 @@
             B.writer,
             B.reg_date_time,
             B.view_count,
-            B.account,
-            COUNT(R.reply_no) AS reply_count
+            COUNT(R.reply_no) AS reply_count,
+            B.account
         FROM tbl_board B
         LEFT OUTER JOIN tbl_reply R
         ON B.board_no = R.board_no
@@ -43,6 +43,7 @@
     </select>
 
     <select id="findOne" resultType="board">
+
         SELECT
         B.board_no, B.title, M.name AS writer
         , B.content, B.view_count
@@ -54,24 +55,27 @@
     </select>
 
     <insert id="save">
-        INSERT INTO tbl_board (title, content, writer, account)
-            Value (#{title}, #{content}, #{writer}, #{account})
+        INSERT INTO tbl_board
+            (writer, content, title, account)
+        VALUES
+            (#{writer}, #{content}, #{title}, #{account})
     </insert>
 
     <delete id="delete">
-        DELETE FROM tbl_board WHERE board_no = #{boardNo}
+        DELETE FROM tbl_board
+        WHERE board_no = #{boardNo}
     </delete>
 
-    <update id="updateViewCount">
-        UPDATE tbl_board SET view_count = view_count + 1 WHERE board_no = #{bno}
+    <update id="upViewCount">
+        UPDATE tbl_board
+        SET view_count = view_count + 1
+        WHERE board_no = #{boardNo}
     </update>
 
     <select id="count" resultType="int">
         SELECT COUNT(*)
         FROM tbl_board
-        <include refid="search"/>
+        <include refid="search" />
     </select>
 
-
 </mapper>
-

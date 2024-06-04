@@ -1,7 +1,7 @@
 package com.study.springstudy.springmvc.error;
 
-import com.study.springstudy.webservlet.Model;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
@@ -15,7 +15,6 @@ public class ErrorController {
     public String error500() {
         return "error/error500";
     }
-
     @GetMapping("/access-deny")
     public String error500(String message, Model model) {
         model.addAttribute("msg", message);

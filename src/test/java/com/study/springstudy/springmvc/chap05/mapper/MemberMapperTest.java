@@ -1,6 +1,5 @@
 package com.study.springstudy.springmvc.chap05.mapper;
 
-import com.study.springstudy.springmvc.chap05.entity.Auth;
 import com.study.springstudy.springmvc.chap05.entity.Member;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -20,7 +19,7 @@ class MemberMapperTest {
     PasswordEncoder encoder;
 
     @Test
-    @DisplayName("회원가입에 성공해야 한다.")
+    @DisplayName("회원가입에 성공해야 한다")
     void saveTest() {
         //given
         Member member = Member.builder()
@@ -29,33 +28,50 @@ class MemberMapperTest {
                 .name("쿠로미")
                 .email("kuromi@gmail.com")
                 .build();
+
         //when
         boolean flag = memberMapper.save(member);
+
+        //then
+        assertTrue(flag);
+    }
+
+
+    @Test
+    @DisplayName("kuromi 계정명을 조회하면 그 회원의 이름이 쿠로미여야 한다")
+    void findOneTest() {
+        //given
+        String acc = "kuromi";
+        //when
+        Member foundMember = memberMapper.findOne(acc);
+        //then
+        assertEquals("쿠로미", foundMember.getName());
+    }
+
+
+
+    @Test
+    @DisplayName("계정명이 kuromi인 회원은 중복확인 결과가 true이다.")
+    void existsTest() {
+        //given
+        String acc = "kuromi";
+        //when
+        boolean flag = memberMapper.existsById("account", acc);
         //then
         assertTrue(flag);
     }
 
     @Test
-    @DisplayName("멤버 조회에 성공해야 한다.")
-    void findOneTest() {
+    @DisplayName("계정명이 newjeans인 회원은 중복확인 결과가 false이다.")
+    void existsTest2() {
         //given
-
+        String acc = "newjeans";
         //when
-        Member kuromi = memberMapper.findOne("kuromi");
+        boolean flag = memberMapper.existsById("account", acc);
         //then
-        assertEquals("쿠로미", kuromi.getName());
+        assertFalse(flag);
     }
 
-    @Test
-    @DisplayName("계정 중복 조회에 성공ㅇ해야 한다.")
-    void existsTest() {
-        //given
-
-        //when
-        boolean b = memberMapper.existsById("account", "kuromi");
-        //then
-        assertTrue(b);
-    }
 
     @Test
     @DisplayName("평문의 암호를 인코딩하여야 한다.")
@@ -65,6 +81,8 @@ class MemberMapperTest {
         //when
         String encodedPassword = encoder.encode(rawPassword);
         //then
-        System.out.println(encodedPassword);
+        System.out.println("encodedPassword = " + encodedPassword);
     }
+
+
 }
