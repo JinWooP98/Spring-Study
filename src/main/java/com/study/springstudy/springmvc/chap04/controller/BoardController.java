@@ -1,30 +1,27 @@
 package com.study.springstudy.springmvc.chap04.controller;
 
-import com.study.springstudy.springmvc.chap04.common.Page;
 import com.study.springstudy.springmvc.chap04.common.PageMaker;
 import com.study.springstudy.springmvc.chap04.common.Search;
 import com.study.springstudy.springmvc.chap04.dto.BoardDetailResponseDto;
 import com.study.springstudy.springmvc.chap04.dto.BoardListResponseDto;
 import com.study.springstudy.springmvc.chap04.dto.BoardRequestDto;
-import com.study.springstudy.springmvc.chap04.entity.Board;
-import com.study.springstudy.springmvc.chap04.mapper.BoardMapper;
-import com.study.springstudy.springmvc.chap04.repository.BoardRepository;
 import com.study.springstudy.springmvc.chap04.service.BoardService;
+import com.study.springstudy.springmvc.chap05.dto.response.ReactionDto;
+import com.study.springstudy.springmvc.chap05.entity.ReactionType;
+import com.study.springstudy.springmvc.chap05.service.ReactionService;
+import com.study.springstudy.springmvc.util.LoginUtil;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/board/*")
@@ -32,7 +29,11 @@ import java.util.stream.Collectors;
 public class BoardController {
 
 
-    private final BoardService service;
+    private static final Logger log = LoggerFactory.getLogger(BoardController.class);
+    private final BoardService boardService;
+    private final ReactionService reactionService;
+    private final HttpSession httpSession;
+
     // 1. 목록 조회 요청 (/board/list : GET)
     @GetMapping("/list")
     public String list(@ModelAttribute("s") Search page, Model model) {
@@ -50,10 +51,10 @@ public class BoardController {
 //            BoardListResponseDto dto = new BoardListResponseDto(b);
 //            bList.add(dto);
 //        }
-        List<BoardListResponseDto> bList = service.getList(page);
+        List<BoardListResponseDto> bList = boardService.getList(page);
 
         // 페이지 정보를 생성하여 JSP 에게 전송
-        PageMaker maker = new PageMaker(page, service.getCount(page));
+        PageMaker maker = new PageMaker(page, boardService.getCount(page));
         // 3. JSP파일에 해당 목록데이터를 보냄
         model.addAttribute("bList", bList);
         model.addAttribute("maker", maker);
@@ -75,7 +76,7 @@ public class BoardController {
 //
 //        repository.save(board);
 
-        service.insert(boardPostDto, session);
+        boardService.insert(boardPostDto, session);
 
         return "redirect:/board/list";
     }
@@ -84,7 +85,7 @@ public class BoardController {
     @GetMapping("/delete")
     public String delete(int bno) {
 
-        service.deleteBoard(bno);
+        boardService.deleteBoard(bno);
 
         return "redirect:/board/list";
     }
@@ -94,7 +95,7 @@ public class BoardController {
 //        Board board = repository.findOne(bno);
 //        if ( board != null) repository.updateViewCount(bno);
 
-        BoardDetailResponseDto board = service.retrieve(bno, request, response);
+        BoardDetailResponseDto board = boardService.retrieve(bno, request, response);
 
         model.addAttribute("b", board);
 
@@ -103,5 +104,29 @@ public class BoardController {
         model.addAttribute("ref", ref);
 
         return "/board/detail";
+    }
+
+    // 좋아요 요청 비동기 처리
+    @GetMapping("/like")
+    @ResponseBody
+    public ResponseEntity<?> like(long bno, HttpSession session) {
+
+        log.info("like async request!");
+
+        String account = LoginUtil.getLoggedInUserAccount(session);
+        ReactionDto dto = reactionService.like(bno, account);
+        return ResponseEntity.ok().body(dto);
+    }
+
+    // 싫어요 요청 비동기 처리
+    @GetMapping("/dislike")
+    @ResponseBody
+    public ResponseEntity<?> dislike(long bno, HttpSession session) {
+
+        log.info("dislike async request!");
+
+        String account = LoginUtil.getLoggedInUserAccount(session);
+        ReactionDto dto = reactionService.dislike(bno, account);
+        return ResponseEntity.ok().body(dto);
     }
 }

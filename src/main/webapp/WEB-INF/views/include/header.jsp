@@ -6,7 +6,7 @@
     <div class="inner-header">
         <h1 class="logo">
             <a href="/board/list">
-                <img src="/assets/css/img/logo.png" alt="로고이미지">
+                <img src="/assets/img/logo.png" alt="로고이미지">
             </a>
         </h1>
         <h2 class="intro-text">Welcome (${login.nickName})</h2>

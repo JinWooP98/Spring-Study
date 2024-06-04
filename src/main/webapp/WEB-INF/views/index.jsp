@@ -20,7 +20,7 @@
     <section class="visual">
         <ul class="slide">
             <li>
-                <img src="#" alt="슬라이드 이미지1">
+                <img src="/assets/img/visual1.jpg" alt="슬라이드 이미지1">
                 <div class="txt">
                     <p>Creative design with Hong Studio</p>
                     <h3>Website & APP, <br>Responsive Web and <br>Brand Identity </h3>

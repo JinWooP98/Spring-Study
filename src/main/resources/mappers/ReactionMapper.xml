@@ -4,30 +4,39 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.study.springstudy.springmvc.chap05.mapper.ReactionMapper">
+
+    <insert id="save">
+        INSERT INTO tbl_reaction
+        (board_no, account, reaction_type)
+        VALUES
+        (#{boardNo}, #{account}, #{reactionType})
+    </insert>
+
+    <delete id="delete">
+        DELETE FROM tbl_reaction
+        WHERE board_no = #{boardNo}
+        AND account = #{account}
+    </delete>
+
     <select id="findOne" resultType="reaction">
         SELECT *
         FROM tbl_reaction
-        WHERE account = #{account}
-        AND board_no = #{bno}
+        WHERE board_no = #{boardNo}
+        AND account = #{account}
     </select>
 
-    <insert id="insertReaction">
-        INSERT INTO tbl_reaction
-            (account, board_no, reaction_type, reaction_date)
-        VALUES
-            (#{account}, #{boardNo}, #{reactionType}, #{reactionDate})
-    </insert>
+    <select id="countLikes" resultType="int">
+        SELECT COUNT(*)
+        FROM tbl_reaction
+        WHERE board_no = #{boardNo}
+        AND reaction_type = 'LIKE'
+    </select>
 
-    <delete id="deleteReaction">
-        DELETE FROM tbl_reaction
-        WHERE account = #{account}
-        AND board_no = #{boardNo}
-    </delete>
+    <select id="countDisLikes" resultType="int">
+        SELECT COUNT(*)
+        FROM tbl_reaction
+        WHERE board_no = #{boardNo}
+        AND reaction_type = 'DISLIKE'
+    </select>
 
-    <update id="upDataReaction">
-        UPDATE tbl_reaction
-        SET reaction_type = #{reactionType}
-        WHERE account = #{account}
-        AND board_no = #{boardNo}
-    </update>
 </mapper>
