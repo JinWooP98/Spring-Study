@@ -137,13 +137,18 @@ function appendReplies({ replies, loginUser }) {
   // 댓글 목록 렌더링
   let tag = '';
   if (replies && replies.length > 0) {
-    replies.forEach(({ reply_no: rno, writer, text, createAt, account: replyAccount }) => {
+    replies.forEach(({ reply_no: rno, writer, text, createAt, account: replyAccount, profile }) => {
+      if(profile === null) profile = "/assets/img/anonymous.jpg";
       tag += `
         <div id='replyContent' class='card-body' data-reply-id='${rno}'>
             <div class='row user-block'>
                 <span class='col-md-3'>
-                    <b>${writer}</b>
+                    <span>
+                         <img id="profile_img" src="${profile}" alt="profile image">
+                         <b>${writer}</b>  
+                    </span>
                 </span>
+                
                 <span class='offset-md-6 col-md-3 text-right'><b>${getRelativeTime(
                   createAt
                 )}</b></span>
@@ -249,3 +254,31 @@ export function setupInfiniteScroll() {
 export function removeInfiniteScroll() {
   window.removeEventListener('scroll', scrollHandler);
 }
+
+export function openProfileModal() {
+  // 댓글 프로필 모달 이벤트 등록
+  console.log(document.getElementById('replyData'));
+  document.getElementById('replyData')?.addEventListener('click', e => {
+    const $profileImg = document.getElementById('profile_img');
+    if($profileImg === null) {
+      return;
+    } else {
+      if(e.target !== $profileImg) return;
+    }
+
+    document.getElementById('profileModal').style.display = 'flex';
+    document.querySelector('.profileBox img').src = e.target.src;
+
+
+  });
+}
+
+export function closeProfileModal() {
+  document.getElementById('profileModal').addEventListener('click', e => {
+    if(e.target === document.querySelector('.profileBox')) return;
+
+    document.getElementById('profileModal').style.display = 'none';
+  });
+}
+
+

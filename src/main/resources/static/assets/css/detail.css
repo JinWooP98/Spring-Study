@@ -163,3 +163,64 @@ button.list-btn {
   background-color: #f44336;
   color: #fff;
 }
+
+.reply-login-profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.reply-login-profile img{
+  width: 150px;
+  height: 150px;
+
+  overflow: hidden;
+
+}
+
+#profileModal {
+  display: none;
+}
+
+/* 댓글 프로필 */
+.profile-box {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 10px auto;
+}
+
+.profile-box img {
+  width: 100%;
+}
+
+.reply-profile {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+
+}
+
+#profileModal {
+  display: none;
+  width: 100%;
+  height: 85%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+}
+
+.profileBox img {
+  width: 300px;
+  height: 300px;
+}

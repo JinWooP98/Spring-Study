@@ -37,6 +37,7 @@ public class BoardController {
         System.out.println("/board/list GET");
 
         // 서비스에게 조회 요청 위임
+
         List<BoardListResponseDto> bList = boardService.findList(page);
         // 페이지 정보를 생성하여 JSP에게 전송
         PageMaker maker = new PageMaker(page, boardService.getCount(page));

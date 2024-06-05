@@ -33,5 +33,6 @@ public class Reply {
     private LocalDateTime replyDate;
     private long boardNo;
     private String account;
+    private String profileImg;
 
 }

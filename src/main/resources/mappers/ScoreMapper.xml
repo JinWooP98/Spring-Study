@@ -17,6 +17,7 @@
 
     <select id="findAll" resultType="score">
         SELECT * FROM tbl_score
+
     </select>
 
     <select id="findOne" resultType="score">

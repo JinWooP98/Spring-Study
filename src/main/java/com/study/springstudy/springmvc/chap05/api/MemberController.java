@@ -46,10 +46,14 @@ public class MemberController {
 
         log.info("/members/sign-up POST ");
         log.debug("parameter: {}", dto);
-        log.debug("attached profile image name: {}", dto.getProfileImage().getOriginalFilename());
 
-        // 서버에 업로드 후 업로드 경로 반환
-        String profilePath = FileUtil.uploadFile(rootPath, dto.getProfileImage());
+        String profilePath = null;
+        if(!dto.getProfileImage().isEmpty()) {
+            log.debug("attached profile image name: {}", dto.getProfileImage().getOriginalFilename());
+
+            // 서버에 업로드 후 업로드 경로 반환
+            profilePath = FileUtil.uploadFile(rootPath, dto.getProfileImage());
+        }
 
         boolean flag = memberService.join(dto, profilePath);
 

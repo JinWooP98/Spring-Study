@@ -1,5 +1,5 @@
 
-import { fetchInfScrollReplies, setupInfiniteScroll } from "./getReply.js";
+import {fetchInfScrollReplies, openProfileModal, setupInfiniteScroll, closeProfileModal} from "./getReply.js";
 import { fetchReplyPost } from "./postReply.js";
 import { removeReplyClickEvent } from "./deleteReply.js";
 import { modifyReplyClickEvent } from "./modifyReply.js";
@@ -20,13 +20,16 @@ document.getElementById('replyAddBtn')?.addEventListener('click', e => {
   fetchReplyPost();
 });
 
+
+
 // 댓글 삭제 이벤트 등록
 removeReplyClickEvent();
 modifyReplyClickEvent();
 
 // 댓글 페이지 클릭이벤트 등록
 // replyPageClickEvent();
+// 프로파일 모달 이벤트 등록
+openProfileModal();
 
 
-
-
+closeProfileModal();
