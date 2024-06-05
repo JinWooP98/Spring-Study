@@ -9,14 +9,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
-import java.io.IOException;
 
 @Controller
 @Slf4j
 public class UploadController {
 
     // 업로드 루트 경로
-//    private String rootPath = "D:/spring-prj/upload";
+    //  private String rootPath = "D:/spring-prj/upload";
 
     private String rootPath = "D:/spring-prj/upload";
 
