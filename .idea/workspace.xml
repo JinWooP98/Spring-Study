@@ -4,13 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec3da5f4-95c0-4ce2-96e2-c5d6bdbf9b4b" name="변경" comment="# 파일 업로드 &amp; 업로드한 파일 받기">
+    <list default="true" id="ec3da5f4-95c0-4ce2-96e2-c5d6bdbf9b4b" name="변경" comment="# 회원가입 - 프로필 사진 처리 1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/config/LocalResourceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/anonymous.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/image-add.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/api/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/api/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/request/SignUpDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/request/SignUpDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/entity/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/entity/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/service/MemberService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/upload/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/upload/UploadController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/util/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/util/FileUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/member.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/member.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/members/sign-up.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/members/sign-up.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/upload/upload-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/upload/upload-form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/MemberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/MemberMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -321,15 +328,7 @@
       <workItem from="1716528901753" duration="151000" />
       <workItem from="1716767867006" duration="45000" />
       <workItem from="1717483747498" duration="282000" />
-      <workItem from="1717545479785" duration="6405000" />
-    </task>
-    <task id="LOCAL-00022" summary="마이바티스 part1">
-      <option name="closed" value="true" />
-      <created>1716259944025</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1716259944025</updated>
+      <workItem from="1717545479785" duration="10402000" />
     </task>
     <task id="LOCAL-00023" summary="마이바티스 part2">
       <option name="closed" value="true" />
@@ -715,7 +714,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717549221135</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="# 회원가입 - 프로필 사진 처리 1">
+      <option name="closed" value="true" />
+      <created>1717552242428</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1717552242428</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -734,7 +741,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="무한스크롤 완성" />
     <MESSAGE value="댓글 삭제 기능" />
     <MESSAGE value="댓글 수정 백엔드" />
     <MESSAGE value="댓글 수정 프론트엔드" />
@@ -759,6 +765,7 @@
     <MESSAGE value="# 댓글 인가처리 - 인터셉터설정 및 fetch 함수 호출 일원화" />
     <MESSAGE value="# 댓글 인가처리 - 댓글쓰기 기능 수정" />
     <MESSAGE value="# 파일 업로드 &amp; 업로드한 파일 받기" />
-    <option name="LAST_COMMIT_MESSAGE" value="# 파일 업로드 &amp; 업로드한 파일 받기" />
+    <MESSAGE value="# 회원가입 - 프로필 사진 처리 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="# 회원가입 - 프로필 사진 처리 1" />
   </component>
 </project>

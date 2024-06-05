@@ -5,9 +5,11 @@ import com.study.springstudy.springmvc.chap05.dto.request.SignUpDto;
 import com.study.springstudy.springmvc.chap05.dto.response.LoginUserInfoDto;
 import com.study.springstudy.springmvc.chap05.service.LoginResult;
 import com.study.springstudy.springmvc.chap05.service.MemberService;
+import com.study.springstudy.springmvc.util.FileUtil;
 import com.study.springstudy.springmvc.util.LoginUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,6 +27,9 @@ import javax.servlet.http.HttpSession;
 @RequiredArgsConstructor
 public class MemberController {
 
+    @Value("${file.upload.root-path}")
+    private String rootPath;
+
     private final MemberService memberService;
 
     // 회원가입 양식 열기
@@ -39,12 +44,14 @@ public class MemberController {
     @PostMapping("/sign-up")
     public String signUp(@Validated SignUpDto dto) {
 
-
-
         log.info("/members/sign-up POST ");
         log.debug("parameter: {}", dto);
+        log.debug("attached profile image name: {}", dto.getProfileImage().getOriginalFilename());
 
-        boolean flag = memberService.join(dto);
+        // 서버에 업로드 후 업로드 경로 반환
+        String profilePath = FileUtil.uploadFile(rootPath, dto.getProfileImage());
+
+        boolean flag = memberService.join(dto, profilePath);
 
         return flag ? "redirect:/members/sign-in" : "redirect:/members/sign-up";
     }
