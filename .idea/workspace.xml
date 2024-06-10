@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec3da5f4-95c0-4ce2-96e2-c5d6bdbf9b4b" name="변경" comment="# 프로파일 모달 &amp; 표시되는 게시글 수 버튼 기능 구현">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/api/SnsLoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="ec3da5f4-95c0-4ce2-96e2-c5d6bdbf9b4b" name="변경" comment="# 카카오 로그인 인가코드 발급">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/response/AccessTokenDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/dto/response/KakaoUserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/service/SnsLoginService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/members/sign-in.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/members/sign-in.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/api/SnsLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/springstudy/springmvc/chap05/api/SnsLoginController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -323,15 +322,7 @@
       <workItem from="1717483747498" duration="282000" />
       <workItem from="1717545479785" duration="26532000" />
       <workItem from="1717577255474" duration="83000" />
-      <workItem from="1717977838167" duration="2416000" />
-    </task>
-    <task id="LOCAL-00025" summary="페이징 기초">
-      <option name="closed" value="true" />
-      <created>1716339036952</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1716339036952</updated>
+      <workItem from="1717977838167" duration="13250000" />
     </task>
     <task id="LOCAL-00026" summary="페이징 렌더링 알고리즘 1">
       <option name="closed" value="true" />
@@ -717,7 +708,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717577297694</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="# 카카오 로그인 인가코드 발급">
+      <option name="closed" value="true" />
+      <created>1717980733311</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1717980733311</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -736,7 +735,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="댓글 수정 프론트엔드" />
     <MESSAGE value="# 회원관리 시스템 만들기 - Entity, Mapper 생성" />
     <MESSAGE value="# 회원가입 패스워드 인코딩 처리" />
     <MESSAGE value="# include" />
@@ -761,6 +759,7 @@
     <MESSAGE value="# 회원가입 - 프로필 사진 처리 1" />
     <MESSAGE value="# 회원가입 - 프로필 사진 처리 2" />
     <MESSAGE value="# 프로파일 모달 &amp; 표시되는 게시글 수 버튼 기능 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="# 프로파일 모달 &amp; 표시되는 게시글 수 버튼 기능 구현" />
+    <MESSAGE value="# 카카오 로그인 인가코드 발급" />
+    <option name="LAST_COMMIT_MESSAGE" value="# 카카오 로그인 인가코드 발급" />
   </component>
 </project>
